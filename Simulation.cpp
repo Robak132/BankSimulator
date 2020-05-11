@@ -9,20 +9,22 @@ Jakub Robaczewski, Oskar Bartosz
 #include <string>
 #include "Simulation.h"
 
+#include "Client.h"
+
 using namespace std;
 
-Simulation::Simulation(int _time_per_tick = 60, int _open_time = 8, int _close_time = 16, int _n_workers = 10) {
-        n_workers = _n_workers;
-        time_per_tick = _time_per_tick;
-        open_time = _open_time * 60;
-        close_time = _close_time * 60;
-        time_now = _open_time * 60;
+Simulation::Simulation(int _time_per_tick, int _open_time, int _close_time, int _n_workers) {
+    n_workers = _n_workers;
+    time_per_tick = _time_per_tick;
+    open_time = _open_time * 60;
+    close_time = _close_time * 60;
+    time_now = _open_time * 60;
 
-        log.open("log.txt");
-    }
+    log.open("log.txt");
+}
 Simulation::~Simulation() {
-        log.close();
-    }
+    log.close();
+}
 
 void Simulation::start_simulation() {
     cout << "Simulation started!\n";
@@ -53,6 +55,7 @@ string Simulation::get_formated_time(int time) const {
 }
 
 int main() {
-    Simulation sim(15);
-    sim.start_simulation();
+   Client cl("Name", "Surname", "CIA667", "Pay");
+   // Simulation sim(15);
+   // sim.start_simulation();
 }
