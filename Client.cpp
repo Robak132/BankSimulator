@@ -2,115 +2,130 @@
 #include <vector>
 #include "Client.h"
 
-#define NEW_LINE() cout << "-----------------------------------" << endl << endl
-
 using namespace std;
 
-Client::Client(int _client_number, string _name, string _surname, string _type_of_document, string _document_id) {
-    client_number = _client_number;
+Client::Client(string _name, string _surname, string _document_id, string _reason, int _money, ID _id_number, Account _account) {
     name = _name;
     surname = _surname;
-    type_of_document = _type_of_document;
-    document_id = _document_id;
+    if (!checkDocID(_document_id))
+        throw invalid_argument("Invalid argument");
+    else
+        document_id = _document_id;
+    reason = _reason;
+    money = _money;
+    id_number = _id_number;
+    account = _account;
 }
 Client::Client(const Client& c) {
-    client_number = c.client_number;
     name = c.name;
     surname = c.surname;
-    type_of_document = c.type_of_document;
-    document_id = c.document_id;
-    products = c.products;
+    if (!checkDocID(c.document_id))
+        throw invalid_argument("Invalid argument");
+    else
+        document_id = c.document_id;
+    reason = c.reason;
+    money = c.money;
+    id_number = c.id_number;
+    account = c.account;
 }
 Client& Client::operator = (const Client& c) {
     if (this != &c) {
-        client_number = c.client_number;
         name = c.name;
         surname = c.surname;
-        type_of_document = c.type_of_document;
-        document_id = c.document_id;
-        products = c.products;
+        if (!checkDocID(c.document_id))
+            throw invalid_argument("Invalid argument");
+        else
+            document_id = c.document_id;
+        reason = c.reason;
+        money = c.money;
+        id_number = c.id_number;
+        account = c.account;
     }
     return *this;
 }
 
-std::ostream& operator << (ostream& out, Client& c) {
-    return out << "Client number:\t" << c.get_client_number() << endl <<
-        "Name:\t\t" << c.get_name() << endl <<
-        "Surname:\t" << c.get_surname() << endl <<
-        "Document's type:" << c.get_type_of_document() << endl <<
-        "Document's ID:\t" << c.get_document_id() << endl <<
-        "Products: " << endl << c.get_products();
-}
 bool operator == (Client a, Client b) {
-    return a.get_client_number() == b.get_client_number() && a.get_name() == b.get_name() && a.get_surname() == b.get_surname() && a.get_type_of_document() == b.get_type_of_document() && a.get_document_id() == b.get_document_id() && a.get_products() == b.get_products();
+    return a.getIDNumber() == b.getIDNumber() &&
+           a.getName() == b.getName() &&
+           a.getSurname() == b.getSurname() &&
+           a.getDocumentID() == b.getDocumentID() &&
+           a.getReason() == b.getReason() &&
+           a.getMoney() == b.getMoney() &&
+           a.getAccount() == b.getAccount();
 }
 bool operator != (Client a, Client b) {
     return !(a == b);
 }
 
-string Client::get_changeable_data() {
-    string out = "";
-    out += "1. Name:\t\t" + name + "\n";
-    out += "2. Surname:\t\t" + surname + "\n";
-    out += "3. Document's type:\t" + type_of_document + "\n";
-    out += "4. Document's ID:\t" + document_id + "\n";
-    return out;
-}
-void Client::add_product(string product) {
-    if (product != "")
-        products.push_back(product);
-}
-void Client::delete_product(string product) {
-    for (int i = 0; i < products.size(); i++) {
-        if (products[i] == product) {
-            products.erase(products.begin() + i);
-            break;
+bool Client::checkDocID(string _document_id) {
+    if (_document_id.length() != 6)
+        return false;
+    for (int i = 0; i < 6; i++) {
+        if (i < 3) {
+            if (_document_id[i] < 65 || _document_id[i] > 90)
+                return false;
+        }
+        else {
+            if (_document_id[i] < 48 || _document_id[i] > 57)
+                return false;
         }
     }
+    return true;
+}
+bool Client::isRealClient() {
+    if (id_number == "000000")
+        return false;
+    return true;
 }
 
 // Getter
-const int Client::get_client_number() {
-    return client_number;
+ID Client::getIDNumber() const {
+    return id_number;
 }
-const string Client::get_name() {
+string Client::getName() const {
     return name;
 }
-const string Client::get_surname() {
+string Client::getSurname() const {
     return surname;
 }
-const string Client::get_name_surname() {
+string Client::getNameSurname() const {
     return name + " " + surname;
 }
-const string Client::get_type_of_document() {
-    return type_of_document;
-}
-const string Client::get_document_id() {
+string Client::getDocumentID() const {
     return document_id;
 }
-const string Client::get_products() {
-    string out = "";
-    for (int i = 0; i < products.size(); i++) {
-        out += "\t";
-        out += products[i];
-        out += "\n";
-    }
-    return out;
+string Client::getReason() const {
+    return reason;
+}
+int Client::getMoney() const {
+    return money;
+}
+Account Client::getAccount() const {
+    return account;
 }
 
 // Setter
-void Client::set_client_number(int _client_number) {
-    client_number = _client_number;
+void Client::setIDNumber(ID _id_number) {
+    id_number = _id_number;
 }
-void Client::set_name(string _name) {
+void Client::setName(string _name) {
     name = _name;
 }
-void Client::set_surname(string _surname) {
+void Client::setSurname(string _surname) {
     surname = _surname;
 }
-void Client::set_type_of_document(string _type_of_document) {
-    type_of_document = _type_of_document;
+void Client::setDocumentID(string _document_id) {
+    if (!checkDocID(_document_id))
+        throw invalid_argument("Invalid argument");
+    else
+        document_id = _document_id;
 }
-void Client::set_document_id(string _document_id) {
-    document_id = _document_id;
+void Client::setReason(string _reason) {
+    reason = _reason;
+}
+void Client::setMoney(int _money) {
+    money = _money;
+}
+void Client::setAccount(Account _account) {
+    account = _account;
 }

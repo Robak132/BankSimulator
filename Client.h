@@ -3,47 +3,50 @@
 
 #include <iostream>
 #include <vector>
+#include "Account.h"
+#include "ID.h"
 
 using namespace std;
 
 class Client {
 private:
-    int client_number;
+    ID id_number;   // 000000 - Not a client (Don't have account) [6-digit]
 
     string name;
     string surname;
+    string document_id; // [3 - letters upersize, 3- digits]
+    string reason;
+    int money;
 
-    string type_of_document;
-    string document_id;
-
-    vector<string>products;
+    Account account;
+    bool checkDocID(string _document_id);
 public:
-    Client(int _client_number, string _name, string _surname, string _type_of_document, string _document_id);
+    Client(string _name, string _surname, string _document_id, string reason, int money=0, ID _id_number = ID(), Account _account = Account());
     Client(const Client& c);
     Client& operator = (const Client& c);
-      
-    friend std::ostream& operator << (ostream& out, Client& c);
-    friend bool operator == (Client a, Client b);
-    friend bool operator != (Client a, Client b);
-
-    string get_changeable_data();
-    void add_product(string product);
-    void delete_product(string product);
+    
+    bool isRealClient();
 
     // Getter
-    const int get_client_number();
-    const string get_name();
-    const string get_surname();
-    const string get_name_surname();
-    const string get_type_of_document();
-    const string get_document_id();
-    const string get_products();
+    ID getIDNumber() const;
+    string getName() const;
+    string getSurname() const;
+    string getNameSurname() const;
+    string getDocumentID() const;
+    string getReason() const;
+    int getMoney() const;
+    Account getAccount() const;
 
     // Setter
-    void set_client_number(int _client_number);
-    void set_name(string _name);
-    void set_surname(string _surname);
-    void set_type_of_document(string _type_of_document);
-    void set_document_id(string _document_id);
+    void setIDNumber(ID _id_number);
+    void setName(string _name);
+    void setSurname(string _surname);
+    void setDocumentID(string _document_id);
+    void setReason(string _reason);
+    void setMoney(int _money);
+    void setAccount(Account _account);
 };
+
+bool operator == (Client a, Client b);
+bool operator != (Client a, Client b);
 #endif
