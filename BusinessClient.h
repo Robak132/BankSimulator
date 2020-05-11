@@ -11,6 +11,6 @@ class BusinessClient : protected Client {
 private:
 	string type;
 public:
-	BusinessClient();
+	BusinessClient(string _name, string _surname, string _document_id, string reason, int money = 0, ID _id_number = ID(), Account _account = Account());
 };
 #endif
