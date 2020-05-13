@@ -22,7 +22,7 @@ public:
     K GetKey() const {
         return key;
     }
-    void SetValue(K _key) {
+    void SetKey(K _key) {
         key = _key;
     }
     
