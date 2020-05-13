@@ -2,6 +2,7 @@
 #define DICT_H
 #include "Node.h"
 #include "Error.h"
+#include <vector>
 
 using namespace std;
 
@@ -56,6 +57,12 @@ public:
             last_head->SetNext(head);
         }
         len++;
+    }
+    void AddTable(vector<K> _keys, vector<V> _values) {
+        if (_keys.size() != _values.size())
+            throw invalid_argument("vectors' size different");
+        for (int i = 0; i < _keys.size(); i++)
+            Add(_keys[i], _values[i]);
     }
     void Delete(K _key, V _value) {
         // Usuwa wêze³ (klucz i wartoœæ) z s³ownika
