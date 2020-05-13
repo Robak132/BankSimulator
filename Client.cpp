@@ -79,28 +79,28 @@ bool Client::isRealClient() {
 }
 
 // Getter
-ID Client::getIDNumber() const {
+ID Client::getIDNumber(){
     return id_number;
 }
-string Client::getName() const {
+string Client::getName(){
     return name;
 }
-string Client::getSurname() const {
+string Client::getSurname(){
     return surname;
 }
-string Client::getNameSurname() const {
+string Client::getNameSurname(){
     return name + " " + surname;
 }
-string Client::getDocumentID() const {
+string Client::getDocumentID(){
     return document_id;
 }
-string Client::getReason() const {
+string Client::getReason(){
     return reason;
 }
-int Client::getMoney() const {
+int Client::getMoney(){
     return money;
 }
-Account Client::getAccount() const {
+Account Client::getAccount(){
     return account;
 }
 
