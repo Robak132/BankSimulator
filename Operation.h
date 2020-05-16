@@ -1,4 +1,6 @@
-#pragma once
+#ifndef OPERATION_H
+#define OPERATION_H
+
 #include "Client.h"
 using namespace std;
 
@@ -9,59 +11,29 @@ public:
 	virtual void doOperation(Client) = 0;
 };
 
-class WithdrawMoney : public Operation
-{
-public:
-	WithdrawMoney();
-	void doOperation(Client);
-};
-
-class DepositMoney : public Operation
-{
-public:
-	DepositMoney();
-	void doOperation(Client);
-};
-
-class TransferMoney : public Operation
-{
-public:
-	TransferMoney();
-	void doOperation(Client);
-};
-
-class CreateAccount : public Operation
-{
-public:
-	CreateAccount();
-	void doOperation(Client);
-};
-
-class AccountInfo : public Operation
-{
-public:
-	AccountInfo();
-	void doOperation(Client);
-};
-
-class DeleteAccount : public Operation
-{
-public:
-	DeleteAccount();
-	void doOperation(Client);
-};
-
-class TakeLoan : public Operation
-{
-public:
-	TakeLoan();
-	void doOperation(Client);
-};
-
-class RepayLoan : public Operation
-{
-public:
-	RepayLoan();
-	void doOperation(Client);
-};
-
+//
+//class Transfer : public Operation
+//{
+//public:
+	/*void accountToClient();
+	void clientToAccount();
+	void accountToAccount();*/
+//	void doOperation(Client);
+//};
+//
+//class Account : public Operation
+//{
+//public:
+//	void createAccount();
+//	void deleteAccount();
+//	void infoAccount();
+//	void doOperation(Client);
+//};
+//
+//class Loan : public Operation
+//{
+//	void takeLoan();
+//	void repayLoan();
+//	void infoLoan();
+//};
+#endif

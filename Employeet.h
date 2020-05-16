@@ -1,4 +1,5 @@
-#pragma once
+#ifndef EMPLOYEET_H
+#define EMPLOYEET_H
 #include "ID.h"
 
 class Employeet
@@ -8,3 +9,4 @@ class Employeet
 public:
 	Employeet();
 };
+#endif
