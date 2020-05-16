@@ -4,57 +4,18 @@
 
 using namespace std;
 
-Client::Client(string _name, string _surname, string _document_id, string _reason, int _money, ID _id_number, Account _account) {
+Client::Client(string _name, string _surname, string _document_id, ID _id_number, reason _reason, int _money, Account _account) {
+    type = "NoType";
     name = _name;
     surname = _surname;
     if (!checkDocID(_document_id))
         throw invalid_argument("Invalid argument");
     else
         document_id = _document_id;
-    reason = _reason;
+    client_reason = _reason;
     money = _money;
     id_number = _id_number;
     account = _account;
-}
-Client::Client(const Client& c) {
-    name = c.name;
-    surname = c.surname;
-    if (!checkDocID(c.document_id))
-        throw invalid_argument("Invalid argument");
-    else
-        document_id = c.document_id;
-    reason = c.reason;
-    money = c.money;
-    id_number = c.id_number;
-    account = c.account;
-}
-Client& Client::operator = (const Client& c) {
-    if (this != &c) {
-        name = c.name;
-        surname = c.surname;
-        if (!checkDocID(c.document_id))
-            throw invalid_argument("Invalid argument");
-        else
-            document_id = c.document_id;
-        reason = c.reason;
-        money = c.money;
-        id_number = c.id_number;
-        account = c.account;
-    }
-    return *this;
-}
-
-bool operator == (Client a, Client b) {
-    return a.getIDNumber() == b.getIDNumber() &&
-           a.getName() == b.getName() &&
-           a.getSurname() == b.getSurname() &&
-           a.getDocumentID() == b.getDocumentID() &&
-           a.getReason() == b.getReason() &&
-           a.getMoney() == b.getMoney() &&
-           a.getAccount() == b.getAccount();
-}
-bool operator != (Client a, Client b) {
-    return !(a == b);
 }
 
 bool Client::checkDocID(string _document_id) {
@@ -79,6 +40,9 @@ bool Client::isRealClient() {
 }
 
 // Getter
+string Client::getType() {
+    return type;
+}
 ID Client::getIDNumber(){
     return id_number;
 }
@@ -94,8 +58,8 @@ string Client::getNameSurname(){
 string Client::getDocumentID(){
     return document_id;
 }
-string Client::getReason(){
-    return reason;
+reason Client::getReason(){
+    return client_reason;
 }
 int Client::getMoney(){
     return money;
@@ -105,6 +69,9 @@ Account Client::getAccount(){
 }
 
 // Setter
+void Client::setType(string _type) {
+    type = _type;
+}
 void Client::setIDNumber(ID _id_number) {
     id_number = _id_number;
 }
@@ -120,8 +87,8 @@ void Client::setDocumentID(string _document_id) {
     else
         document_id = _document_id;
 }
-void Client::setReason(string _reason) {
-    reason = _reason;
+void Client::setReason(reason _reason) {
+    client_reason = _reason;
 }
 void Client::setMoney(int _money) {
     money = _money;

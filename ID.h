@@ -6,14 +6,14 @@ using namespace std;
 
 class ID {
 private:
-	string id_number;
-	bool checkID(string _id);
+	char category;
+	string value;
 	string extendID(string _id);
 public:
-	ID(string _id_number="000000");
+	ID(char _category='C');
+	ID& operator= (const ID& id);
 	string getID();
-	void setID(string _id);
-	void setNewID();
+	void setNewID(char _category);
 };
 ostream& operator << (ostream& out, ID& id);
 bool operator == (ID a, ID b);

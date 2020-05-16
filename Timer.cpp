@@ -5,6 +5,8 @@ Timer::Timer(int _time_per_tick, int _open_time, int _close_time) {
 	open_time = _open_time;
 	close_time = _close_time;
 	actual_time = open_time;
+
+	bank = new Bank(10);
 }
 
 int Timer::getTimePerTick() {

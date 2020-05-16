@@ -1,77 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Timer" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAiAAAAAAAAAAQAAQAAABBAEAAIAAAAAECAA=</HashCode>
+      <FileName>Timer.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="bank" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Bank" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAAAAAAAAAAAAAKAAgAAAAAAAAAoAIAAAAAAA=</HashCode>
+      <FileName>Bank.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IClient" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAgAQACAAAAEAAAAAEGAAAAQBAQAAEAAQAAEI=</HashCode>
+      <FileName>Client.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAgAQACAAAAEAEAgAEORAFAQBEQAAEQAQAEEY=</HashCode>
+      <FileName>Client.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="account" />
+      <Field Name="client_reason" />
+      <Field Name="id_number" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BusinessClient" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Client.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndividualClient" Collapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Client.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Employeet" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAACAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Employeet.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="self_ID" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ID" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACgACAAAAAAAAAAAAAACAAAAAoAAAAQAA=</HashCode>
+      <FileName>ID.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Operation" Collapsed="true">
+    <Position X="1.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Operation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IStand" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAgBAABAAIAAAAAAAAAAACABAAAAAAAAEAA=</HashCode>
+      <FileName>Stand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stand" Collapsed="true">
+    <Position X="1.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAgBAABAAIAIAAAAAAACACAJAAAABAABEAA=</HashCode>
+      <FileName>Stand.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="client" />
+      <Field Name="employeet" />
+    </ShowAsAssociation>
+  </Class>
   <Class Name="Account" Collapsed="true">
-    <Position X="9.25" Y="4.5" Width="1.5" />
+    <Position X="10.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAEAAAAQAAAAEQAAAAEEA=</HashCode>
       <FileName>Account.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Client" Collapsed="true">
-    <Position X="6.75" Y="4.5" Width="1.5" />
+  <Enum Name="reason" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAggQACAAAAEAEAgAEOAAEAQBEQAAkQAQAEEY=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAQAAAEAAAAAAAAAgAgAAAAAAAAAAA=</HashCode>
       <FileName>Client.h</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="id_number" />
-      <Field Name="account" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="ID" Collapsed="true">
-    <Position X="4.5" Y="4.5" Width="1.25" />
+  </Enum>
+  <Enum Name="possible_operations" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAACgACAAAAAAAAAIAAAAAAAAAAAAAAASAA=</HashCode>
-      <FileName>ID.h</FileName>
+      <HashCode>AAAAAAAAAAEIAAAAAAAAAEAAAgAAAAgEAAAABAAABgA=</HashCode>
+      <FileName>OpEnum.h</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="IndividualClient" Collapsed="true">
-    <Position X="6" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IndividualClient.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Dict&lt;K, V&gt;" Collapsed="true">
-    <Position X="2.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAICAAAAAAAAAACAAAGAgAAAACEEAAAAQAAAAQAAQgA=</HashCode>
-      <FileName>Dict.h</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="first" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Node&lt;K, V&gt;" Collapsed="true">
-    <Position X="2.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAABAAAIAAAAgAAAAAEAAQAAAAgACIAAAAAAAEAAAA=</HashCode>
-      <FileName>Node.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BusinessClient" Collapsed="true">
-    <Position X="7.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BusinessClient.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Bank" Collapsed="true">
-    <Position X="6.75" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQQAAAAAAAAAAAAAIAAAOAAgAAAAAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>Bank.h</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="timer" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Timer" Collapsed="true">
-    <Position X="9.25" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAiAAAAAAAAAAQAAQAAABBAEAAIAAAAAECAA=</HashCode>
-      <FileName>Timer.h</FileName>
-    </TypeIdentifier>
-  </Class>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

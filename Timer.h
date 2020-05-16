@@ -1,12 +1,15 @@
 #ifndef TIMER_H
 #define TIMER_H
 
+#include "Bank.h"
+
 class Timer {
 private:
 	int time_per_tick;
 	int open_time;
 	int close_time;
 	int actual_time;
+	Bank* bank;
 public:
 	Timer(int _time_per_tick, int _open_time, int _close_time);
 

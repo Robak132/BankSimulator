@@ -4,42 +4,47 @@
 
 using namespace std;
 
-ID::ID(string _id_number) {
-	if (!checkID(_id_number))
-		throw invalid_argument("ID invalid");
-	id_number = _id_number;
-}
-bool ID::checkID(string _id) {
-	if (_id.length() != 6)
-		return false;
-	for (int i = 0; i < 6; i++) {
-		if (_id[i] < 48 || _id[i] > 57)
-			return false;
+ID::ID(char _category) {
+	if (_category == 'C' || _category == 'E' || _category == 'S') {
+		category = _category;
+		setNewID(_category);
 	}
-	return true;
+	else
+		throw invalid_argument("Unknown category");
+}
+ID& ID::operator= (const ID& id) {
+	if (this == &id)
+		return *this;
+	category = id.category;
+	value = id.value;
+	return *this;
 }
 string ID::extendID(string _id) {
 	while (_id.length() != 6)
 		_id = "0" + _id;
 	return _id;
 }
-
 string ID::getID() {
-	return id_number;
+	return value;
 }
-void ID::setID(string _id) {
-	_id = extendID(_id);
-	if (!checkID(_id))
-		throw invalid_argument("ID invalid");
-	id_number = _id;
-}
-void ID::setNewID() {
-	static int last_id = 1;
-	string _id = extendID(to_string(last_id));
-	if (!checkID(_id))
-		throw invalid_argument("ID invalid");
-	id_number = _id;
-	last_id++;
+void ID::setNewID(char _category) {
+	static int last_id_c = 0;
+	static int last_id_e = 0;
+	static int last_id_s = 0;
+	switch (_category) {
+	case 'C':
+		value = 'C' + extendID(to_string(last_id_c));
+		last_id_c++;
+		break;
+	case 'E':
+		value = 'E' + extendID(to_string(last_id_e));
+		last_id_e++;
+		break;
+	case 'S':
+		value = 'S' + extendID(to_string(last_id_s));
+		last_id_s++;
+		break;
+	}
 }
 
 ostream& operator << (ostream& out, ID& id) {
