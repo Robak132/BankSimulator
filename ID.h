@@ -11,6 +11,7 @@ private:
 	string extendID(string _id);
 public:
 	ID(char _category='C');
+	ID(const ID& id);
 	ID& operator= (const ID& id);
 	string getID();
 	void setNewID(char _category);

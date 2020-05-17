@@ -22,5 +22,7 @@ public:
 
     int randomInt();
     void createClient();
+    string randomName();
+    string randomSurname();
 };
 #endif

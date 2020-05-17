@@ -33,11 +33,6 @@ bool Client::checkDocID(string _document_id) {
     }
     return true;
 }
-bool Client::isRealClient() {
-    if (id_number == "000000")
-        return false;
-    return true;
-}
 
 // Getter
 string Client::getType() {

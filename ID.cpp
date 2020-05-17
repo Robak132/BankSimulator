@@ -12,6 +12,11 @@ ID::ID(char _category) {
 	else
 		throw invalid_argument("Unknown category");
 }
+ID::ID(const ID& id) {
+	category = id.category;
+	value = id.value;
+}
+
 ID& ID::operator= (const ID& id) {
 	if (this == &id)
 		return *this;

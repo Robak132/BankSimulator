@@ -19,8 +19,6 @@ enum class reason {
 
 class IClient {
 public:
-    virtual bool isRealClient() = 0;
-
     virtual ID getIDNumber() = 0;
     virtual string getName() = 0;
     virtual string getSurname() = 0;
@@ -55,8 +53,6 @@ private:
 public:
     Client(string _name, string _surname, string _document_id, ID _id_number, reason reason = static_cast<reason>(0), int money = 0, Account _account = Account());
 
-    bool isRealClient();
-
     string getType();
     ID getIDNumber();
     string getName();
@@ -84,6 +80,7 @@ public:
         setType("Business");
     }
 };
+
 class IndividualClient : public Client {
 public:
     IndividualClient(string _name, string _surname, string _document_id, ID _id_number, reason _reason=static_cast<reason>(0), int _money = 0, Account _account = Account())

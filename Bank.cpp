@@ -1,15 +1,10 @@
-﻿/*
-Symulacja banku
-
-Jakub Robaczewski, Oskar Bartosz
-*/
-
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 #include <chrono>
 #include <random>
+#include <string>
 
 #include "Bank.h"
 #include "Timer.h"
@@ -39,4 +34,28 @@ void Bank::createClient() {
         client = new IndividualClient("name", "surname", "DID123", ID('C'));
     }
     clients.push_back(client);
+}
+string Bank::randomName() {
+    string line;
+    ifstream namefile;
+    namefile.open("namelist.txt");
+    if (namefile.is_open()) {
+        while (getline(namefile, line)) {
+            cout << line << '\n';
+        }
+        namefile.close();
+    }
+    return "";
+}
+string Bank::randomSurname() {
+    string line;
+    ifstream namefile;
+    namefile.open("surnamelist.txt");
+    if (namefile.is_open()) {
+        while (getline(namefile, line)) {
+            cout << line << '\n';
+        }
+        namefile.close();
+    }
+    return "";
 }
