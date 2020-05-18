@@ -14,6 +14,12 @@ class Bank {
 private:
     int n_workers;
     ofstream log;
+    
+    ifstream namefile;
+    vector<string>namelist;
+    ifstream surnamefile;
+    vector<string>surnamelist;
+
     list<Stand>stands;
     list<Client*>clients;
 public:
@@ -21,7 +27,7 @@ public:
     ~Bank();
 
     int randomInt();
-    void createClient();
+    Client* createClient();
     string randomName();
     string randomSurname();
 };

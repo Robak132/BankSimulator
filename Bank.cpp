@@ -15,9 +15,20 @@ using namespace std;
 Bank::Bank(int _n_workers, string filename) {
     n_workers = _n_workers;
     log.open(filename);
+    namefile.open("name.txt");
+    surnamefile.open("surname.txt");
+
+    string line;
+    while (getline(namefile, line)) {
+        namelist.push_back(line);
+    }
+    while (getline(surnamefile, line)) {
+        surnamelist.push_back(line);
+    }
 }
 Bank::~Bank() {
     log.close();
+    namefile.close();
 }
 
 int Bank::randomInt() {
@@ -25,37 +36,17 @@ int Bank::randomInt() {
     mt19937 generator(seed);
     return generator();
 }
-void Bank::createClient() {
+Client* Bank::createClient() {
     Client* client = nullptr;
-    if (randomInt() % 2 == 0) {
-        client = new BusinessClient("name", "surname", "DID123", ID('C'));
-    }
-    else {
-        client = new IndividualClient("name", "surname", "DID123", ID('C'));
-    }
-    clients.push_back(client);
+    if (randomInt() % 2 == 0)
+        client = new BusinessClient(randomName(), randomSurname(), "DID123");
+    else
+        client = new IndividualClient(randomName(), randomSurname(), "DID123");
+    return client;
 }
 string Bank::randomName() {
-    string line;
-    ifstream namefile;
-    namefile.open("namelist.txt");
-    if (namefile.is_open()) {
-        while (getline(namefile, line)) {
-            cout << line << '\n';
-        }
-        namefile.close();
-    }
-    return "";
+    return namelist[randomInt() % namelist.size()];
 }
 string Bank::randomSurname() {
-    string line;
-    ifstream namefile;
-    namefile.open("surnamelist.txt");
-    if (namefile.is_open()) {
-        while (getline(namefile, line)) {
-            cout << line << '\n';
-        }
-        namefile.close();
-    }
-    return "";
+    return surnamelist[randomInt() % surnamelist.size()];
 }
