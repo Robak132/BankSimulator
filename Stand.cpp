@@ -6,48 +6,39 @@ using namespace std;
 
 Stand::Stand()
 {
-    self_ID = 0;
+    self_ID = ID();
     client = nullptr;
-    employeet = nullptr;
 }
-
-//Stand::Stand(ID stand_id)
-//{
-//    self_ID = stand_id;
-//    client = nullptr;
-//    employeet = nullptr;
-//}
 
 Client* Stand::getClient()
 {
     return client;
 }
 
-int Stand::getStandID()
+int Stand::getWorkTime()
+{
+    return work_time;
+}
+
+ID Stand::getStandID()
 {
     return self_ID;
 }
 
-Employeet* Stand::getEmployeet()
+bool Stand::isClient()
 {
-    return employeet;
-}
-
-bool Stand::isEmployeet()
-{
-    if (employeet == nullptr) return false;
-    else return true;
-}
-
-bool Stand::isCustomer()
-{
-    if (employeet == nullptr) return false;
+    if (client == nullptr) return false;
     else return true;
 }
 
 int Stand::getQueueLength()
 {
     return client_queue.size();
+}
+
+void Stand::addClient(Client* c)
+{
+    client_queue.push(c);
 }
 
 void Stand::performOperation(int op)
@@ -67,6 +58,5 @@ void Stand::nextClient()
         client = nullptr;
     }
 }
-
 
 

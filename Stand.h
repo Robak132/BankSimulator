@@ -12,12 +12,12 @@ class Operation { public: int m; };
 class IStand
 {
 public:
-	virtual int getStandID() = 0;
+	virtual ID getStandID() = 0;
 	virtual Client* getClient() = 0;
-	virtual Employeet* getEmployeet() = 0;
-	virtual bool isEmployeet() = 0;
-	virtual bool isCustomer() = 0;
+	virtual int getWorkTime() = 0;
+	virtual bool isClient() = 0;
 	virtual int getQueueLength() = 0;
+	virtual void addClient(Client*)= 0;
 	virtual void performOperation(int) = 0;
 	virtual void nextClient() = 0;
 };
@@ -25,22 +25,29 @@ public:
 class Stand : public IStand
 {
 	int work_time{};
-	int self_ID;
+	ID self_ID;
 	Client* client;
-	Employeet* employeet;
 	queue<Client*> client_queue{};
-	const vector<Operation> possible_operations;
+	const vector<Operation> operations;
 
 public:
 	Stand();
-	//Stand(ID = ID());
-	int getStandID();
+	ID getStandID();
 	Client* getClient();
-	Employeet* getEmployeet();
-	bool isEmployeet();
-	bool isCustomer();
+	int getWorkTime();
+	bool isClient();
 	int getQueueLength();
+	void addClient(Client*);
 	void performOperation(int);
 	void nextClient();
+};
+
+class EStand : public Stand
+{
+	Employeet* employeet;
+public:
+	EStand();
+	Employeet* getEmployeet();
+	bool isEmployeet();
 };
 #endif
