@@ -17,7 +17,18 @@ Client::Client(string _name, string _surname, string _document_id, ID _id_number
     money = _money;
     id_number = _id_number;
     account = _account;
+    setInBank();
     setNextID();
+}
+
+bool Client::inBank()
+{
+    return in_bank;
+}
+
+void Client::setInBank(bool b)
+{
+    in_bank = b;
 }
 
 bool Client::checkDocID(string _document_id) {

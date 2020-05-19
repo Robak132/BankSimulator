@@ -1,29 +1,38 @@
-#include "Stand.h"
+#include "Bank.h"
 #include "ID.h"
 #include <iostream>
+#include <iomanip>
+#include <vector>
 
 using namespace std;
+template<typename typ>
+void show2D(vector<vector<typ>> vec)
+{
+    for (auto row : vec)
+    {
+        cout << "Row length " << row.size() << "----> |";
+        for (auto elem : row)
+        {
+            cout << setw(4)<< elem << "|";
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
-    //Client marek("MArek", "Nazwisko", "ABC123", ID(200001), numt::clientToAccount, 200);
-    //TransferO trans(&marek);
-    ATMin object;                       // Jak ju¿ bêdzie klient to bêdzie dzia³aæ.
-    ATMout object_another;
-    try
-    {
-        object.performOperation(numt::accountToClient);
-        object_another.performOperation(numt::accountToClient);
-    }
-    catch (BadOperation e)
-    {
-        cout << e << endl;
-    }
-    catch (NoClient e)
-    {
-        cout << e << endl;
-    }
-    cout << object.getWorkTime() << endl;
-    cout << object_another.getWorkTime() << endl;
+    //Bank bank(10, 7);
+    //vector<vector<IStand*>> vec = bank.get_stands();
+    //IStand* atm = vec[0][0];
+    //show2D(vec);
+    //cout<< vec[0][0]->isClient() << endl;
+    //IClient* kuba = bank.randomClient();
+    //atm->addClient(kuba);
+    //atm->nextClient();
+    //cout << vec[0][0]->isClient() << endl;
+    //atm->performOperation();
+    //cout << (kuba == atm->getClient()) << endl;
+    //cout << kuba ->getAccount()->getMoney() << endl;
+    //cout << kuba ->getMoney() << endl;
 }
 

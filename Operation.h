@@ -7,16 +7,16 @@ using namespace std;
 class Operation
 {
 protected:
-	Client* client;
+	IClient* client;
 public:
-	Operation(Client*);
+	Operation(IClient*);
 };
 
 
 class TransferO : public Operation
 {
 public:
-	TransferO(Client*);
+	TransferO(IClient*);
 	int accountToClient();
 	int clientToAccount();
 };
@@ -24,7 +24,7 @@ public:
 class AccountO : public Operation  // Øeby dzia≥a≥a jak potrzeba potrzebny wskaünik na Account
 {
 public:
-	AccountO(Client*);
+	AccountO(IClient*);
 	int createAccount();
 	int deleteAccount();
 	int infoAccount();
@@ -33,7 +33,7 @@ public:
 class LoanO : public Operation
 {
 public:
-	LoanO(Client*);
+	LoanO(IClient*);
 	int takeLoan();
 	int repayLoan();
 	int infoLoan();

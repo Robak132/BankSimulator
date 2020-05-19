@@ -17,6 +17,8 @@ public:
     virtual string getSurname() = 0;
     virtual string getNameSurname() = 0;
     virtual string getDocumentID() = 0;
+    virtual bool inBank() = 0;
+    virtual void setInBank(bool) = 0;
     virtual numt::PossibleOperations getReason() = 0;
     virtual int getMoney() = 0;
     virtual Account* getAccount() = 0;
@@ -35,6 +37,7 @@ class Client : public IClient {
 private:
     ID id_number;   // 000000 - Not a client (Don't have account) [6-digit]
 
+    bool in_bank;
     string type;
     string name;
     string surname;
@@ -45,8 +48,10 @@ private:
     Account account;
     bool checkDocID(string _document_id);
 public:
-    Client(string _name, string _surname, string _document_id, ID _id_number=ID('C'), numt::PossibleOperations reason=numt::clientToAccount, int money=0, Account _account=Account());
+    Client(string _name, string _surname, string _document_id, ID _id_number=ID('C'), numt::PossibleOperations reason=numt::clientToAccount, int money=1000, Account _account=Account());
 
+    bool inBank();
+    void setInBank(bool = false);
     string getType();
     ID getID();
     string getIDNumber();
