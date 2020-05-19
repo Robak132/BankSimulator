@@ -13,15 +13,24 @@ using namespace std;
 class Bank {
 private:
     int n_workers;
+    int n_stands;
+    list<Stand*>stands;
+
     ofstream log;
-    list<Stand>stands;
+    
+    ifstream namefile;
+    vector<string>namelist;
+    ifstream surnamefile;
+    vector<string>surnamelist;
+
     list<Client*>clients;
 public:
-    Bank(int _n_workers, string filename="log.txt");
+    Bank(int _n_workers, int _n_stands, string filename="log.txt");
     ~Bank();
 
+    Client* createClient();
+
     int randomInt();
-    void createClient();
     string randomName();
     string randomSurname();
 };

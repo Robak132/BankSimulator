@@ -7,7 +7,7 @@ using namespace std;
 ID::ID(char _category) {
 	if (_category == 'C' || _category == 'E' || _category == 'S') {
 		category = _category;
-		setNewID(_category);
+		value = category + "000000";
 	}
 	else
 		throw invalid_argument("Unknown category");
@@ -32,24 +32,26 @@ string ID::extendID(string _id) {
 string ID::getID() {
 	return value;
 }
-void ID::setNewID(char _category) {
+void ID::setNextID() {
 	static int last_id_c = 0;
 	static int last_id_e = 0;
 	static int last_id_s = 0;
-	switch (_category) {
+	string newid = "";
+	switch (category) {
 	case 'C':
-		value = 'C' + extendID(to_string(last_id_c));
+		newid = 'C' + extendID(to_string(last_id_c));
 		last_id_c++;
 		break;
 	case 'E':
-		value = 'E' + extendID(to_string(last_id_e));
+		newid = 'E' + extendID(to_string(last_id_e));
 		last_id_e++;
 		break;
 	case 'S':
-		value = 'S' + extendID(to_string(last_id_s));
+		newid = 'S' + extendID(to_string(last_id_s));
 		last_id_s++;
 		break;
 	}
+	value = newid;
 }
 
 ostream& operator << (ostream& out, ID& id) {
