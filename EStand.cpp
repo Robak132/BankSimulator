@@ -3,9 +3,14 @@
 
 using namespace std;
 
-EStand::EStand(): Stand()
+EStand::EStand(ID id): Stand(id)
 {
 	employeet = nullptr;
+}
+
+void EStand::setEmployeet(Employeet* e)
+{
+	employeet = e;
 }
 
 Employeet* EStand::getEmployeet()

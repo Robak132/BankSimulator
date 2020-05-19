@@ -7,10 +7,11 @@ using namespace std;
 
 class Account {
 private:
+	bool created;   // Taka tam zmienna
 	int money;
 	int credit;
 public:
-	Account(int _money=0, int _credit=0);
+	Account(int _money=0, int _credit=0, bool _created = true);
 
 	int getMoney() const;
 	int getCredit() const;

@@ -4,9 +4,9 @@
 
 using namespace std;
 
-Stand::Stand()
+Stand::Stand(ID id)
 {
-    self_ID = ID();
+    self_ID = id;
     client = nullptr;
 }
 
@@ -18,6 +18,14 @@ Client* Stand::getClient()
 int Stand::getWorkTime()
 {
     return work_time;
+}
+
+void Stand::setWorkTime(int i)
+{
+    if (!work_time)
+    {
+        work_time = i;
+    }
 }
 
 ID Stand::getStandID()
@@ -41,7 +49,7 @@ void Stand::addClient(Client* c)
     client_queue.push(c);
 }
 
-void Stand::performOperation(int op)
+void Stand::performOperation(numt::PossibleOperations op)
 {
     cout << op << endl;
 }

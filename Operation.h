@@ -6,34 +6,36 @@ using namespace std;
 
 class Operation
 {
-	int execution_time;
+protected:
+	Client* client;
 public:
-	virtual void doOperation(Client) = 0;
+	Operation(Client*);
 };
 
-//
-//class Transfer : public Operation
-//{
-//public:
-	/*void accountToClient();
-	void clientToAccount();
-	void accountToAccount();*/
-//	void doOperation(Client);
-//};
-//
-//class Account : public Operation
-//{
-//public:
-//	void createAccount();
-//	void deleteAccount();
-//	void infoAccount();
-//	void doOperation(Client);
-//};
-//
-//class Loan : public Operation
-//{
-//	void takeLoan();
-//	void repayLoan();
-//	void infoLoan();
-//};
+
+class TransferO : public Operation
+{
+public:
+	TransferO(Client*);
+	int accountToClient();
+	int clientToAccount();
+};
+
+class AccountO : public Operation  // Øeby dzia≥a≥a jak potrzeba potrzebny wskaünik na Account
+{
+public:
+	AccountO(Client*);
+	int createAccount();
+	int deleteAccount();
+	int infoAccount();
+};
+
+class LoanO : public Operation
+{
+public:
+	LoanO(Client*);
+	int takeLoan();
+	int repayLoan();
+	int infoLoan();
+};
 #endif
