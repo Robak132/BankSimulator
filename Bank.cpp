@@ -7,16 +7,87 @@
 #include <string>
 
 #include "Bank.h"
-#include "Timer.h"
 #include "Client.h"
 #include "Stand.h"
 
+//#define N_STAND 5
+
 using namespace std;
 
-Bank::Bank(int _n_workers, int _n_stands, string filename) {
-    n_workers = _n_workers;
-    n_stands = _n_stands;
-    log.open(filename);
+Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_CashStand, int _n_InfoStand, int _n_AccountStand) {
+    if(_n_workers < _n_CashStand + _n_InfoStand + _n_AccountStand)
+    {
+        throw BadOperation("Not enough employees.");
+    }
+
+    b_setup.n_workers = _n_workers;
+    b_setup.n_clients = _n_clients;
+    b_setup.n_ATMin = _n_ATMin;
+    b_setup.n_CashStand = _n_CashStand;
+    b_setup.n_InfoStand = _n_InfoStand;
+    b_setup.n_AccountStand = _n_AccountStand;
+
+    //int longest = max(_n_ATMin, _n_ATMout, _n_CashStand, _n_InfoStand, _n_AccountStand))
+    int emp_iterator = 0;
+    
+
+    for(int i = 0; i<b_setup.n_workers; i++)
+    {
+        employees.push_back(new Employeet);
+    }
+
+    //stands {
+    //    longest,
+    //    vector<IStand*>(N_STAND);
+	//}
+
+    vector<IStand*>temp;
+    for(int i=0; i<b_setup.n_ATMin; i++)
+    {
+        temp.push_back(new ATMin());
+    }
+    stands.push_back(temp);
+
+    temp.clear();
+    for (int i = 0; i < b_setup.n_ATMout; i++)
+    {
+        temp.push_back(new ATMout());
+
+    }
+    stands.push_back(temp);
+
+    temp.clear();
+    for (int i = 0; i < b_setup.n_CashStand; i++)
+    {
+        EStand* hash = new CashStand;
+        hash->setEmployeet(employees[emp_iterator++]);
+        temp.push_back(hash);
+    }
+    stands.push_back(temp);
+    
+    temp.clear();
+    for (int i = 0; i < b_setup.n_InfoStand; i++)
+    {
+       EStand* hash = new InfoStand;
+       hash->setEmployeet(employees[emp_iterator++]);
+       temp.push_back(hash);
+    }
+    stands.push_back(temp);
+
+    temp.clear();
+    for (int i = 0; i < b_setup.n_AccountStand; i++)
+    {
+        EStand* hash = new AccountStand;
+        hash->setEmployeet(employees[emp_iterator++]);
+        temp.push_back(hash);
+    }
+    stands.push_back(temp);
+}
+Bank::~Bank() {
+}
+
+void Bank::initializeClients()
+{
     namefile.open("name.txt");
     surnamefile.open("surname.txt");
 
@@ -27,29 +98,49 @@ Bank::Bank(int _n_workers, int _n_stands, string filename) {
     while (getline(surnamefile, line)) {
         surnamelist.push_back(line);
     }
-    
-    for (int i = 0; i < n_stands; i++) {
-        stands.push_back(new Stand());
+    for (int i = 0; i < b_setup.n_clients; i++) {
+        clients.push_back(createClient());
     }
-}
-Bank::~Bank() {
-    log.close();
+
     namefile.close();
+    surnamefile.close();
 }
 
-Client* Bank::createClient() {
-    Client* client = nullptr;
+IClient* Bank::createClient() {
+    IClient* client = nullptr;
     if (randomInt() % 2 == 0)
         client = new BusinessClient(randomName(), randomSurname(), "DID123");
     else
         client = new IndividualClient(randomName(), randomSurname(), "DID123");
     return client;
 }
+void Bank::addClientToList(Client* client) {
+    IStand* best_stand = nullptr;
+    for (int i = 0; i < stands.size(); i++) {
+        bool isGood = false;
+        for (int j = 0; j < stands[i][0]->getOperations().size(); j++)
+            if (stands[i][0]->getOperations()[j] == client->getReason())
+                isGood = true;
+
+        if (!isGood)
+            continue;
+
+        for (int j = 0; j < stands[i].size(); j++) {
+            if (best_stand == nullptr || stands[i][j]->getQueueLength() < best_stand->getQueueLength())
+                best_stand = stands[i][j];
+        }
+    }
+    if (best_stand != nullptr)
+        best_stand->addClient(client);
+}
 
 int Bank::randomInt() {
     unsigned seed = chrono::system_clock::now().time_since_epoch().count();
     mt19937 generator(seed);
     return generator();
+}
+IClient* Bank::randomClient() {
+    return clients[randomInt() % b_setup.n_clients];
 }
 string Bank::randomName() {
     return namelist[randomInt() % namelist.size()];

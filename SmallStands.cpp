@@ -64,7 +64,7 @@ void ATMin::performOperation(numt::PossibleOperations e)
 	}
 }
 
-InfoStand::InfoStand(ID id, Employeet* e) : Stand(id, e)
+InfoStand::InfoStand(ID id, Employeet* e) : EStand(id, e)
 {
 	operations = { numt::infoAccount, numt::infoLoan };
 }
@@ -102,7 +102,7 @@ void InfoStand::performOperation(numt::PossibleOperations e)
 	
 }
 
-CashStand::CashStand(ID id, Employeet* e) : Stand(id, e)
+CashStand::CashStand(ID id, Employeet* e) : EStand(id, e)
 {
 	operations = { numt::takeLoan, numt::repayLoan, numt::clientToAccount, numt::accountToClient };
 }
@@ -152,7 +152,7 @@ void CashStand::performOperation(numt::PossibleOperations e)
 	
 }
 
-AccountStand::AccountStand(ID id, Employeet* e) : Stand(id, e)
+AccountStand::AccountStand(ID id, Employeet* e) : EStand(id, e)
 {
 	operations = { numt::createAccount, numt::deleteAccount, numt::infoAccount };
 }

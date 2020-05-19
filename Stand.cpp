@@ -54,6 +54,11 @@ void Stand::performOperation(numt::PossibleOperations op)
     cout << op << endl;
 }
 
+vector<numt::PossibleOperations> Stand::getOperations()
+{
+    return operations;
+}
+
 void Stand::nextClient()
 {
     if (getQueueLength() && !work_time) 

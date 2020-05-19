@@ -22,6 +22,7 @@ public:
 	virtual void addClient(Client*) = 0;
 	virtual void performOperation(numt::PossibleOperations) = 0;
 	virtual void nextClient() = 0;
+	virtual vector<numt::PossibleOperations> getOperations() = 0;
 };
 
 class Stand : public IStand
@@ -43,7 +44,10 @@ public:
 	int getQueueLength();
 	void addClient(Client*);
 	void performOperation(numt::PossibleOperations);
+	vector<numt::PossibleOperations> getOperations();
 	void nextClient();
+
+	
 };
 
 class EStand : public Stand

@@ -8,13 +8,24 @@
 #include <list>
 #include "Client.h"
 #include "Stand.h"
+
 using namespace std;
+
+struct BankSetup
+{
+    int n_workers;
+    int n_clients;
+    int n_ATMin;
+    int n_ATMout;
+    int n_CashStand;
+    int n_InfoStand;
+    int n_AccountStand;
+};
 
 class Bank {
 private:
-    int n_workers;
-    int n_stands;
-    list<Stand*>stands;
+    BankSetup b_setup;
+    vector<vector<IStand*>>stands;
 
     ofstream log;
     
@@ -23,15 +34,18 @@ private:
     ifstream surnamefile;
     vector<string>surnamelist;
 
-    list<Client*>clients;
-public:
-    Bank(int _n_workers, int _n_stands, string filename="log.txt");
-    ~Bank();
-
-    Client* createClient();
+    vector<IClient*>clients;
+    vector<Employeet*> employees;
 
     int randomInt();
     string randomName();
     string randomSurname();
+    IClient* createClient();
+    void initializeClients();
+public:
+    Bank(int _n_clients, int _n_workers=5, int _n_ATMin = 1, int _nATMout = 2, int _n_CashStand = 2, int _n_InfoStand = 1, int _n_AccountStand = 2);
+    ~Bank();
+    IClient* randomClient();
+    void addClientToList(Client* client);
 };
 #endif

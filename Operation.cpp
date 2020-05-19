@@ -15,7 +15,7 @@ TransferO::TransferO(Client* c):Operation(c)
 
 int TransferO::accountToClient()
 {
-	if (client->getAccount().getMoney() >= 100)
+	if (client->getAccount()->getMoney() >= 100)
 	{
 		client->setMoney(client->getMoney() + 100);
 	}
@@ -59,7 +59,7 @@ LoanO::LoanO(Client* c) : Operation(c)
 
 int LoanO::takeLoan()
 {
-	if (client->getAccount().getCredit() <= 1000)
+	if (client->getAccount()->getCredit() <= 1000)
 	{
 		//Tutaj ustalanie kredytu
 	}
@@ -68,7 +68,7 @@ int LoanO::takeLoan()
 
 int LoanO::repayLoan()
 {
-	if (client->getAccount().getCredit() <= client->getAccount().getMoney())
+	if (client->getAccount()->getCredit() <= client->getAccount()->getMoney())
 	{
 		//Tutaj sp³acañsko kredytu
 	}
