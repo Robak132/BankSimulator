@@ -13,6 +13,9 @@ using namespace std;
 class Bank {
 private:
     int n_workers;
+    int n_stands;
+    list<Stand*>stands;
+
     ofstream log;
     
     ifstream namefile;
@@ -20,14 +23,14 @@ private:
     ifstream surnamefile;
     vector<string>surnamelist;
 
-    list<Stand>stands;
     list<Client*>clients;
 public:
-    Bank(int _n_workers, string filename="log.txt");
+    Bank(int _n_workers, int _n_stands, string filename="log.txt");
     ~Bank();
 
-    int randomInt();
     Client* createClient();
+
+    int randomInt();
     string randomName();
     string randomSurname();
 };

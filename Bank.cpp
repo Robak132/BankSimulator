@@ -9,11 +9,13 @@
 #include "Bank.h"
 #include "Timer.h"
 #include "Client.h"
+#include "Stand.h"
 
 using namespace std;
 
-Bank::Bank(int _n_workers, string filename) {
+Bank::Bank(int _n_workers, int _n_stands, string filename) {
     n_workers = _n_workers;
+    n_stands = _n_stands;
     log.open(filename);
     namefile.open("name.txt");
     surnamefile.open("surname.txt");
@@ -25,17 +27,16 @@ Bank::Bank(int _n_workers, string filename) {
     while (getline(surnamefile, line)) {
         surnamelist.push_back(line);
     }
+    
+    for (int i = 0; i < n_stands; i++) {
+        stands.push_back(new Stand());
+    }
 }
 Bank::~Bank() {
     log.close();
     namefile.close();
 }
 
-int Bank::randomInt() {
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-    mt19937 generator(seed);
-    return generator();
-}
 Client* Bank::createClient() {
     Client* client = nullptr;
     if (randomInt() % 2 == 0)
@@ -43,6 +44,12 @@ Client* Bank::createClient() {
     else
         client = new IndividualClient(randomName(), randomSurname(), "DID123");
     return client;
+}
+
+int Bank::randomInt() {
+    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    mt19937 generator(seed);
+    return generator();
 }
 string Bank::randomName() {
     return namelist[randomInt() % namelist.size()];

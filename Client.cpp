@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Client::Client(string _name, string _surname, string _document_id, ID _id_number, Reason _reason, int _money, Account _account) {
+Client::Client(string _name, string _surname, string _document_id, ID _id_number, possible_operations _reason, int _money, Account _account) {
     type = "NoType";
     name = _name;
     surname = _surname;
@@ -16,6 +16,7 @@ Client::Client(string _name, string _surname, string _document_id, ID _id_number
     money = _money;
     id_number = _id_number;
     account = _account;
+    setNextID();
 }
 
 bool Client::checkDocID(string _document_id) {
@@ -56,7 +57,7 @@ string Client::getNameSurname(){
 string Client::getDocumentID(){
     return document_id;
 }
-Reason Client::getReason(){
+possible_operations Client::getReason(){
     return client_reason;
 }
 int Client::getMoney(){
@@ -85,7 +86,7 @@ void Client::setDocumentID(string _document_id) {
     else
         document_id = _document_id;
 }
-void Client::setReason(Reason _reason) {
+void Client::setReason(possible_operations _reason) {
     client_reason = _reason;
 }
 void Client::setMoney(int _money) {
