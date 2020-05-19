@@ -51,7 +51,7 @@ class EStand : public Stand
 protected:
 	Employeet* employeet;
 public:
-	EStand(ID= ID());
+	EStand(ID= ID(), Employeet* = nullptr);
 	void setEmployeet(Employeet*);
 	Employeet* getEmployeet();
 	bool isEmployeet();
@@ -75,21 +75,21 @@ public:
 class InfoStand : public EStand
 {
 public:
-	InfoStand(ID = ID());
+	InfoStand(ID = ID(), Employeet* = nullptr);
 	void performOperation(numt::PossibleOperations);
 };
 
 class CashStand : public EStand
 {
 public:
-	CashStand(ID = ID());
+	CashStand(ID = ID(), Employeet* = nullptr);
 	void performOperation(numt::PossibleOperations);
 };
 
 class AccountStand : public EStand
 {
 public:
-	AccountStand(ID = ID());
+	AccountStand(ID = ID(), Employeet* = nullptr);
 	void performOperation(numt::PossibleOperations);
 };
 
