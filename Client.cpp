@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
 #include "Client.h"
+#include "OpEnum.h"
 
 using namespace std;
 
-Client::Client(string _name, string _surname, string _document_id, ID _id_number, possible_operations _reason, int _money, Account _account) {
+Client::Client(string _name, string _surname, string _document_id, ID _id_number, numt::PossibleOperations _reason, int _money, Account _account) {
     type = "NoType";
     name = _name;
     surname = _surname;
@@ -57,14 +58,14 @@ string Client::getNameSurname(){
 string Client::getDocumentID(){
     return document_id;
 }
-possible_operations Client::getReason(){
+numt::PossibleOperations Client::getReason(){
     return client_reason;
 }
 int Client::getMoney(){
     return money;
 }
-Account Client::getAccount(){
-    return account;
+Account* Client::getAccount(){
+    return &account;
 }
 
 // Setter
@@ -86,7 +87,7 @@ void Client::setDocumentID(string _document_id) {
     else
         document_id = _document_id;
 }
-void Client::setReason(possible_operations _reason) {
+void Client::setReason(numt::PossibleOperations _reason) {
     client_reason = _reason;
 }
 void Client::setMoney(int _money) {
