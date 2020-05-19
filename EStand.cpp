@@ -3,9 +3,9 @@
 
 using namespace std;
 
-EStand::EStand(ID id): Stand(id)
+EStand::EStand(ID id, Employeet* e): Stand(id)
 {
-	employeet = nullptr;
+	employeet = e;
 }
 
 void EStand::setEmployeet(Employeet* e)
