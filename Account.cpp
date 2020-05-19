@@ -3,9 +3,17 @@
 
 using namespace std;
 
-Account::Account(int _money, int _credit) {
-	money = _money;
-	credit = _credit;
+Account::Account(int _money, int _credit, bool _created) {
+	if (_created) {
+		money = _money;
+		credit = _credit;
+	}
+	else
+	{
+		money = 0;
+		credit = 0;
+	}
+	created = _created;
 }
 
 int Account::getMoney() const {

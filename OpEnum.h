@@ -1,15 +1,17 @@
 #ifndef OPENUM_H
 #define OPENUM_H
-enum possible_operations
+namespace numt
 {
-	accountToClient,
-	clientToAccount,
-	accountToAccount,
-	createAccount,
-	deleteAccount,
-	infoAccount,
-	takeLoan,
-	repayLoan,
-	infoLoan,
-};
+	enum PossibleOperations
+	{
+		accountToClient,
+		clientToAccount,
+		createAccount,
+		deleteAccount,
+		infoAccount,
+		takeLoan,
+		repayLoan,
+		infoLoan,
+	};
+}
 #endif

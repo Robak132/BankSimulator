@@ -1,66 +1,87 @@
 #include "Operation.h"
 #include <iostream>
 using namespace std;
+#define MONEY 100
 
-//Transfer::Transfer()
-//{
-//	execution_time = 3;
-//}
-//
-//void Transfer::doOperation(Client client)
-//{
-//	cout << "TransferMoney\n";
-//}
-//
-//CreateAccount::CreateAccount()
-//{
-//	execution_time = 20;
-//}
-//
-//void CreateAccount::doOperation(Client client)
-//{
-//	cout << "CreateAccount\n";
-//}
-//
-//AccountInfo::AccountInfo()
-//{
-//	execution_time = 7;
-//}
-//
-//void AccountInfo::doOperation(Client client)
-//{
-//	cout << "AccountInfo\n";
-//}
-//
-//DeleteAccount::DeleteAccount()
-//{
-//	execution_time = "25";
-//}
-//
-//void DeleteAccount::doOperation(Client)
-//{
-//	cout << "DeleteAccount\n";
-//}
-//
-//TakeLoan::TakeLoan();
-//{
-//	execution_time = "8";
-//}
-//
-//void TakeLoan::doOperation(Client client)
-//{
-//	cout << "TakeLoan\n";
-//}
-//
-//RepayLoan::RepayLoan()
-//{
-//	execution_time = "5"
-//}
-//
-//voi RepayLoan::doOperation(Client client)
-//{
-//	cout << "RepayLoan\n;"
-//}
+Operation::Operation(Client* c)
+{
+	client = c;
+}
+
+TransferO::TransferO(Client* c):Operation(c)
+{
+
+}
+
+int TransferO::accountToClient()
+{
+	if (client->getAccount().getMoney() >= 100)
+	{
+		client->setMoney(client->getMoney() + 100);
+	}
+	return 5;
+}
+
+int TransferO::clientToAccount()
+{
+	if (client->getMoney() >= 100)
+	{
+		client->setMoney(client->getMoney() - 100);
+		
+	}
+	return 4;
+}
+
+AccountO::AccountO(Client* c) :Operation(c)
+{
+
+}
+
+int AccountO::createAccount()
+{
+	return 30;
+}
+
+int AccountO::deleteAccount()
+{
+	return 20;
+}
+
+int AccountO::infoAccount()
+{
+	return 3;
+}
+
+LoanO::LoanO(Client* c) : Operation(c)
+{
+
+}
+
+int LoanO::takeLoan()
+{
+	if (client->getAccount().getCredit() <= 1000)
+	{
+		//Tutaj ustalanie kredytu
+	}
+	return 10;
+}
+
+int LoanO::repayLoan()
+{
+	if (client->getAccount().getCredit() <= client->getAccount().getMoney())
+	{
+		//Tutaj sp³acañsko kredytu
+	}
+	return 5;
+}
+
+int LoanO::infoLoan()
+{
+	return 3;
+}
+
+
+
 
 
 
