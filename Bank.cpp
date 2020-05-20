@@ -9,6 +9,7 @@
 #include "Bank.h"
 #include "Client.h"
 #include "Stand.h"
+#include "Tools.h"
 
 using namespace std;
 
@@ -39,8 +40,6 @@ Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_C
 }
 Bank::~Bank() {
 }
-
-
 
 vector<vector<IStand*>> Bank::get_stands()
 {
@@ -93,32 +92,18 @@ void Bank::initializeStands()
     stands.push_back(temp);
 }
 
-void Bank::initializeClients()
-{
-    namefile.open("name.txt");
-    surnamefile.open("surname.txt");
-
-    string line;
-    while (getline(namefile, line)) {
-        namelist.push_back(line);
-    }
-    while (getline(surnamefile, line)) {
-        surnamelist.push_back(line);
-    }
+void Bank::initializeClients() {
     for (int i = 0; i < b_setup.n_clients; i++) {
         clients.push_back(createClient());
     }
-
-    namefile.close();
-    surnamefile.close();
 }
 
 IClient* Bank::createClient() {
     IClient* client = nullptr;
-    if (randomInt() % 2 == 0)
-        client = new BusinessClient(randomName(), randomSurname(), "DID123");
+    if (Tools::randomInt() % 2 == 0)
+        client = new BusinessClient();
     else
-        client = new IndividualClient(randomName(), randomSurname(), "DID123");
+        client = new IndividualClient();
     return client;
 }
 void Bank::addClientToList(IClient* client) {
@@ -140,23 +125,3 @@ void Bank::addClientToList(IClient* client) {
     if (best_stand != nullptr)
         best_stand->addClient(client);
 }
-
-int Bank::randomInt() {
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-    mt19937 generator(seed);
-    return generator();
-}
-IClient* Bank::randomClient() {
-    return clients[randomInt() % clients.size()];
-}
-string Bank::randomName() {
-    return "Jakub";//namelist[randomInt() % namelist.size()];
-}
-string Bank::randomSurname() {
-    return "Mazur";//surnamelist[randomInt() % surnamelist.size()];
-}
-
-//numt::PossibleOperations Bank::randomReason()
-//{
-//
-//}
