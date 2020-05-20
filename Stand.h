@@ -35,7 +35,7 @@ protected:
 	vector<numt::PossibleOperations> operations;
 
 public:
-	Stand(ID = ID());
+	Stand();
 	ID getStandID();
 	IClient* getClient();
 	int getWorkTime();
@@ -55,7 +55,7 @@ class EStand : public Stand
 protected:
 	Employeet* employeet;
 public:
-	EStand(ID= ID(), Employeet* = nullptr);
+	EStand(Employeet* = nullptr);
 	void setEmployeet(Employeet*);
 	Employeet* getEmployeet();
 	bool isEmployeet();
@@ -65,35 +65,35 @@ public:
 class ATMout : public Stand
 {
 public:
-	ATMout(ID = ID());
+	ATMout();
 	void performOperation();
 };
 
 class ATMin : public Stand
 {
 public:
-	ATMin(ID = ID());
+	ATMin();
 	void performOperation();
 };
 
 class InfoStand : public EStand
 {
 public:
-	InfoStand(ID = ID(), Employeet* = nullptr);
+	InfoStand(Employeet* = nullptr);
 	void performOperation();
 };
 
 class CashStand : public EStand
 {
 public:
-	CashStand(ID = ID(), Employeet* = nullptr);
+	CashStand(Employeet* = nullptr);
 	void performOperation();
 };
 
 class AccountStand : public EStand
 {
 public:
-	AccountStand(ID = ID(), Employeet* = nullptr);
+	AccountStand(Employeet* = nullptr);
 	void performOperation();
 };
 

@@ -4,9 +4,9 @@
 
 using namespace std;
 
-Stand::Stand(ID id)
+Stand::Stand()
 {
-    self_ID = id;
+    self_ID = ID('S');
     client = nullptr;
 }
 

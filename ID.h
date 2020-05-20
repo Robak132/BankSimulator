@@ -9,12 +9,12 @@ private:
 	char category;
 	string value;
 	string extendID(string _id);
+	string nextID(char _category);
 public:
 	ID(char _category='C');
 	ID(const ID& id);
 	ID& operator= (const ID& id);
 	string getID();
-	void setNextID();
 };
 ostream& operator << (ostream& out, ID& id);
 bool operator == (ID a, ID b);

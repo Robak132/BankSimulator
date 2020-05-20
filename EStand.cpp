@@ -3,7 +3,7 @@
 
 using namespace std;
 
-EStand::EStand(ID id, Employeet* e): Stand(id)
+EStand::EStand(Employeet* e): Stand()
 {
 	employeet = e;
 }

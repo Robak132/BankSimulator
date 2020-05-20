@@ -147,7 +147,7 @@ int Bank::randomInt() {
     return generator();
 }
 IClient* Bank::randomClient() {
-    return clients[randomInt() % b_setup.n_clients];
+    return clients[randomInt() % clients.size()];
 }
 string Bank::randomName() {
     return "Jakub";//namelist[randomInt() % namelist.size()];

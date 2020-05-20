@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ATMout::ATMout(ID id) : Stand(id)
+ATMout::ATMout() : Stand()
 {
 	operations = { numt::accountToClient };
 }
@@ -33,7 +33,7 @@ void ATMout::performOperation()
 	}
 }
 
-ATMin::ATMin(ID id) : Stand(id)
+ATMin::ATMin() : Stand()
 {
 	operations = { numt::clientToAccount };
 }
@@ -64,7 +64,7 @@ void ATMin::performOperation()
 	}
 }
 
-InfoStand::InfoStand(ID id, Employeet* e) : EStand(id, e)
+InfoStand::InfoStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::infoAccount, numt::infoLoan };
 }
@@ -102,7 +102,7 @@ void InfoStand::performOperation()
 	
 }
 
-CashStand::CashStand(ID id, Employeet* e) : EStand(id, e)
+CashStand::CashStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::takeLoan, numt::repayLoan, numt::clientToAccount, numt::accountToClient };
 }
@@ -152,7 +152,7 @@ void CashStand::performOperation()
 	
 }
 
-AccountStand::AccountStand(ID id, Employeet* e) : EStand(id, e)
+AccountStand::AccountStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::createAccount, numt::deleteAccount, numt::infoAccount };
 }
