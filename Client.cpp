@@ -6,6 +6,7 @@
 #include "Client.h"
 #include "OpEnum.h"
 #include "Tools.h"
+#include "Stand.h"
 
 using namespace std;
 
@@ -34,15 +35,15 @@ void Client::setInBank(bool b)
     in_bank = b;
 }
 
-//IStand* Client::getCurrentStand()
-//{
-//    return current_stand;
-//}
-//
-//void Client::setCurrentStand(IStand* cs)
-//{  
-//    current_stand = cs;
-//}
+IStand* Client::getCurrentStand()
+{
+    return current_stand;
+}
+
+void Client::setCurrentStand(IStand* cs)
+{  
+    current_stand = cs;
+}
 
 bool Client::checkDocID(string _document_id) {
     if (_document_id.length() != 6)
