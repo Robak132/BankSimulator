@@ -8,6 +8,7 @@ Stand::Stand()
 {
     self_ID = ID('S');
     client = nullptr;
+    s_type = "MainStand";
 }
 
 IClient* Stand::getClient()
@@ -26,6 +27,11 @@ void Stand::setWorkTime(int i)
     {
         work_time = i;
     }
+}
+
+string Stand::getSType()
+{
+    return s_type;
 }
 
 ID Stand::getStandID()
@@ -63,6 +69,8 @@ void Stand::nextClient()
 {
     if (getQueueLength() && !work_time) 
     { 
+        if(client)
+            client->setInBank(false);
         client = client_queue.front();
         client_queue.pop();
     }

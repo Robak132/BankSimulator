@@ -138,11 +138,14 @@ void Bank::addClientToList(IClient* client) {
         }
     }
     if (best_stand != nullptr)
+    {
+        client->setInBank(true);
         best_stand->addClient(client);
+    }
 }
 
 int Bank::randomInt() {
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    unsigned seed = static_cast<int>(chrono::system_clock::now().time_since_epoch().count());
     mt19937 generator(seed);
     return generator();
 }
@@ -150,10 +153,10 @@ IClient* Bank::randomClient() {
     return clients[randomInt() % clients.size()];
 }
 string Bank::randomName() {
-    return "Jakub";//namelist[randomInt() % namelist.size()];
+    return namelist[randomInt() % namelist.size()];
 }
 string Bank::randomSurname() {
-    return "Mazur";//surnamelist[randomInt() % surnamelist.size()];
+    return surnamelist[randomInt() % surnamelist.size()];
 }
 
 //numt::PossibleOperations Bank::randomReason()

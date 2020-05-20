@@ -10,6 +10,7 @@ private:
 	bool created;   // Taka tam zmienna
 	int money;
 	int credit;
+
 public:
 	Account(int _money=500, int _credit=0, bool _created = true);
 

@@ -62,7 +62,8 @@ int LoanO::takeLoan()
 {
 	if (client->getAccount()->getCredit() <= 1000)
 	{
-		//Tutaj ustalanie kredytu
+		client->getAccount()->setMoney(client->getAccount()->getMoney() + 100);
+		client->getAccount()->setCredit(client->getAccount()->getCredit() + 100);
 	}
 	return 10;
 }
@@ -71,7 +72,8 @@ int LoanO::repayLoan()
 {
 	if (client->getAccount()->getCredit() <= client->getAccount()->getMoney())
 	{
-		//Tutaj sp³acañsko kredytu
+		client->getAccount()->setMoney(client->getAccount()->getMoney() - 100);
+		client->getAccount()->setCredit(client->getAccount()->getCredit() - 100);
 	}
 	return 5;
 }

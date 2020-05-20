@@ -6,6 +6,7 @@
 #include "Account.h"
 #include "Client.h"
 #include "OpEnum.h"
+//#include "Stand.h"
 
 using namespace std;
 
@@ -30,6 +31,8 @@ public:
     virtual void setReason(numt::PossibleOperations _reason) = 0;
     virtual void setMoney(int _money) = 0;
     virtual void setAccount(Account _account) = 0;
+   /* virtual IStand* getCurrentStand() = 0;
+    virtual void setCurrentStand(IStand*) = 0;*/
 };
 
 class Client : public IClient {
@@ -37,6 +40,7 @@ private:
     ID id_number;
 
     bool in_bank;
+    /*IStand* current_stand;*/
     string type;
     string name;
     string surname;
@@ -47,10 +51,12 @@ private:
     Account account;
     bool checkDocID(string _document_id);
 public:
-    Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason=numt::clientToAccount, int money=1000, Account _account=Account());
+    Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason=numt::clientToAccount, int money=0, Account _account=Account());
 
     bool inBank();
     void setInBank(bool = false);
+    /*IStand* getCurrentStand();
+    void setCurrentStand(IStand*);*/
     string getType();
     ID getID();
     string getIDNumber();
@@ -73,7 +79,7 @@ public:
 
 class BusinessClient : public Client {
 public:
-    BusinessClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    BusinessClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money =500, Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Business");
     }
@@ -81,7 +87,7 @@ public:
 
 class IndividualClient : public Client {
 public:
-    IndividualClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    IndividualClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money=1000, Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Individual");
     }

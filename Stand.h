@@ -14,6 +14,7 @@ class IStand
 {
 public:
 	virtual ID getStandID() = 0;
+	virtual string getSType() = 0;
 	virtual IClient* getClient() = 0;
 	virtual int getWorkTime() = 0;
 	virtual void setWorkTime(int) = 0;
@@ -28,17 +29,20 @@ public:
 class Stand : public IStand
 {
 protected:
+	string s_type;
 	int work_time{};
 	ID self_ID;
 	IClient* client;
 	queue<IClient*> client_queue{};
 	vector<numt::PossibleOperations> operations;
 
+
 public:
 	Stand();
 	ID getStandID();
 	IClient* getClient();
 	int getWorkTime();
+	string getSType();
 	void setWorkTime(int);
 	bool isClient();
 	int getQueueLength();
