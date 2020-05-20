@@ -106,6 +106,10 @@ IClient* Bank::createClient() {
         client = new IndividualClient();
     return client;
 }
+IClient* Bank::randomClient() {
+    return clients[Tools::randomInt() % clients.size()];
+}
+
 void Bank::addClientToList(IClient* client) {
     IStand* best_stand = nullptr;
     for (unsigned int i = 0; i < stands.size(); i++) {
@@ -126,4 +130,5 @@ void Bank::addClientToList(IClient* client) {
     {
         client->setInBank(true);
         best_stand->addClient(client);
+    }
 }

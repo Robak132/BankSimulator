@@ -22,7 +22,6 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
 
     type = "NoType";
     id_number = ID('C');
-    cout << id_number.getID() << endl;
     in_bank = true;
 }
 
