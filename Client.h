@@ -2,6 +2,8 @@
 #define CLIENT_H
 
 #include <iostream>
+#include <vector>
+
 #include "ID.h"
 #include "Account.h"
 #include "Client.h"
@@ -47,7 +49,7 @@ private:
     Account account;
     bool checkDocID(string _document_id);
 public:
-    Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason=numt::clientToAccount, int money=1000, Account _account=Account());
+    Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason, int money, Account _account);
 
     bool inBank();
     void setInBank(bool = false);
@@ -69,11 +71,15 @@ public:
     void setReason(numt::PossibleOperations _reason);
     void setMoney(int _money);
     void setAccount(Account _account);
+
+    static string randomName();
+    static string randomSurname();
+    static string randomDocumentID();
 };
 
 class BusinessClient : public Client {
 public:
-    BusinessClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    BusinessClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Business");
     }
@@ -81,7 +87,7 @@ public:
 
 class IndividualClient : public Client {
 public:
-    IndividualClient(string _name, string _surname, string _document_id, numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    IndividualClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Individual");
     }

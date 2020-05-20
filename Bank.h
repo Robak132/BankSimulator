@@ -26,19 +26,10 @@ class Bank {
 private:
     BankSetup b_setup;
     vector<vector<IStand*>>stands;
-    
-    ifstream namefile;
-    vector<string>namelist;
-    ifstream surnamefile;
-    vector<string>surnamelist;
 
     vector<IClient*>clients;
     vector<Employeet*> employees;
 
-    int randomInt();
-    string randomName();
-    string randomSurname();
-    //numt::PossibleOperations randomReason();
     IClient* createClient();
     void initializeClients();
     void initializeStands();

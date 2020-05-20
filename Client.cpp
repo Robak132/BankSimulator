@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <string>
+
 #include "Client.h"
 #include "OpEnum.h"
+#include "Tools.h"
 
 using namespace std;
 
@@ -18,6 +22,7 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
 
     type = "NoType";
     id_number = ID('C');
+    cout << id_number.getID() << endl;
     in_bank = true;
 }
 
@@ -25,12 +30,10 @@ bool Client::inBank()
 {
     return in_bank;
 }
-
 void Client::setInBank(bool b)
 {
     in_bank = b;
 }
-
 bool Client::checkDocID(string _document_id) {
     if (_document_id.length() != 6)
         return false;
@@ -45,6 +48,46 @@ bool Client::checkDocID(string _document_id) {
         }
     }
     return true;
+}
+
+string Client::randomName() {
+    static vector<string>namelist;
+    if (namelist.size() == 0) {
+        ifstream file;
+        string line;
+
+        file.open("name.txt");
+
+        while (getline(file, line))
+            namelist.push_back(line);
+        file.close();
+    }
+    return namelist[Tools::randomInt() % namelist.size()];
+}
+string Client::randomSurname() {
+    static vector<string>surnamelist;
+    if (surnamelist.size() == 0) {
+        ifstream file;
+        string line;
+
+        file.open("surname.txt");
+        while (getline(file, line))
+            surnamelist.push_back(line);
+        file.close();
+    }
+    return surnamelist[Tools::randomInt() % surnamelist.size()];
+}
+string Client::randomDocumentID() {
+    string _document_id = "";
+    for (int i = 0; i < 3; i++) {
+        int rand = Tools::randomInt() % 26 + 65;
+        _document_id += char(rand);
+    }
+    for (int i = 0; i < 3; i++) {
+        int rand = Tools::randomInt() % 10 + 48;
+        _document_id += char(rand);
+    }
+    return _document_id;
 }
 
 // Getter
