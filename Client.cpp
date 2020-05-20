@@ -5,8 +5,7 @@
 
 using namespace std;
 
-Client::Client(string _name, string _surname, string _document_id, ID _id_number, numt::PossibleOperations _reason, int _money, Account _account) {
-    type = "NoType";
+Client::Client(string _name, string _surname, string _document_id, numt::PossibleOperations _reason, int _money, Account _account) {
     name = _name;
     surname = _surname;
     if (!checkDocID(_document_id))
@@ -15,10 +14,11 @@ Client::Client(string _name, string _surname, string _document_id, ID _id_number
         document_id = _document_id;
     client_reason = _reason;
     money = _money;
-    id_number = _id_number;
     account = _account;
-    setInBank();
-    setNextID();
+
+    type = "NoType";
+    id_number = ID('C');
+    in_bank = true;
 }
 
 bool Client::inBank()
@@ -82,9 +82,6 @@ Account* Client::getAccount(){
 // Setter
 void Client::setType(string _type) {
     type = _type;
-}
-void Client::setNextID() {
-    id_number.setNextID();
 }
 void Client::setName(string _name) {
     name = _name;
