@@ -6,6 +6,7 @@ using namespace std;
 ATMout::ATMout() : Stand()
 {
 	operations = { numt::accountToClient };
+	s_type = "ATMout";
 }
 
 void ATMout::performOperation()
@@ -36,6 +37,7 @@ void ATMout::performOperation()
 ATMin::ATMin() : Stand()
 {
 	operations = { numt::clientToAccount };
+	s_type = "ATMin";
 }
 
 void ATMin::performOperation()
@@ -67,6 +69,7 @@ void ATMin::performOperation()
 InfoStand::InfoStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::infoAccount, numt::infoLoan };
+	s_type = "Information Stand";
 }
 
 void InfoStand::performOperation()
@@ -105,6 +108,7 @@ void InfoStand::performOperation()
 CashStand::CashStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::takeLoan, numt::repayLoan, numt::clientToAccount, numt::accountToClient };
+	s_type = "Cash Stand";
 }
 
 void CashStand::performOperation()
@@ -155,6 +159,7 @@ void CashStand::performOperation()
 AccountStand::AccountStand(Employeet* e) : EStand(e)
 {
 	operations = { numt::createAccount, numt::deleteAccount, numt::infoAccount };
+	s_type = "Account Stand";
 }
 
 void AccountStand::performOperation()

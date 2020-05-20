@@ -8,6 +8,7 @@
 #include "Account.h"
 #include "Client.h"
 #include "OpEnum.h"
+//#include "Stand.h"
 
 using namespace std;
 
@@ -32,6 +33,8 @@ public:
     virtual void setReason(numt::PossibleOperations _reason) = 0;
     virtual void setMoney(int _money) = 0;
     virtual void setAccount(Account _account) = 0;
+   /* virtual IStand* getCurrentStand() = 0;
+    virtual void setCurrentStand(IStand*) = 0;*/
 };
 
 class Client : public IClient {
@@ -39,6 +42,7 @@ private:
     ID id_number;
 
     bool in_bank;
+    /*IStand* current_stand;*/
     string type;
     string name;
     string surname;
@@ -53,6 +57,8 @@ public:
 
     bool inBank();
     void setInBank(bool = false);
+    /*IStand* getCurrentStand();
+    void setCurrentStand(IStand*);*/
     string getType();
     ID getID();
     string getIDNumber();

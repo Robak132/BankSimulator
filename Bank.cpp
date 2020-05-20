@@ -123,5 +123,7 @@ void Bank::addClientToList(IClient* client) {
         }
     }
     if (best_stand != nullptr)
+    {
+        client->setInBank(true);
         best_stand->addClient(client);
 }
