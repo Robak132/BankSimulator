@@ -11,7 +11,7 @@ private:
 	int money;
 	int credit;
 public:
-	Account(int _money=0, int _credit=0, bool _created = true);
+	Account(int _money=500, int _credit=0, bool _created = true);
 
 	int getMoney() const;
 	int getCredit() const;

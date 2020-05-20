@@ -10,7 +10,7 @@ Stand::Stand(ID id)
     client = nullptr;
 }
 
-Client* Stand::getClient()
+IClient* Stand::getClient()
 {
     return client;
 }
@@ -44,14 +44,14 @@ int Stand::getQueueLength()
     return client_queue.size();
 }
 
-void Stand::addClient(Client* c)
+void Stand::addClient(IClient* c)
 {
     client_queue.push(c);
 }
 
-void Stand::performOperation(numt::PossibleOperations op)
+void Stand::performOperation()
 {
-    cout << op << endl;
+    cout << client->getReason() << endl;
 }
 
 vector<numt::PossibleOperations> Stand::getOperations()

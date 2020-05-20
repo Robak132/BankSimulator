@@ -10,8 +10,6 @@
 #include "Client.h"
 #include "Stand.h"
 
-//#define N_STAND 5
-
 using namespace std;
 
 Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_CashStand, int _n_InfoStand, int _n_AccountStand) {
@@ -23,12 +21,10 @@ Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_C
     b_setup.n_workers = _n_workers;
     b_setup.n_clients = _n_clients;
     b_setup.n_ATMin = _n_ATMin;
+    b_setup.n_ATMout = _n_ATMout;
     b_setup.n_CashStand = _n_CashStand;
     b_setup.n_InfoStand = _n_InfoStand;
     b_setup.n_AccountStand = _n_AccountStand;
-
-    //int longest = max(_n_ATMin, _n_ATMout, _n_CashStand, _n_InfoStand, _n_AccountStand))
-    int emp_iterator = 0;
     
 
     for(int i = 0; i<b_setup.n_workers; i++)
@@ -36,13 +32,26 @@ Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_C
         employees.push_back(new Employeet);
     }
 
-    //stands {
-    //    longest,
-    //    vector<IStand*>(N_STAND);
-	//}
 
+    initializeStands();
+    initializeClients();
+
+}
+Bank::~Bank() {
+}
+
+
+
+vector<vector<IStand*>> Bank::get_stands()
+{
+    return stands;
+}
+
+void Bank::initializeStands()
+{
+    int emp_iterator = 0;
     vector<IStand*>temp;
-    for(int i=0; i<b_setup.n_ATMin; i++)
+    for (int i = 0; i < b_setup.n_ATMin; i++)
     {
         temp.push_back(new ATMin());
     }
@@ -64,13 +73,13 @@ Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_C
         temp.push_back(hash);
     }
     stands.push_back(temp);
-    
+
     temp.clear();
     for (int i = 0; i < b_setup.n_InfoStand; i++)
     {
-       EStand* hash = new InfoStand;
-       hash->setEmployeet(employees[emp_iterator++]);
-       temp.push_back(hash);
+        EStand* hash = new InfoStand;
+        hash->setEmployeet(employees[emp_iterator++]);
+        temp.push_back(hash);
     }
     stands.push_back(temp);
 
@@ -82,8 +91,6 @@ Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_C
         temp.push_back(hash);
     }
     stands.push_back(temp);
-}
-Bank::~Bank() {
 }
 
 void Bank::initializeClients()
@@ -114,18 +121,18 @@ IClient* Bank::createClient() {
         client = new IndividualClient(randomName(), randomSurname(), "DID123");
     return client;
 }
-void Bank::addClientToList(Client* client) {
+void Bank::addClientToList(IClient* client) {
     IStand* best_stand = nullptr;
-    for (int i = 0; i < stands.size(); i++) {
+    for (unsigned int i = 0; i < stands.size(); i++) {
         bool isGood = false;
-        for (int j = 0; j < stands[i][0]->getOperations().size(); j++)
+        for (unsigned int j = 0; j < stands[i][0]->getOperations().size(); j++)
             if (stands[i][0]->getOperations()[j] == client->getReason())
                 isGood = true;
 
         if (!isGood)
             continue;
 
-        for (int j = 0; j < stands[i].size(); j++) {
+        for (unsigned int j = 0; j < stands[i].size(); j++) {
             if (best_stand == nullptr || stands[i][j]->getQueueLength() < best_stand->getQueueLength())
                 best_stand = stands[i][j];
         }
@@ -143,8 +150,13 @@ IClient* Bank::randomClient() {
     return clients[randomInt() % b_setup.n_clients];
 }
 string Bank::randomName() {
-    return namelist[randomInt() % namelist.size()];
+    return "Jakub";//namelist[randomInt() % namelist.size()];
 }
 string Bank::randomSurname() {
-    return surnamelist[randomInt() % surnamelist.size()];
+    return "Mazur";//surnamelist[randomInt() % surnamelist.size()];
 }
+
+//numt::PossibleOperations Bank::randomReason()
+//{
+//
+//}

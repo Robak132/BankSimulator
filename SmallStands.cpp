@@ -8,12 +8,12 @@ ATMout::ATMout(ID id) : Stand(id)
 	operations = { numt::accountToClient };
 }
 
-void ATMout::performOperation(numt::PossibleOperations e)
+void ATMout::performOperation()
 {
 	if (client != nullptr)
 	{
 		TransferO trans(client);
-		switch (e)
+		switch (client->getReason())
 		{
 		case numt::accountToClient:
 		{
@@ -38,13 +38,13 @@ ATMin::ATMin(ID id) : Stand(id)
 	operations = { numt::clientToAccount };
 }
 
-void ATMin::performOperation(numt::PossibleOperations e)
+void ATMin::performOperation()
 {
 	
 	if (client != nullptr)
 	{
 		TransferO trans(client);
-		switch (e)
+		switch (client->getReason())
 		{
 		case numt::clientToAccount:
 		{
@@ -69,13 +69,13 @@ InfoStand::InfoStand(ID id, Employeet* e) : EStand(id, e)
 	operations = { numt::infoAccount, numt::infoLoan };
 }
 
-void InfoStand::performOperation(numt::PossibleOperations e)
+void InfoStand::performOperation()
 {
 	if (client != nullptr)
 	{
 		AccountO acc(client);
 		LoanO loa(client);
-		switch (e)
+		switch (client->getReason())
 		{
 		case numt::infoAccount:
 		{
@@ -107,13 +107,13 @@ CashStand::CashStand(ID id, Employeet* e) : EStand(id, e)
 	operations = { numt::takeLoan, numt::repayLoan, numt::clientToAccount, numt::accountToClient };
 }
 
-void CashStand::performOperation(numt::PossibleOperations e)
+void CashStand::performOperation()
 {
 	if (client != nullptr)
 	{
 		TransferO trans(client);
 		LoanO loa(client);
-		switch (e)
+		switch (client->getReason())
 		{
 		case numt::takeLoan:
 		{
@@ -157,12 +157,12 @@ AccountStand::AccountStand(ID id, Employeet* e) : EStand(id, e)
 	operations = { numt::createAccount, numt::deleteAccount, numt::infoAccount };
 }
 
-void AccountStand::performOperation(numt::PossibleOperations e)
+void AccountStand::performOperation()
 {
 	if (client != nullptr)
 	{
 		AccountO acc(client);
-		switch (e)
+		switch (client->getReason())
 		{
 		case  numt::createAccount:
 		{

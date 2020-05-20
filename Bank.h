@@ -26,8 +26,6 @@ class Bank {
 private:
     BankSetup b_setup;
     vector<vector<IStand*>>stands;
-
-    ofstream log;
     
     ifstream namefile;
     vector<string>namelist;
@@ -40,12 +38,15 @@ private:
     int randomInt();
     string randomName();
     string randomSurname();
+    //numt::PossibleOperations randomReason();
     IClient* createClient();
     void initializeClients();
+    void initializeStands();
 public:
+    vector<vector<IStand*>> get_stands();
     Bank(int _n_clients, int _n_workers=5, int _n_ATMin = 1, int _nATMout = 2, int _n_CashStand = 2, int _n_InfoStand = 1, int _n_AccountStand = 2);
     ~Bank();
     IClient* randomClient();
-    void addClientToList(Client* client);
+    void addClientToList(IClient* client);
 };
 #endif

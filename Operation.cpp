@@ -3,12 +3,12 @@
 using namespace std;
 #define MONEY 100
 
-Operation::Operation(Client* c)
+Operation::Operation(IClient* c)
 {
 	client = c;
 }
 
-TransferO::TransferO(Client* c):Operation(c)
+TransferO::TransferO(IClient* c):Operation(c)
 {
 
 }
@@ -27,12 +27,13 @@ int TransferO::clientToAccount()
 	if (client->getMoney() >= 100)
 	{
 		client->setMoney(client->getMoney() - 100);
+		client->getAccount()->setMoney(client->getAccount()->getMoney() + 100);
 		
 	}
 	return 4;
 }
 
-AccountO::AccountO(Client* c) :Operation(c)
+AccountO::AccountO(IClient* c) :Operation(c)
 {
 
 }
@@ -52,7 +53,7 @@ int AccountO::infoAccount()
 	return 3;
 }
 
-LoanO::LoanO(Client* c) : Operation(c)
+LoanO::LoanO(IClient* c) : Operation(c)
 {
 
 }
