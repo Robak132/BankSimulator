@@ -67,7 +67,12 @@ string Client::randomName() {
         ifstream file;
         string line;
 
-        file.open("name.txt");
+        try {
+		    file.open("name.txt");
+	    }
+    	catch (exception ex) {
+            throw FileNotFound("Name generator not found");
+	    }
 
         while (getline(file, line))
             namelist.push_back(line);
@@ -81,7 +86,13 @@ string Client::randomSurname() {
         ifstream file;
         string line;
 
-        file.open("surname.txt");
+        try {
+            file.open("surname.txt");
+	    }
+    	catch (exception ex) {
+            throw FileNotFound("Surname generator not found");
+	    }
+
         while (getline(file, line))
             surnamelist.push_back(line);
         file.close();

@@ -13,37 +13,47 @@
 
 using namespace std;
 
-Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_CashStand, int _n_InfoStand, int _n_AccountStand) {
-    if(_n_workers < _n_CashStand + _n_InfoStand + _n_AccountStand)
-    {
+//Bank::Bank(int _n_clients, int _n_workers, int _n_ATMin, int _n_ATMout, int _n_CashStand, int _n_InfoStand, int _n_AccountStand, int _open_time, int _close_time ) {
+Bank::Bank(BankSetup _bs ) {
+    if(_bs.n_workers < _bs.n_CashStand + _bs.n_InfoStand + _bs.n_AccountStand) {
         throw BadOperation("Not enough employees.");
     }
 
-    b_setup.n_workers = _n_workers;
-    b_setup.n_clients = _n_clients;
-    b_setup.n_ATMin = _n_ATMin;
-    b_setup.n_ATMout = _n_ATMout;
-    b_setup.n_CashStand = _n_CashStand;
-    b_setup.n_InfoStand = _n_InfoStand;
-    b_setup.n_AccountStand = _n_AccountStand;
-    
+    b_setup = _bs;
 
     for(int i = 0; i<b_setup.n_workers; i++)
     {
         employees.push_back(new Employeet);
     }
 
-
     initializeStands();
     initializeClients();
-
 }
 Bank::~Bank() {
+    for (int i = clients.size() - 1; i > 0; i--)
+        delete clients[i];
+
+    for (int i = employees.size() - 1; i > 0; i--)
+        delete employees[i];
+
+    for (int i=0;i<stands.size();i++)
+        for (int j = stands[i].size() - 1; j > 0; j--)
+            delete stands[i][j];
 }
 
 vector<vector<IStand*>> Bank::get_stands()
 {
     return stands;
+}
+
+int Bank::getCloseTime()
+{
+    return  b_setup.close_time;
+}
+
+int Bank::getOpenTime()
+{
+    return  b_setup.open_time;
 }
 
 void Bank::initializeStands()

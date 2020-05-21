@@ -7,6 +7,10 @@ StandError::StandError(string something)
 {
 	message = something;
 }
+FileNotFound::FileNotFound(string something)
+{
+	message = something;
+}
 
 ostream& operator<<(ostream& os, const StandError& e)
 {

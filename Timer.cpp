@@ -1,31 +1,49 @@
 #include "Timer.h"
 
-Timer::Timer(int _time_per_tick, int _open_time, int _close_time) {
+using namespace std;
+
+Timer::Timer(int _time_per_tick, string _log, BankSetup _bs) {
 	time_per_tick = _time_per_tick;
-	open_time = _open_time;
-	close_time = _close_time;
-	actual_time = open_time;
+	bank = new Bank(_bs);
+	actual_time = bank->getOpenTime();
+
+	try {
+		log.open(_log);
+	}
+	catch (exception ex) {
+		throw FileNotFound("Log file not found");
+	}
 }
+Timer::~Timer() {
+	delete bank;
+	log.close();
+}
+
+void Timer::runSimulation() {
+	log << "Simulation started" << endl;
+	while (bank->getCloseTime() > actual_time) {
+		log << getFormatedTime() << endl;
+		actual_time += time_per_tick;
+	}
+	log << "Simulation ended" << endl;
+}
+
 
 int Timer::getTimePerTick() {
 	return time_per_tick;
 }
-int Timer::getOpenTime() {
-	return open_time;
-}
-int Timer::getCloseTime() {
-	return close_time;
-}
 int Timer::getActualTime() {
 	return actual_time;
+}
+string Timer::getFormatedTime() {
+	string minutes = to_string(actual_time % 60);
+	if (minutes.size() == 1)
+		minutes = "0" + minutes;
+	string hours = to_string(actual_time / 60);
+	string time = hours + ":" + minutes;
+	return time;
 }
 
 void Timer::setTimePerTick(int _time_per_tick) {
 	time_per_tick = _time_per_tick;
-}
-void Timer::getOpenTime(int _open_time) {
-	open_time = _open_time;
-}
-void Timer::getCloseTime(int _close_time) {
-	close_time = _close_time;
 }

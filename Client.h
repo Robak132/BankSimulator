@@ -7,7 +7,6 @@
 #include "ID.h"
 #include "Account.h"
 #include "OpEnum.h"
-//#include "Stand.h"
 
 using namespace std;
 

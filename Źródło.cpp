@@ -21,7 +21,7 @@ void show2D(vector<vector<typ>> vec)
 
 int main()
 {
-    Bank bank(10, 10, 3,4,2,2,2);
+    Bank bank;
     vector<vector<IStand*>> vec = bank.get_stands();
     IStand* atm = vec[0][0];
     show2D(vec);
