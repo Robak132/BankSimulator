@@ -13,16 +13,16 @@ using namespace std;
 class IStand;
 class IClient {
 public:
-    virtual ID getID() = 0;
-    virtual string getIDNumber() = 0;
-    virtual string getName() = 0;
-    virtual string getSurname() = 0;
-    virtual string getNameSurname() = 0;
-    virtual string getDocumentID() = 0;
+    virtual ID getID() const = 0;
+    virtual string getIDNumber() const = 0;
+    virtual string getName() const = 0;
+    virtual string getSurname() const= 0;
+    virtual string getNameSurname() const = 0;
+    virtual string getDocumentID() const = 0;
     virtual bool inBank() = 0;
-    virtual void setInBank(bool) = 0;
-    virtual numt::PossibleOperations getReason() = 0;
-    virtual int getMoney() = 0;
+    virtual numt::PossibleOperations getReason() const = 0;
+    virtual string getFormatedReason() const = 0;
+    virtual int getMoney() const = 0;
     virtual Account* getAccount() = 0;
 
     virtual void setType(string _type) = 0;
@@ -55,20 +55,21 @@ public:
     Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason, int money, Account _account);
 
     bool inBank();
-    void setInBank(bool = false);
+
     IStand* getCurrentStand();
-    void setCurrentStand(IStand*);
-    string getType();
-    ID getID();
-    string getIDNumber();
-    string getName();
-    string getSurname();
-    string getNameSurname();
-    string getDocumentID();
-    numt::PossibleOperations getReason();
-    int getMoney();
+    string getType() const;
+    ID getID() const;
+    string getIDNumber() const;
+    string getName() const;
+    string getSurname() const;
+    string getNameSurname() const;
+    string getDocumentID() const;
+    numt::PossibleOperations getReason() const;
+    string getFormatedReason() const;
+    int getMoney() const;
     Account* getAccount();
 
+    void setCurrentStand(IStand*);
     void setType(string _type);
     void setName(string _name);
     void setSurname(string _surname);
@@ -81,6 +82,7 @@ public:
     static string randomSurname();
     static string randomDocumentID();
 };
+ostream& operator << (ostream& out, const IClient* client);
 
 class BusinessClient : public Client {
 public:

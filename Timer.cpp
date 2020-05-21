@@ -1,4 +1,5 @@
 #include "Timer.h"
+#include "Tools.h"
 
 using namespace std;
 
@@ -21,8 +22,14 @@ Timer::~Timer() {
 
 void Timer::runSimulation() {
 	log << "Simulation started" << endl;
-	while (bank->getCloseTime() > actual_time) {
+	while (bank->getCloseTime() >= actual_time) {
 		log << getFormatedTime() << endl;
+		if (Tools::randomInt() % 4 == 0) {
+			IClient* temp_client = bank->randomClient();
+			log << "A wild client appeared: " << temp_client << endl;
+			bank->addClientToList(temp_client);
+			log << "Client chose: " << temp_client->getCurrentStand() << endl;
+		}
 		actual_time += time_per_tick;
 	}
 	log << "Simulation ended" << endl;
@@ -40,6 +47,8 @@ string Timer::getFormatedTime() {
 	if (minutes.size() == 1)
 		minutes = "0" + minutes;
 	string hours = to_string(actual_time / 60);
+	if (hours.size() == 1)
+		hours = "0" + hours;
 	string time = hours + ":" + minutes;
 	return time;
 }

@@ -29,12 +29,12 @@ void Stand::setWorkTime(int i)
     }
 }
 
-string Stand::getSType()
+string Stand::getSType() const
 {
     return s_type;
 }
 
-ID Stand::getStandID()
+ID Stand::getStandID() const
 {
     return self_ID;
 }
@@ -45,7 +45,7 @@ bool Stand::isClient()
     else return true;
 }
 
-int Stand::getQueueLength()
+int Stand::getQueueLength() const
 {
     return client_queue.size();
 }
@@ -70,7 +70,7 @@ void Stand::nextClient()
     if (getQueueLength() && !work_time) 
     { 
         if(client)
-            client->setInBank(false);
+            client->setCurrentStand(nullptr);
         client = client_queue.front();
         client_queue.pop();
     }
@@ -78,6 +78,14 @@ void Stand::nextClient()
     {
         client = nullptr;
     }
+}
+
+ostream& operator << (ostream& out, const IStand* _is) {
+    if (_is)
+        out << _is->getSType() << " with ID " << _is->getStandID().getID() << " and queue length " << _is->getQueueLength();
+    else
+        out << "Stand hasn't been builded yet.";
+    return out;
 }
 
 

@@ -14,7 +14,7 @@ public:
 	ID(char _category='S');
 	ID(const ID& id);
 	ID& operator= (const ID& id);
-	string getID();
+	string getID() const;
 };
 ostream& operator << (ostream& out, ID& id);
 bool operator == (ID a, ID b);

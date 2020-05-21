@@ -13,18 +13,21 @@
 class IStand
 {
 public:
-	virtual ID getStandID() = 0;
-	virtual string getSType() = 0;
+	virtual ID getStandID() const = 0;
+	virtual string getSType() const = 0;
 	virtual IClient* getClient() = 0;
 	virtual int getWorkTime() = 0;
 	virtual void setWorkTime(int) = 0;
 	virtual bool isClient() = 0;
-	virtual int getQueueLength() = 0;
+	virtual int getQueueLength() const = 0;
 	virtual void addClient(IClient*) = 0;
 	virtual void performOperation() = 0;
 	virtual void nextClient() = 0;
 	virtual vector<numt::PossibleOperations> getOperations() = 0;
 };
+
+ostream& operator << (ostream& out, const IStand* _is);
+
 
 class Stand : public IStand
 {
@@ -39,13 +42,13 @@ protected:
 
 public:
 	Stand();
-	ID getStandID();
+	ID getStandID() const;
 	IClient* getClient();
 	int getWorkTime();
-	string getSType();
+	string getSType() const;
 	void setWorkTime(int);
 	bool isClient();
-	int getQueueLength();
+	int getQueueLength() const;
 	void addClient(IClient*);
 	void performOperation();
 	vector<numt::PossibleOperations> getOperations();
@@ -53,6 +56,7 @@ public:
 
 	
 };
+
 
 class EStand : public Stand
 {

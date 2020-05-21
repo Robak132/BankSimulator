@@ -26,22 +26,16 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
     in_bank = true;
 }
 
-bool Client::inBank()
-{
-    return in_bank;
-}
-void Client::setInBank(bool b)
-{
-    in_bank = b;
+bool Client::inBank() {
+    if (current_stand) return true;
+    else return false;
 }
 
-IStand* Client::getCurrentStand()
-{
+IStand* Client::getCurrentStand() {
     return current_stand;
 }
 
-void Client::setCurrentStand(IStand* cs)
-{  
+void Client::setCurrentStand(IStand* cs) {
     current_stand = cs;
 }
 
@@ -112,35 +106,68 @@ string Client::randomDocumentID() {
     return _document_id;
 }
 
+ostream& operator << (ostream& out, const IClient* client) {
+    return out << client->getNameSurname() << " (" << client->getDocumentID() << ") with reason: " << client->getFormatedReason();
+}
+
+
 // Getter
-string Client::getType() {
+string Client::getType() const{
     return type;
 }
-ID Client::getID() {
+ID Client::getID() const {
     return id_number;
 }
-string Client::getIDNumber(){
+string Client::getIDNumber() const {
     return id_number.getID();
 }
-string Client::getName(){
+string Client::getName() const {
     return name;
 }
-string Client::getSurname(){
+string Client::getSurname() const {
     return surname;
 }
-string Client::getNameSurname(){
+string Client::getNameSurname() const {
     return name + " " + surname;
 }
-string Client::getDocumentID(){
+string Client::getDocumentID() const {
     return document_id;
 }
-numt::PossibleOperations Client::getReason(){
+numt::PossibleOperations Client::getReason() const {
     return client_reason;
 }
-int Client::getMoney(){
+string Client::getFormatedReason() const {
+    switch (client_reason) {
+    case numt::accountToClient:
+        return "Withdraw";
+        break;
+    case numt::clientToAccount:
+        return "Payment";
+        break;
+    case numt::createAccount:
+        return "Create account";
+        break;
+    case numt::deleteAccount:
+        return "Delete account";
+        break;
+    case numt::infoAccount:
+        return "Get info about account";
+        break;
+    case numt::takeLoan:
+        return "Take loan";
+        break;
+    case numt::repayLoan:
+        return "Repay loan";
+        break;
+    case numt::infoLoan:
+        return "Get info about loan";
+        break;
+	}
+}
+int Client::getMoney() const {
     return money;
 }
-Account* Client::getAccount(){
+Account* Client::getAccount() {
     return &account;
 }
 

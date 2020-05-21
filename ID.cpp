@@ -29,7 +29,7 @@ string ID::extendID(string _id) {
 		_id = "0" + _id;
 	return _id;
 }
-string ID::getID() {
+string ID::getID() const {
 	return value;
 }
 string ID::nextID(char _category) {
