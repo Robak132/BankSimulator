@@ -29,7 +29,7 @@ void Timer::runSimulation() {
 				log << getFormatedTime() << endl;
 				log << "A wild client appeared: " << temp_client << endl;
 				bank->addClientToList(temp_client);
-				log << "Client chose: " << temp_client->getCurrentStand() << endl;
+				log << "Client chose " << temp_client->getCurrentStand() << endl;
 			}
 		}
 		actual_time += time_per_tick;

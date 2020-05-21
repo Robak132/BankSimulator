@@ -7,7 +7,7 @@ using namespace std;
 
 class Account {
 private:
-	bool created;   // Taka tam zmienna
+	bool created;
 	int money;
 	int credit;
 

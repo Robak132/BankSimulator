@@ -83,13 +83,14 @@ protected:
     static string randomDocumentID();
     static numt::PossibleOperations randomOperation();
     static int randomMoney();
+    static Account randomAccount();
 };
 
 ostream& operator << (ostream& out, const IClient* client);
 
 class BusinessClient : public Client {
 public:
-    BusinessClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account = Account())
+    BusinessClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account=randomAccount())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Business");
     }
@@ -99,7 +100,7 @@ protected:
 
 class IndividualClient : public Client {
 public:
-    IndividualClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account = Account())
+    IndividualClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account=randomAccount())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Individual");
     }

@@ -17,9 +17,9 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
         throw invalid_argument("Invalid argument");
     else
         document_id = _document_id;
+    account = _account;
     client_reason = _reason;
     money = _money;
-    account = _account;
 
     type = "NoType";
     id_number = ID('C');
@@ -29,15 +29,6 @@ bool Client::inBank() {
     if (current_stand) return true;
     else return false;
 }
-
-IStand* Client::getCurrentStand() {
-    return current_stand;
-}
-
-void Client::setCurrentStand(IStand* cs) {
-    current_stand = cs;
-}
-
 bool Client::checkDocID(string _document_id) {
     if (_document_id.length() != 6)
         return false;
@@ -109,26 +100,46 @@ numt::PossibleOperations Client::randomOperation() {
     return static_cast<numt::PossibleOperations>(rand);
 }
 int Client::randomMoney() {
-    return (Tools::randomInt() % 10);
+    return (Tools::randomInt() % 10 + 1) * 1000;
 }
 int BusinessClient::randomMoney() {
-    return (Tools::randomInt() % 10) * 10000;
+    return (Tools::randomInt() % 10 + 1) * 10000;
 }
 int IndividualClient::randomMoney() {
-    return (Tools::randomInt() % 10) * 1000;
+    return (Tools::randomInt() % 10 + 1) * 1000;
+}
+Account Client::randomAccount() {
+    int temp_money = 0;
+    int temp_credit = 0;
+    switch (Tools::randomInt() % 7) {
+    case 0:
+        return Account(0, 0, false);
+        break;
+    case 1:
+    case 2:
+    case 3:
+        temp_money = (Tools::randomInt() % 10 + 1) * 100;
+        return Account(temp_money, 0, true);
+        break;
+    case 4:
+    case 5:
+    case 6:
+        temp_money = (Tools::randomInt() % 10 + 1) * 100;
+        temp_credit = (Tools::randomInt() % 10 + 1) * 100;
+        return Account(temp_money, temp_credit, true);
+    }
 }
 
 ostream& operator << (ostream& out, const IClient* client) {
     return out << client->getNameSurname() << " (" << client->getDocumentID() << ") with reason: " << client->getFormatedReason();
 }
 
-
 // Getter
-string Client::getType() const{
-    return type;
-}
 ID Client::getID() const {
     return id_number;
+}
+string Client::getType() const{
+    return type;
 }
 string Client::getIDNumber() const {
     return id_number.getID();
@@ -144,9 +155,6 @@ string Client::getNameSurname() const {
 }
 string Client::getDocumentID() const {
     return document_id;
-}
-numt::PossibleOperations Client::getReason() const {
-    return client_reason;
 }
 string Client::getFormatedReason() const {
     switch (client_reason) {
@@ -174,13 +182,19 @@ string Client::getFormatedReason() const {
     case numt::infoLoan:
         return "Get info about loan";
         break;
-	}
+    }
+}
+numt::PossibleOperations Client::getReason() const {
+    return client_reason;
 }
 int Client::getMoney() const {
     return money;
 }
 Account* Client::getAccount() {
     return &account;
+}
+IStand* Client::getCurrentStand() {
+    return current_stand;
 }
 
 // Setter
@@ -207,4 +221,7 @@ void Client::setMoney(int _money) {
 }
 void Client::setAccount(Account _account) {
     account = _account;
+}
+void Client::setCurrentStand(IStand* cs) {
+    current_stand = cs;
 }
