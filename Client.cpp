@@ -105,6 +105,19 @@ string Client::randomDocumentID() {
     }
     return _document_id;
 }
+numt::PossibleOperations Client::randomOperation() {
+    int rand = Tools::randomInt() % 8;
+    return static_cast<numt::PossibleOperations>(rand);
+}
+int Client::randomMoney() {
+    return (Tools::randomInt() % 10);
+}
+int BusinessClient::randomMoney() {
+    return (Tools::randomInt() % 10) * 10000;
+}
+int IndividualClient::randomMoney() {
+    return (Tools::randomInt() % 10) * 1000;
+}
 
 ostream& operator << (ostream& out, const IClient* client) {
     return out << client->getNameSurname() << " (" << client->getDocumentID() << ") with reason: " << client->getFormatedReason();

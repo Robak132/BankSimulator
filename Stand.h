@@ -8,8 +8,6 @@
 #include <vector>
 #include <queue>
 
-
-
 class IStand
 {
 public:
@@ -38,8 +36,6 @@ protected:
 	IClient* client;
 	queue<IClient*> client_queue{};
 	vector<numt::PossibleOperations> operations;
-
-
 public:
 	Stand();
 	ID getStandID() const;
@@ -53,8 +49,6 @@ public:
 	void performOperation();
 	vector<numt::PossibleOperations> getOperations();
 	void nextClient();
-
-	
 };
 
 
@@ -104,6 +98,4 @@ public:
 	AccountStand(Employeet* = nullptr);
 	void performOperation();
 };
-
 #endif
-

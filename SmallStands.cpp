@@ -1,5 +1,4 @@
 #include "Stand.h"
-#include "Stand.h"
 
 using namespace std;
 

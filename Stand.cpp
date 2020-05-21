@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include "Stand.h"
 
-
 using namespace std;
 
 Stand::Stand()
