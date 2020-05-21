@@ -7,11 +7,11 @@
 #include "ID.h"
 #include "Account.h"
 #include "OpEnum.h"
-//#include "Stand.h"
 
 using namespace std;
 
 class IStand;
+
 class IClient {
 public:
     virtual ID getID() = 0;
@@ -77,25 +77,31 @@ public:
     void setReason(numt::PossibleOperations _reason);
     void setMoney(int _money);
     void setAccount(Account _account);
-
+protected:
     static string randomName();
     static string randomSurname();
     static string randomDocumentID();
+    static numt::PossibleOperations randomOperation();
+    static int randomMoney();
 };
 
 class BusinessClient : public Client {
 public:
-    BusinessClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    BusinessClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Business");
     }
+protected:
+    static int randomMoney();
 };
 
 class IndividualClient : public Client {
 public:
-    IndividualClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=numt::clientToAccount, int _money = 0, Account _account = Account())
+    IndividualClient(string _name=randomName(), string _surname=randomSurname(), string _document_id=randomDocumentID(), numt::PossibleOperations _reason=randomOperation(), int _money=randomMoney(), Account _account = Account())
         : Client(_name, _surname, _document_id, _reason, _money, _account) {
         setType("Individual");
     }
+protected:
+    static int randomMoney();
 };
 #endif
