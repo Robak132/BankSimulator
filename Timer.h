@@ -15,7 +15,7 @@ private:
 
 	ofstream log;
 public:
-	Timer(int _time_per_tick = 1, string _log = "log.txt", BankSetup = {20,5,1,2,2,1,2,420,1320});
+	Timer(int _time_per_tick = 1, string _log = "log.txt", BankSetup = {20,20,1,2,2,1,2,420,1320});
 	~Timer();
 	void runSimulation();
 

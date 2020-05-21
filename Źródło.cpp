@@ -41,7 +41,5 @@ int main()
     atm->addClient(kuba);
     cout << atm << endl;
     atm->nextClient();
-    atm->performOperation();
-
 }
 

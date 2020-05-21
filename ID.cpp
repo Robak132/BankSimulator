@@ -9,20 +9,6 @@ ID::ID(char _category) {
 		category = _category;
 		value = nextID(category);
 	}
-	else
-		throw invalid_argument("Unknown category");
-}
-ID::ID(const ID& id) {
-	category = id.category;
-	value = id.value;
-}
-
-ID& ID::operator= (const ID& id) {
-	if (this == &id)
-		return *this;
-	category = id.category;
-	value = id.value;
-	return *this;
 }
 string ID::extendID(string _id) {
 	while (_id.length() != 6)

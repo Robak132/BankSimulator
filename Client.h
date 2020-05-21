@@ -41,7 +41,6 @@ class Client : public IClient {
 private:
     ID id_number;
 
-    bool in_bank;
     IStand* current_stand;
     string type;
     string name;
@@ -85,6 +84,7 @@ protected:
     static numt::PossibleOperations randomOperation();
     static int randomMoney();
 };
+
 ostream& operator << (ostream& out, const IClient* client);
 
 class BusinessClient : public Client {

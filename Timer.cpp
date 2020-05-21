@@ -23,12 +23,14 @@ Timer::~Timer() {
 void Timer::runSimulation() {
 	log << "Simulation started" << endl;
 	while (bank->getCloseTime() >= actual_time) {
-		log << getFormatedTime() << endl;
-		if (Tools::randomInt() % 4 == 0) {
+		if (Tools::randomInt() % 20 == 0) {
 			IClient* temp_client = bank->randomClient();
-			log << "A wild client appeared: " << temp_client << endl;
-			bank->addClientToList(temp_client);
-			log << "Client chose: " << temp_client->getCurrentStand() << endl;
+			if (!temp_client->inBank()) {
+				log << getFormatedTime() << endl;
+				log << "A wild client appeared: " << temp_client << endl;
+				bank->addClientToList(temp_client);
+				log << "Client chose: " << temp_client->getCurrentStand() << endl;
+			}
 		}
 		actual_time += time_per_tick;
 	}

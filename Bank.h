@@ -40,7 +40,7 @@ public:
     int getOpenTime();
     int getCloseTime();
     //Bank(int _n_clients=20, int _n_workers=5, int _n_ATMin = 1, int _nATMout = 2, int _n_CashStand = 2, int _n_InfoStand = 1, int _n_AccountStand = 2, int _open_time = 420, int _close_time = 1320);
-    Bank(BankSetup = { 20,5,1,2,2,1,2,420,1320 });
+    Bank(BankSetup = { 20,20,1,2,2,1,2,420,1320 });
     ~Bank();
     IClient* randomClient();
     void addClientToList(IClient* client);
