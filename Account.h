@@ -14,9 +14,11 @@ private:
 public:
 	Account(int _money=500, int _credit=0, bool _created = true);
 
+	bool getCreated() const;
 	int getMoney() const;
 	int getCredit() const;
 	
+	void setCreated(bool status);
 	void setMoney(int _money);
 	void setCredit(int _credit);
 };
