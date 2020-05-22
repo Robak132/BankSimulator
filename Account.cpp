@@ -16,11 +16,17 @@ Account::Account(int _money, int _credit, bool _created) {
 	created = _created;
 }
 
+bool Account::getCreated() const {
+	return created;
+}
 int Account::getMoney() const {
 	return money;
 }
 int Account::getCredit() const {
 	return credit;
+}
+void Account::setCreated(bool _const) {
+	created = _const;
 }
 void Account::setMoney(int _money) {
 	money = _money;

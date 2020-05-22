@@ -53,23 +53,24 @@ private:
 
     Account account;
     bool checkDocID(string _document_id);
+    bool checkReason(numt::PossibleOperations _reason);
 public:
     Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason, int money, Account _account);
 
     bool inBank();
 
-    IStand* getCurrentStand();
-    string getType() const;
     ID getID() const;
+    string getType() const;
     string getIDNumber() const;
     string getName() const;
     string getSurname() const;
     string getNameSurname() const;
     string getDocumentID() const;
-    numt::PossibleOperations getReason() const;
     string getFormatedReason() const;
+    numt::PossibleOperations getReason() const;
     int getMoney() const;
     Account* getAccount();
+    IStand* getCurrentStand();
 
     void setInBank(bool = false);
     void setCurrentStand(IStand*);
@@ -80,6 +81,7 @@ public:
     void setReason(numt::PossibleOperations _reason);
     void setMoney(int _money);
     void setAccount(Account _account);
+    void setCurrentStand(IStand*);
 protected:
     static string randomName();
     static string randomSurname();
