@@ -62,20 +62,12 @@ void Bank::iterateThrough()
     {
         for (auto elem : row)
         {
-            try {
-                elem->decreaseWorkTime();
-                cout << elem->getStandID().getID() << " ---> "<< elem->getWorkTime() << " ->>> " << elem->getQueueLength() << endl;
-                elem->nextClient();
-                elem->performOperation();
-            }
-            catch (BadOperation ex)
-            {
-                //cout << "xdd";
-            }
-            catch (NoClient ex)
-            {
-                //cout << "xd";
-            }
+            
+            elem->decreaseWorkTime();
+            //cout << elem->getStandID().getID() << " ---> "<< elem->getWorkTime() << " ->>> " << elem->getQueueLength() << endl;
+            elem->nextClient();
+            elem->performOperation();
+            
         }
     }
 }
@@ -161,6 +153,7 @@ void Bank::addClientToList(IClient* client) {
     }
     if (best_stand != nullptr) {
         client->setCurrentStand(best_stand);
+        client->setInBank(true);
         best_stand->addClient(client);
     }
 }

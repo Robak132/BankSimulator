@@ -69,12 +69,21 @@ vector<numt::PossibleOperations> Stand::getOperations()
     return operations;
 }
 
+Employeet* Stand::getEmployeet()
+{
+    return nullptr;
+}
+
+bool Stand::isEmployeet() {
+    return false;
+}
+
 void Stand::nextClient()
 {
     if (getQueueLength() && !work_time) 
     { 
         if(client)
-            client->setCurrentStand(nullptr);
+            client->setInBank(false);
         client = client_queue.front();
         client_queue.pop();
     }

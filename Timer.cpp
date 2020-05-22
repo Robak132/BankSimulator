@@ -1,6 +1,7 @@
 #include "Timer.h"
 #include "Tools.h"
 
+
 using namespace std;
 
 Timer::Timer(int _time_per_tick, string _log, BankSetup _bs) {
@@ -23,16 +24,32 @@ Timer::~Timer() {
 void Timer::runSimulation() {
 	log << "Simulation started" << endl;
 	while (bank->getCloseTime() >= actual_time) {
-		if (Tools::randomInt() % 20 == 0) {
+		bool time_rised = false;
+		if (Tools::randomInt() % 5 == 0) {
 			IClient* temp_client = bank->randomClient();
 			if (!temp_client->inBank()) {
+				clients_in.push_back(temp_client);
+				log << endl;
 				log << getFormatedTime() << endl;
+				time_rised = true;
 				log << "A wild client appeared: " << temp_client << endl;
 				bank->addClientToList(temp_client);
 				log << "Client chose " << temp_client->getCurrentStand() << endl;
 			}
 		}
 		bank->iterateThrough();
+		for (int i = clients_in.size()-1 ; i>=0; i--)
+		{
+			if (!clients_in[i]->inBank())
+			{
+				if (clients_in[i]->getCurrentStand()->isEmployeet())
+					log << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << " just helped customer with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "!" << endl;
+				else
+					log << clients_in[i] << " finished doing it with " << clients_in[i]->getCurrentStand()->getSType() << "." << endl;
+				clients_in.erase(clients_in.begin()+i);
+			}
+
+		}
 		actual_time += time_per_tick;
 	}
 	log << "Simulation ended" << endl;

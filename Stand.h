@@ -11,7 +11,9 @@
 class IStand
 {
 public:
+	virtual bool isEmployeet() = 0;
 	virtual ID getStandID() const = 0;
+	virtual Employeet* getEmployeet() = 0;
 	virtual string getSType() const = 0;
 	virtual IClient* getClient() = 0;
 	virtual int getWorkTime() = 0;
@@ -40,6 +42,8 @@ protected:
 public:
 	Stand();
 	ID getStandID() const;
+	Employeet* getEmployeet();
+	bool isEmployeet();
 	IClient* getClient();
 	int getWorkTime();
 	string getSType() const;
@@ -73,6 +77,7 @@ class ATMout : public Stand
 public:
 	ATMout();
 	void performOperation();
+	
 };
 
 class ATMin : public Stand

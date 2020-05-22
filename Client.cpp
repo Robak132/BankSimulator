@@ -23,12 +23,21 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
 
     type = "NoType";
     id_number = ID('C');
+    setInBank();
+    setCurrentStand(nullptr);
 }
 
 bool Client::inBank() {
-    if (current_stand) return true;
-    else return false;
+    return in_bank;
 }
+
+void Client::setInBank(bool _b)
+{
+    in_bank = _b;
+}
+
+
+
 bool Client::checkDocID(string _document_id) {
     if (_document_id.length() != 6)
         return false;

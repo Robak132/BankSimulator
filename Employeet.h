@@ -8,5 +8,6 @@ class Employeet
 	int productivity;
 public:
 	Employeet();
+	ID getSelfID();
 };
 #endif
