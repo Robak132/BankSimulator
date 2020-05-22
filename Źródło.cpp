@@ -25,11 +25,9 @@ void show2D(vector<vector<typ>> vec)
 
 int main()
 {
-
-    //cout << P(numt::infoLoan);
     Timer time;
     time.runSimulation();
-    Bank bank;
+    /*Bank bank;
     vector<vector<IStand*>> vec = bank.get_stands();
     IStand* atm = vec[0][0];
     cout << atm << endl;
@@ -40,6 +38,6 @@ int main()
     cout << kuba << endl;
     atm->addClient(kuba);
     cout << atm << endl;
-    atm->nextClient();
+    atm->nextClient();*/
 }
 

@@ -32,6 +32,7 @@ void Timer::runSimulation() {
 				log << "Client chose " << temp_client->getCurrentStand() << endl;
 			}
 		}
+		bank->iterateThrough();
 		actual_time += time_per_tick;
 	}
 	log << "Simulation ended" << endl;

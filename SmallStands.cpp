@@ -23,14 +23,10 @@ void ATMout::performOperation()
 		}
 		default:
 		{
-			throw BadOperation("Can not perform that weird shit.");
 		}
 		}
 	}
-	else
-	{
-		throw NoClient("Without client? U dumb?");
-	}
+
 }
 
 ATMin::ATMin() : Stand()
@@ -55,13 +51,8 @@ void ATMin::performOperation()
 		}
 		default:
 		{
-			throw BadOperation("Can not perform that weird shit.");
 		}
 		}
-	}
-	else
-	{
-		throw NoClient("Without client? U dumb?");
 	}
 }
 
@@ -93,14 +84,10 @@ void InfoStand::performOperation()
 		}
 		default:
 		{
-			throw BadOperation("Can not perform that weird shit.");
 		}
 		}
 	}
-	else
-	{
-		throw NoClient("Without client? U dumb?");
-	}
+
 	
 }
 
@@ -144,14 +131,10 @@ void CashStand::performOperation()
 		}
 		default:
 		{
-			throw BadOperation("Can not perform that weird shit.");
 		}
 		}
 	}
-	else
-	{
-		throw NoClient("Without client? U dumb?");
-	}
+
 	
 }
 
@@ -188,12 +171,7 @@ void AccountStand::performOperation()
 		}
 		default:
 		{
-			throw BadOperation("Can not perform that weird shit.");
 		}
 		}
-	}
-	else
-	{
-		throw NoClient("Without client? U dumb?");
 	}
 }

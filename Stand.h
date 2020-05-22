@@ -16,6 +16,7 @@ public:
 	virtual IClient* getClient() = 0;
 	virtual int getWorkTime() = 0;
 	virtual void setWorkTime(int) = 0;
+	virtual void decreaseWorkTime() = 0;
 	virtual bool isClient() = 0;
 	virtual int getQueueLength() const = 0;
 	virtual void addClient(IClient*) = 0;
@@ -43,12 +44,15 @@ public:
 	int getWorkTime();
 	string getSType() const;
 	void setWorkTime(int);
+	void decreaseWorkTime();
 	bool isClient();
 	int getQueueLength() const;
 	void addClient(IClient*);
 	void performOperation();
 	vector<numt::PossibleOperations> getOperations();
 	void nextClient();
+
+	
 };
 
 

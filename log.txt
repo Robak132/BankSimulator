@@ -1,59 +1,59 @@
 Simulation started
-07:21
-A wild client appeared: Arne Wechsler (USG862) with reason: Get info about account
+07:14
+A wild client appeared: Nat Jochutz (MWR862) with reason: Get info about loan
 Client chose Information Stand with ID S000005 and queue length 1
-07:37
-A wild client appeared: Sigismunda Altmann (CHE368) with reason: Payment
-Client chose ATMin with ID S000000 and queue length 1
-10:22
-A wild client appeared: Ulfred Kalb (KIZ098) with reason: Payment
-Client chose Cash Stand with ID S000003 and queue length 1
-11:05
-A wild client appeared: Mathias Tolzen (ZYN239) with reason: Repay loan
-Client chose Cash Stand with ID S000004 and queue length 1
-12:00
-A wild client appeared: Jose Muller (XRM579) with reason: Create account
-Client chose Account Stand with ID S000006 and queue length 1
-12:09
-A wild client appeared: Adrie Kuhn (JTI303) with reason: Payment
-Client chose ATMin with ID S000000 and queue length 2
-12:29
-A wild client appeared: Cilicia Konigsamen (MCS890) with reason: Repay loan
-Client chose Cash Stand with ID S000003 and queue length 2
-12:37
-A wild client appeared: Dietrich Hoch (TVP491) with reason: Repay loan
-Client chose Cash Stand with ID S000004 and queue length 2
-12:38
-A wild client appeared: Ehrhart Dahmbach (EUE315) with reason: Take loan
-Client chose Cash Stand with ID S000003 and queue length 3
-12:42
-A wild client appeared: Leopold Scherer (PPL654) with reason: Take loan
-Client chose Cash Stand with ID S000004 and queue length 3
-12:49
-A wild client appeared: Calvin Atzwig (ZFH410) with reason: Get info about loan
-Client chose Information Stand with ID S000005 and queue length 2
-13:13
-A wild client appeared: Liebrecht Schwalb (NTH912) with reason: Repay loan
-Client chose Cash Stand with ID S000003 and queue length 4
-13:28
-A wild client appeared: Katerine Kaltenbach (DMD944) with reason: Withdraw
+07:42
+A wild client appeared: Emerlyn Herzog (TNV715) with reason: Withdraw
 Client chose ATMout with ID S000001 and queue length 1
-14:36
-A wild client appeared: K.irsren Hofstetter (VMT914) with reason: Get info about account
-Client chose Account Stand with ID S000007 and queue length 1
-17:01
-A wild client appeared: Constance Hoch (OMA078) with reason: Get info about account
-Client chose Account Stand with ID S000006 and queue length 2
-17:37
-A wild client appeared: Erich Herz (DGP262) with reason: Delete account
-Client chose Account Stand with ID S000007 and queue length 2
-17:56
-A wild client appeared: Allane Reiss (DBQ284) with reason: Take loan
-Client chose Cash Stand with ID S000004 and queue length 4
-20:54
-A wild client appeared: Marietta Schultz (HXG028) with reason: Get info about account
-Client chose Information Stand with ID S000005 and queue length 3
-21:13
-A wild client appeared: Amalinde Jutzenbach (WEV668) with reason: Get info about loan
-Client chose Information Stand with ID S000005 and queue length 4
+07:54
+A wild client appeared: Gerlach Delfholt (NKE632) with reason: Get info about loan
+Client chose Information Stand with ID S000005 and queue length 1
+09:11
+A wild client appeared: Madred Hirtzel (DFK337) with reason: Delete account
+Client chose Account Stand with ID S000006 and queue length 1
+10:30
+A wild client appeared: Kristyn Kummel (VZD532) with reason: Delete account
+Client chose Account Stand with ID S000006 and queue length 1
+10:41
+A wild client appeared: Maude Albrecht (TLQ024) with reason: Take loan
+Client chose Cash Stand with ID S000003 and queue length 1
+11:49
+A wild client appeared: Eloise Netzhoch (CMC462) with reason: Get info about account
+Client chose Information Stand with ID S000005 and queue length 1
+12:11
+A wild client appeared: Constanza Bischof (UAR736) with reason: Repay loan
+Client chose Cash Stand with ID S000003 and queue length 1
+12:19
+A wild client appeared: Engelbert Allenstag (YRM098) with reason: Get info about loan
+Client chose Information Stand with ID S000005 and queue length 1
+13:24
+A wild client appeared: Drachilda Zumwald (PWL737) with reason: Repay loan
+Client chose Cash Stand with ID S000003 and queue length 1
+15:16
+A wild client appeared: Kristen Kummel (GPM874) with reason: Delete account
+Client chose Account Stand with ID S000006 and queue length 1
+15:58
+A wild client appeared: Voltz Riese (SSY775) with reason: Get info about loan
+Client chose Information Stand with ID S000005 and queue length 1
+16:19
+A wild client appeared: Faustus Weber (PYF047) with reason: Create account
+Client chose Account Stand with ID S000006 and queue length 1
+16:47
+A wild client appeared: Rosamunde Allenstag (YIU147) with reason: Create account
+Client chose Account Stand with ID S000006 and queue length 1
+16:55
+A wild client appeared: Faustus Weber (PYF047) with reason: Create account
+Client chose Account Stand with ID S000006 and queue length 1
+18:52
+A wild client appeared: Fulko Meusmann (NWL217) with reason: Create account
+Client chose Account Stand with ID S000006 and queue length 1
+20:20
+A wild client appeared: Anhilda Durrbein (QRX735) with reason: Delete account
+Client chose Account Stand with ID S000006 and queue length 1
+20:42
+A wild client appeared: Rosamunde Allenstag (YIU147) with reason: Create account
+Client chose Account Stand with ID S000006 and queue length 1
+21:55
+A wild client appeared: Andric Adelhof (GMS065) with reason: Get info about loan
+Client chose Information Stand with ID S000005 and queue length 1
 Simulation ended

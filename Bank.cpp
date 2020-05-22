@@ -56,8 +56,31 @@ int Bank::getOpenTime()
     return  b_setup.open_time;
 }
 
-void Bank::initializeStands()
+void Bank::iterateThrough()
 {
+    for (auto row : stands)
+    {
+        for (auto elem : row)
+        {
+            try {
+                elem->decreaseWorkTime();
+                cout << elem->getStandID().getID() << " ---> "<< elem->getWorkTime() << " ->>> " << elem->getQueueLength() << endl;
+                elem->nextClient();
+                elem->performOperation();
+            }
+            catch (BadOperation ex)
+            {
+                //cout << "xdd";
+            }
+            catch (NoClient ex)
+            {
+                //cout << "xd";
+            }
+        }
+    }
+}
+
+void Bank::initializeStands() {
     int emp_iterator = 0;
     vector<IStand*>temp;
     for (int i = 0; i < b_setup.n_ATMin; i++)

@@ -59,6 +59,11 @@ void Stand::performOperation()
     cout << client->getReason() << endl;
 }
 
+void Stand::decreaseWorkTime()
+{
+    if (work_time) work_time--;
+}
+
 vector<numt::PossibleOperations> Stand::getOperations()
 {
     return operations;
