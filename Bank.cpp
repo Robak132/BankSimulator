@@ -56,8 +56,23 @@ int Bank::getOpenTime()
     return  b_setup.open_time;
 }
 
-void Bank::initializeStands()
+void Bank::iterateThrough()
 {
+    for (auto row : stands)
+    {
+        for (auto elem : row)
+        {
+            
+            elem->decreaseWorkTime();
+            //cout << elem->getStandID().getID() << " ---> "<< elem->getWorkTime() << " ->>> " << elem->getQueueLength() << endl;
+            elem->nextClient();
+            elem->performOperation();
+            
+        }
+    }
+}
+
+void Bank::initializeStands() {
     int emp_iterator = 0;
     vector<IStand*>temp;
     for (int i = 0; i < b_setup.n_ATMin; i++)
@@ -138,6 +153,7 @@ void Bank::addClientToList(IClient* client) {
     }
     if (best_stand != nullptr) {
         client->setCurrentStand(best_stand);
+        client->setInBank(true);
         best_stand->addClient(client);
     }
 }

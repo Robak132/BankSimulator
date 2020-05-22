@@ -11,11 +11,14 @@
 class IStand
 {
 public:
+	virtual bool isEmployeet() = 0;
 	virtual ID getStandID() const = 0;
+	virtual Employeet* getEmployeet() = 0;
 	virtual string getSType() const = 0;
 	virtual IClient* getClient() = 0;
 	virtual int getWorkTime() = 0;
 	virtual void setWorkTime(int) = 0;
+	virtual void decreaseWorkTime() = 0;
 	virtual bool isClient() = 0;
 	virtual int getQueueLength() const = 0;
 	virtual void addClient(IClient*) = 0;
@@ -39,16 +42,21 @@ protected:
 public:
 	Stand();
 	ID getStandID() const;
+	Employeet* getEmployeet();
+	bool isEmployeet();
 	IClient* getClient();
 	int getWorkTime();
 	string getSType() const;
 	void setWorkTime(int);
+	void decreaseWorkTime();
 	bool isClient();
 	int getQueueLength() const;
 	void addClient(IClient*);
 	void performOperation();
 	vector<numt::PossibleOperations> getOperations();
 	void nextClient();
+
+	
 };
 
 
@@ -69,6 +77,7 @@ class ATMout : public Stand
 public:
 	ATMout();
 	void performOperation();
+	
 };
 
 class ATMin : public Stand

@@ -21,6 +21,7 @@ public:
     virtual string getNameSurname() const = 0;
     virtual string getDocumentID() const = 0;
     virtual bool inBank() = 0;
+    virtual void setInBank(bool) = 0;
     virtual numt::PossibleOperations getReason() const = 0;
     virtual string getFormatedReason() const = 0;
     virtual int getMoney() const = 0;
@@ -41,6 +42,7 @@ class Client : public IClient {
 private:
     ID id_number;
 
+    bool in_bank;
     IStand* current_stand;
     string type;
     string name;
@@ -70,6 +72,8 @@ public:
     Account* getAccount();
     IStand* getCurrentStand();
 
+    void setInBank(bool = false);
+    void setCurrentStand(IStand*);
     void setType(string _type);
     void setName(string _name);
     void setSurname(string _surname);

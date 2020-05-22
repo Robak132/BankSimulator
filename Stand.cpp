@@ -59,9 +59,23 @@ void Stand::performOperation()
     cout << client->getReason() << endl;
 }
 
+void Stand::decreaseWorkTime()
+{
+    if (work_time) work_time--;
+}
+
 vector<numt::PossibleOperations> Stand::getOperations()
 {
     return operations;
+}
+
+Employeet* Stand::getEmployeet()
+{
+    return nullptr;
+}
+
+bool Stand::isEmployeet() {
+    return false;
 }
 
 void Stand::nextClient()
@@ -69,7 +83,7 @@ void Stand::nextClient()
     if (getQueueLength() && !work_time) 
     { 
         if(client)
-            client->setCurrentStand(nullptr);
+            client->setInBank(false);
         client = client_queue.front();
         client_queue.pop();
     }

@@ -11,6 +11,7 @@
 
 using namespace std;
 
+
 struct BankSetup
 {
     int n_workers;
@@ -43,6 +44,7 @@ public:
     Bank(BankSetup = { 20,20,1,2,2,1,2,420,1320 });
     ~Bank();
     IClient* randomClient();
+    void iterateThrough();
     void addClientToList(IClient* client);
 };
 #endif
