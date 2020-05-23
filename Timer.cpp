@@ -24,17 +24,20 @@ Timer::~Timer() {
 void Timer::runSimulation() {
 	log << "Simulation started" << endl;
 	while (bank->getCloseTime() >= actual_time) {
-		bool time_rised = false;
+		bool not_timed = true;
 		if (Tools::randomInt() % 5 == 0) {
 			IClient* temp_client = bank->randomClient();
 			if (!temp_client->inBank()) {
 				clients_in.push_back(temp_client);
-				log << endl;
-				log << getFormatedTime() << endl;
-				time_rised = true;
+				if (not_timed)
+				{
+					log << endl;
+					log << getFormatedTime() << endl;
+					not_timed = false;
+				}
 				log << "A wild client appeared: " << temp_client << endl;
 				bank->addClientToList(temp_client);
-				log << "Client chose " << temp_client->getCurrentStand() << endl;
+				log << temp_client->getNameSurname() << " chosed " << temp_client->getCurrentStand() << endl;
 			}
 		}
 		bank->iterateThrough();
@@ -42,6 +45,12 @@ void Timer::runSimulation() {
 		{
 			if (!clients_in[i]->inBank())
 			{
+				if (not_timed)
+				{
+					log << endl;
+					log << getFormatedTime() << endl;
+					not_timed = false;
+				}
 				if (clients_in[i]->getCurrentStand()->isEmployeet())
 					log << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << " just helped customer with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "!" << endl;
 				else
@@ -51,6 +60,7 @@ void Timer::runSimulation() {
 
 		}
 		actual_time += time_per_tick;
+		not_timed = true;
 	}
 	log << "Simulation ended" << endl;
 }
