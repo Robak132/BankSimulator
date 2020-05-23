@@ -73,7 +73,7 @@ public:
     IStand* getCurrentStand();
 
     void setInBank(bool = false);
-    void setCurrentStand(IStand*);
+    //void setCurrentStand(IStand*);
     void setType(string _type);
     void setName(string _name);
     void setSurname(string _surname);

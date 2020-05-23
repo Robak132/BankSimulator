@@ -36,7 +36,7 @@ Bank::~Bank() {
     for (int i = employees.size() - 1; i > 0; i--)
         delete employees[i];
 
-    for (int i=0;i<stands.size();i++)
+    for (unsigned int i=0;i<stands.size();i++)
         for (int j = stands[i].size() - 1; j > 0; j--)
             delete stands[i][j];
 }
@@ -67,7 +67,6 @@ void Bank::iterateThrough()
             //cout << elem->getStandID().getID() << " ---> "<< elem->getWorkTime() << " ->>> " << elem->getQueueLength() << endl;
             elem->nextClient();
             elem->performOperation();
-            
         }
     }
 }

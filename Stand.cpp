@@ -89,13 +89,15 @@ void Stand::nextClient()
     }
     else if (!getQueueLength() && !work_time)
     {
+        if (client)
+            client->setInBank(false);
         client = nullptr;
     }
 }
 
 ostream& operator << (ostream& out, const IStand* _is) {
     if (_is)
-        out << _is->getSType() << " with ID " << _is->getStandID().getID() << " and queue length " << _is->getQueueLength();
+        out << _is->getSType() << " with ID " << _is->getStandID().getID() << " and now queue length is " << _is->getQueueLength();
     else
         out << "Stand hasn't been builded yet.";
     return out;

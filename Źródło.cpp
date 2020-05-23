@@ -27,17 +27,27 @@ int main()
 {
     Timer time;
     time.runSimulation();
-    /*Bank bank;
-    vector<vector<IStand*>> vec = bank.get_stands();
-    IStand* atm = vec[0][0];
-    cout << atm << endl;
-    show2D(vec);
-    cout<< vec[0][0]->isClient() << endl;
-    cout<< vec[0][0]->getSType() << endl;
-    IClient* kuba = bank.randomClient();
-    cout << kuba << endl;
-    atm->addClient(kuba);
-    cout << atm << endl;
-    atm->nextClient();*/
+    //Bank bank;
+    //vector<vector<IStand*>> vec = bank.get_stands();
+    //IClient* kuba = bank.randomClient();
+    //IClient* oskar = bank.randomClient();
+    //IStand* atm = vec[1][0];
+    //cout << atm << endl;
+    //cout<< vec[0][0]->isClient() << endl;
+    //cout<< vec[0][0]->getSType() << endl;
+    //cout << kuba << endl;
+    //atm->addClient(kuba);
+    //cout << atm << endl;
+    ////cout<< atm->getClient() << endl;
+    //atm->nextClient();
+    //cout << "TU\n";
+    //cout << atm->getClient() << endl;
+    //atm->performOperation();
+    //cout << atm->getWorkTime() << endl;
+    //atm->addClient(oskar);
+    //cout << atm << endl;
+    //atm->nextClient();
+    //cout << atm->getClient() << endl;
+    //cout << atm->getWorkTime() << endl;
 }
 
