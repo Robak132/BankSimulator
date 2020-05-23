@@ -97,7 +97,7 @@ void Stand::nextClient()
 
 ostream& operator << (ostream& out, const IStand* _is) {
     if (_is)
-        out << _is->getSType() << " with ID " << _is->getStandID().getID() << " and now queue length is " << _is->getQueueLength();
+        out << _is->getSType() << " [" << _is->getStandID().getID() << "] and now queue length is " << _is->getQueueLength();
     else
         out << "Stand hasn't been builded yet.";
     return out;

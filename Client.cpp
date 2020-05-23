@@ -19,8 +19,6 @@ Client::Client(string _name, string _surname, string _document_id, numt::Possibl
         document_id = _document_id;
     account = _account;
     client_reason = _reason;
-    while (!checkReason(client_reason))
-        client_reason = randomOperation();
     money = _money;
 
     type = "NoType";
@@ -54,46 +52,6 @@ bool Client::checkDocID(string _document_id) {
         }
     }
     return true;
-}
-bool Client::checkReason(numt::PossibleOperations _reason) {
-    switch (_reason) {
-    case numt::accountToClient:
-        if (account.getMoney() >= 100)
-            return true;
-        return false;
-        break;
-    case numt::clientToAccount:
-        if (money >= 100)
-            return true;
-        return false;
-        break;
-    case numt::createAccount:
-        if (!account.getCreated())
-            return true;
-        return false;
-        break;
-    case numt::deleteAccount:
-        if (account.getCreated())
-            return true;
-        return false;
-        break;
-    case numt::infoAccount:
-        return true;
-        break;
-    case numt::takeLoan:
-        if (account.getCreated())
-            return true;
-        return false;
-        break;
-    case numt::repayLoan:
-        if (account.getCredit() > 0)
-            return true;
-        return false;
-        break;
-    case numt::infoLoan:
-        return true;
-        break;
-    }
 }
 
 string Client::randomName() {

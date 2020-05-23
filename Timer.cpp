@@ -35,9 +35,9 @@ void Timer::runSimulation() {
 					log << getFormatedTime() << endl;
 					not_timed = false;
 				}
-				log << "A wild client appeared: " << temp_client << endl;
+				log << "A wild client appeared: " << temp_client << "." << endl;
 				bank->addClientToList(temp_client);
-				log << temp_client->getNameSurname() << " chosed " << temp_client->getCurrentStand() << endl;
+				log << temp_client->getNameSurname() << " [" << temp_client->getIDNumber() << "] chose " << temp_client->getCurrentStand() << "." << endl;
 			}
 		}
 		bank->iterateThrough();
@@ -52,15 +52,22 @@ void Timer::runSimulation() {
 					not_timed = false;
 				}
 				if (clients_in[i]->getCurrentStand()->isEmployeet())
-					log << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << " just helped customer with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "!" << endl;
+					log << "Employee [" << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << "] just helped customer [" << clients_in[i]->getIDNumber() << "] with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "." << endl;
 				else
-					log << clients_in[i] << " finished doing it with " << clients_in[i]->getCurrentStand()->getSType() << "." << endl;
+					log << clients_in[i] << " finished doing it with " << clients_in[i]->getCurrentStand()->getSType() << " [" << clients_in[i]->getCurrentStand()->getStandID().getID() << "]." << endl;
 				clients_in.erase(clients_in.begin()+i);
 			}
 
 		}
 		actual_time += time_per_tick;
 		not_timed = true;
+	}
+	actual_time -= time_per_tick;
+
+	log << endl << getFormatedTime() << endl;
+	for (int i = clients_in.size() - 1; i >= 0; i--) {
+		log << clients_in[i] << " failed doing do it because simulation ended." << endl;
+		clients_in.erase(clients_in.begin() + i);
 	}
 	log << "Simulation ended" << endl;
 }

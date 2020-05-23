@@ -53,7 +53,6 @@ private:
 
     Account account;
     bool checkDocID(string _document_id);
-    bool checkReason(numt::PossibleOperations _reason);
 public:
     Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason, int money, Account _account);
 
@@ -73,7 +72,6 @@ public:
     IStand* getCurrentStand();
 
     void setInBank(bool = false);
-    //void setCurrentStand(IStand*);
     void setType(string _type);
     void setName(string _name);
     void setSurname(string _surname);

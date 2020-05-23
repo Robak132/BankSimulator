@@ -278,7 +278,6 @@ Hildric
 Honoria
 Horst
 Hugo
-IO
 Ida
 Ida
 Igor
@@ -408,9 +407,7 @@ Nora
 Odamar
 Odric
 Odwin
-Ol
-Ol
-Olbrechr
+Olbrecht
 Oldred
 Oldric
 Olga
@@ -472,7 +469,6 @@ Rudgar
 Rudolf
 Rufus
 Ruprecht
-SO
 Salina
 Saltza
 Sebastian
