@@ -1,8 +1,8 @@
-Bank: Źródło.o Tools.o Timer.o Stand.o SmallStands.o Operation.o ID.o Employeet.o Client.o Bank.o Account.o
-	g++ -o Bank Źródło.o Tools.o Timer.o Stand.o SmallStands.o Operation.o ID.o Employeet.o Client.o Bank.o Account.o
+Bank: Main.o Tools.o Timer.o Stand.o SmallStands.o Operation.o ID.o Employeet.o Client.o Bank.o Account.o
+	g++ -o Bank Main.o Tools.o Timer.o Stand.o SmallStands.o Operation.o ID.o Employeet.o Client.o Bank.o Account.o
 
-Źródło.o: Źródło.cpp Bank.h ID.h
-	g++ -c Źródło.cpp
+Main.o: Main.cpp Bank.h ID.h
+	g++ -c Main.cpp
 Tools.o: Tools.cpp Tools.h
 	g++ -c Tools.cpp
 Timer.o: Timer.cpp Timer.h
