@@ -64,8 +64,13 @@ int main(int argc, char* argv[]) {
         try {
             int arguments[11] = {};
 
-            for (int n = 1; n < argc; n++)
+            for (int n = 1; n < argc; n++) {
                 arguments[n] = stoi(argv[n]);
+                if (arguments[n] < 0) {
+                    throw BadOperation("Settings have wrong format.");
+                }
+            }
+           
 
             Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] });
             timer.runSimulation();
