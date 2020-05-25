@@ -62,14 +62,17 @@ string Client::randomName() {
 
         try {
 		    file.open("name.txt");
-	    }
-    	catch (exception ex) {
-            throw FileNotFound("Name generator not found");
-	    }
+            if (!file.good())
+                throw FileNotFound("Name generator not found");
 
-        while (getline(file, line))
-            namelist.push_back(line);
-        file.close();
+            while (getline(file, line))
+                namelist.push_back(line);
+            file.close();
+	    }
+    	catch (FileNotFound ex) {
+            cout << "Name generator not found" << endl;
+            exit(1);
+	    }
     }
     return namelist[Tools::randomInt() % namelist.size()];
 }
@@ -81,14 +84,17 @@ string Client::randomSurname() {
 
         try {
             file.open("surname.txt");
-	    }
-    	catch (exception ex) {
-            throw FileNotFound("Surname generator not found");
-	    }
+            if (!file.good())
+                throw FileNotFound("Surname generator not found");
 
-        while (getline(file, line))
-            surnamelist.push_back(line);
-        file.close();
+            while (getline(file, line))
+                surnamelist.push_back(line);
+            file.close();
+        }
+        catch (FileNotFound ex) {
+            cout << "Surname generator not found" << endl;
+            exit(1);
+        }
     }
     return surnamelist[Tools::randomInt() % surnamelist.size()];
 }

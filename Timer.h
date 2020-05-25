@@ -25,8 +25,6 @@ public:
 	string getFormatedTime();
 
 	void setTimePerTick(int _time_per_tick);
-
-
 };
 
 #endif

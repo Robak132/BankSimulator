@@ -1,34 +1,83 @@
-#include "Bank.h"
-#include "Timer.h"
-#include "ID.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
 #include <vector>
+#include "Bank.h"
+#include "Timer.h"
+#include "ID.h"
+#include "Tools.h"
 //#define P(x) #x;
 
-
-using namespace std;
-template<typename typ>
-void show2D(vector<vector<typ>> vec)
-{
-    for (auto row : vec)
-    {
-        cout << "Row length " << row.size() << "----> |";
-        for (auto elem : row)
-        {
-            cout << setw(4)<< elem->getStandID().getID() << "|";
-        }
-        cout << endl;
-    }
-}
-
 int main(int argc, char* argv[]) {
-    Timer time;
-    time.runSimulation();
+    switch (argc) {
+    case 1:     // Default file
+        try {
+            ifstream settings;
+            int arguments[11] = {};
+            
+            settings.open("settings.txt");
+            if (!settings.good())
+                throw FileNotFound("Default settings file not found");
 
-    for (int i = 1; i < argc; ++i)
-        cout << argv[i] << endl;
+            for (int n = 1; !settings.eof(); n++) {
+                settings >> arguments[n];
+                if (settings.fail() || arguments[n] < 0)
+                    throw BadOperation("Settings have wrong format.");
+            }
+            settings.close();
+            Timer timer(arguments[10], "log.txt", BankSetup { arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]});
+            timer.runSimulation();
+        }
+        catch (BadOperation ex) {
+            cout << "Wrong operation: " << ex << endl;
+        }
+        catch (FileNotFound ex) {
+            cout << "Default settings file not found" << endl;
+        }
+        break;
+    case 2:     // File
+        try {
+            ifstream settings;
+            int arguments[11] = {};
+
+            settings.open(argv[1]);
+            if (!settings.good())
+                throw FileNotFound("Settings file not found");
+
+            for (int n = 1; !settings.eof(); n++) {
+                settings >> arguments[n];
+                if (settings.fail() || arguments[n] < 0)
+                    throw BadOperation("Settings have wrong format.");
+            }
+            settings.close();
+            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] });
+            timer.runSimulation();
+        }
+        catch (BadOperation ex) {
+            cout << "Wrong operation: " << ex << endl;
+        }
+        catch (FileNotFound ex) {
+            cout << "Default settings file not found" << endl;
+        }
+        break;
+    case 11:    // Direct arguments
+        try {
+            int arguments[11] = {};
+
+            for (int n = 1; n < argc; n++)
+                arguments[n] = stoi(argv[n]);
+
+            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] });
+            timer.runSimulation();
+        }
+        catch (invalid_argument ex) {
+            cout << "Settings have wrong format.";
+        }
+        catch (BadOperation ex) {
+            cout << "Wrong operation: " << ex << endl;
+        }
+        break;
+    }
     return 0;
 }
 
