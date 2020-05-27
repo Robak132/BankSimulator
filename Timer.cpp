@@ -70,6 +70,7 @@ void Timer::runSimulation() {
 		clients_in.erase(clients_in.begin() + i);
 	}
 	log << "Simulation ended" << endl;
+	bank->getStats().saveIt();
 }
 
 
