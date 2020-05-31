@@ -56,6 +56,11 @@ int Bank::getOpenTime()
     return  b_setup.open_time;
 }
 
+BankStats& Bank::getStats()
+{
+    return statistics;
+}
+
 void Bank::iterateThrough()
 {
     for (auto row : stands)
@@ -154,5 +159,6 @@ void Bank::addClientToList(IClient* client) {
         client->setCurrentStand(best_stand);
         client->setInBank(true);
         best_stand->addClient(client);
+        statistics.lookOnClient(client);
     }
 }

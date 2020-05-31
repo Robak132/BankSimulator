@@ -1,5 +1,7 @@
 #ifndef OPENUM_H
 #define OPENUM_H
+#include <iostream>
+
 namespace numt
 {
 	enum PossibleOperations
@@ -13,5 +15,7 @@ namespace numt
 		repayLoan,
 		infoLoan,
 	};
+
+	std::string getFormatedReason(PossibleOperations po);
 }
 #endif

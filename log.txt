@@ -1,1185 +1,1181 @@
 Simulation started
 
 07:09
-A wild client appeared: Ehrwig Wirtz (PSC176) with reason: Get info about account.
-Ehrwig Wirtz [C009464] chose Information Stand [S000003] and now queue length is 1.
-
-07:11
-A wild client appeared: Halman Sleiner (YAW737) with reason: Repay loan.
-Halman Sleiner [C003793] chose Cash Stand [S000002] and now queue length is 1.
+A wild client appeared: Lavinia Lang (UZD118) with reason: Create account.
+Lavinia Lang [C003532] chose Account Stand [S000004] and now queue length is 1.
 
 07:12
-Employee [E000001] just helped customer [C009464] with Get info about account in Information Stand.
+A wild client appeared: Edhilda Beyer (JIT158) with reason: Delete account.
+Edhilda Beyer [C000757] chose Account Stand [S000004] and now queue length is 1.
 
-07:16
-Employee [E000000] just helped customer [C003793] with Repay loan in Cash Stand.
+07:15
+A wild client appeared: Ermina Schultz (ZNW786) with reason: Payment.
+Ermina Schultz [C000243] chose ATMin [S000000] and now queue length is 1.
 
 07:19
-A wild client appeared: Marget Schaumer (WRL964) with reason: Withdraw.
-Marget Schaumer [C001845] chose ATMout [S000001] and now queue length is 1.
+Ermina Schultz (ZNW786) with reason: Payment finished doing it with ATMin [S000000].
 
-07:24
-A wild client appeared: Siegfried Reifsneider (IBN460) with reason: Take loan.
-Siegfried Reifsneider [C003849] chose Cash Stand [S000002] and now queue length is 1.
-Marget Schaumer (WRL964) with reason: Withdraw finished doing it with ATMout [S000001].
+07:23
+A wild client appeared: Irmine Kraemer (ZRQ221) with reason: Repay loan.
+Irmine Kraemer [C009911] chose Cash Stand [S000002] and now queue length is 1.
 
-07:27
-A wild client appeared: Verena Frohlich (GOG807) with reason: Take loan.
-Verena Frohlich [C000306] chose Cash Stand [S000002] and now queue length is 1.
+07:28
+Employee [E000000] just helped customer [C009911] with Repay loan in Cash Stand.
 
-07:33
-A wild client appeared: Melicent Widmann (YAY251) with reason: Delete account.
-Melicent Widmann [C008884] chose Account Stand [S000004] and now queue length is 1.
+07:29
+A wild client appeared: Fabian Hoefer (QJO397) with reason: Get info about loan.
+Fabian Hoefer [C007939] chose Information Stand [S000003] and now queue length is 1.
 
-07:34
-A wild client appeared: Estelle Fleischer (BBB512) with reason: Delete account.
-Estelle Fleischer [C009329] chose Account Stand [S000004] and now queue length is 1.
-Employee [E000000] just helped customer [C003849] with Take loan in Cash Stand.
+07:30
+A wild client appeared: Admund Hofstetter (CPD020) with reason: Get info about account.
+Admund Hofstetter [C005636] chose Information Stand [S000003] and now queue length is 1.
 
-07:44
-Employee [E000000] just helped customer [C000306] with Take loan in Cash Stand.
+07:31
+A wild client appeared: Marget Betz (YLZ153) with reason: Payment.
+Marget Betz [C002622] chose ATMin [S000000] and now queue length is 1.
+
+07:32
+Employee [E000001] just helped customer [C007939] with Get info about loan in Information Stand.
+
+07:35
+Marget Betz (YLZ153) with reason: Payment finished doing it with ATMin [S000000].
+Employee [E000001] just helped customer [C005636] with Get info about account in Information Stand.
+
+07:38
+A wild client appeared: Cilicia Eschlimann (TAR108) with reason: Withdraw.
+Cilicia Eschlimann [C001151] chose ATMout [S000001] and now queue length is 1.
+
+07:39
+Employee [E000002] just helped customer [C003532] with Create account in Account Stand.
+
+07:41
+A wild client appeared: Amalie Eisenhauer (XRZ925) with reason: Payment.
+Amalie Eisenhauer [C004472] chose ATMin [S000000] and now queue length is 1.
+
+07:43
+Cilicia Eschlimann (TAR108) with reason: Withdraw finished doing it with ATMout [S000001].
+
+07:45
+Amalie Eisenhauer (XRZ925) with reason: Payment finished doing it with ATMin [S000000].
+
+07:47
+A wild client appeared: Amalinde Gebauer (TFH874) with reason: Repay loan.
+Amalinde Gebauer [C001158] chose Cash Stand [S000002] and now queue length is 1.
+
+07:49
+A wild client appeared: Keterlyn Schultz (OET158) with reason: Payment.
+Keterlyn Schultz [C006062] chose ATMin [S000000] and now queue length is 1.
+
+07:52
+Employee [E000000] just helped customer [C001158] with Repay loan in Cash Stand.
 
 07:53
-Employee [E000002] just helped customer [C008884] with Delete account in Account Stand.
+Keterlyn Schultz (OET158) with reason: Payment finished doing it with ATMin [S000000].
 
-07:58
-A wild client appeared: Estelle Tabbcck (ZRJ346) with reason: Delete account.
-Estelle Tabbcck [C003582] chose Account Stand [S000004] and now queue length is 1.
+07:56
+A wild client appeared: Dietrich Lang (ALT872) with reason: Take loan.
+Dietrich Lang [C001835] chose Cash Stand [S000002] and now queue length is 1.
 
-08:00
-A wild client appeared: Keterlyn Otzlowe (UYC248) with reason: Delete account.
-Keterlyn Otzlowe [C003449] chose Account Stand [S000004] and now queue length is 2.
-
-08:01
-A wild client appeared: Leanora Scherer (UPR818) with reason: Delete account.
-Leanora Scherer [C009076] chose Account Stand [S000004] and now queue length is 3.
-
-08:03
-A wild client appeared: Valdred Fiegler (KOR813) with reason: Withdraw.
-Valdred Fiegler [C007286] chose ATMout [S000001] and now queue length is 1.
-
-08:05
-A wild client appeared: Randulf Kummel (JLO654) with reason: Get info about loan.
-Randulf Kummel [C002095] chose Information Stand [S000003] and now queue length is 1.
+07:59
+Employee [E000002] just helped customer [C000757] with Delete account in Account Stand.
 
 08:06
-A wild client appeared: Emme Hoefer (JTF747) with reason: Get info about account.
-Emme Hoefer [C009906] chose Information Stand [S000003] and now queue length is 1.
-
-08:08
-Employee [E000001] just helped customer [C002095] with Get info about loan in Information Stand.
-Valdred Fiegler (KOR813) with reason: Withdraw finished doing it with ATMout [S000001].
-
-08:11
-Employee [E000001] just helped customer [C009906] with Get info about account in Information Stand.
+Employee [E000000] just helped customer [C001835] with Take loan in Cash Stand.
 
 08:13
-Employee [E000002] just helped customer [C009329] with Delete account in Account Stand.
+A wild client appeared: Arnulf Otzlowe (IOR420) with reason: Take loan.
+Arnulf Otzlowe [C001970] chose Cash Stand [S000002] and now queue length is 1.
 
 08:14
-A wild client appeared: Ada Neumann (NPT820) with reason: Create account.
-Ada Neumann [C007622] chose Account Stand [S000004] and now queue length is 3.
+A wild client appeared: Helga Allenstag (VWF512) with reason: Get info about loan.
+Helga Allenstag [C004094] chose Information Stand [S000003] and now queue length is 1.
 
 08:17
-A wild client appeared: Gorwin Netzhoch (VWI073) with reason: Delete account.
-Gorwin Netzhoch [C007475] chose Account Stand [S000004] and now queue length is 4.
+Employee [E000001] just helped customer [C004094] with Get info about loan in Information Stand.
+
+08:21
+A wild client appeared: Abbie Kraemer (RUH844) with reason: Get info about loan.
+Abbie Kraemer [C008559] chose Information Stand [S000003] and now queue length is 1.
 
 08:22
-A wild client appeared: Engel Godtgraf (IKC552) with reason: Get info about loan.
-Engel Godtgraf [C008554] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Marget Lutzen (AMS908) with reason: Get info about account.
+Marget Lutzen [C006705] chose Information Stand [S000003] and now queue length is 1.
 
-08:25
-Employee [E000001] just helped customer [C008554] with Get info about loan in Information Stand.
+08:23
+A wild client appeared: Valeria Schultz (LRP097) with reason: Repay loan.
+Valeria Schultz [C002268] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C001970] with Take loan in Cash Stand.
+
+08:24
+Employee [E000001] just helped customer [C008559] with Get info about loan in Information Stand.
 
 08:27
-A wild client appeared: Ella Herzog (MNC840) with reason: Get info about loan.
-Ella Herzog [C000768] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000001] just helped customer [C006705] with Get info about account in Information Stand.
 
-08:30
-Employee [E000001] just helped customer [C000768] with Get info about loan in Information Stand.
+08:28
+Employee [E000000] just helped customer [C002268] with Repay loan in Cash Stand.
 
-08:32
-A wild client appeared: Hans Adelhof (QXY439) with reason: Take loan.
-Hans Adelhof [C006486] chose Cash Stand [S000002] and now queue length is 1.
+08:31
+A wild client appeared: Lorna Reifsneider (MTV072) with reason: Withdraw.
+Lorna Reifsneider [C004493] chose ATMout [S000001] and now queue length is 1.
 
-08:33
-Employee [E000002] just helped customer [C003582] with Delete account in Account Stand.
+08:35
+A wild client appeared: Lorna Ehrhard (HQG202) with reason: Repay loan.
+Lorna Ehrhard [C001906] chose Cash Stand [S000002] and now queue length is 1.
 
-08:34
-A wild client appeared: Axel Machholt (NIB956) with reason: Repay loan.
-Axel Machholt [C006020] chose Cash Stand [S000002] and now queue length is 1.
+08:36
+Lorna Reifsneider (MTV072) with reason: Withdraw finished doing it with ATMout [S000001].
 
-08:37
-A wild client appeared: Leanora Baumann (LNA518) with reason: Repay loan.
-Leanora Baumann [C007871] chose Cash Stand [S000002] and now queue length is 2.
-
-08:38
-A wild client appeared: Engel Kuhn (EUU865) with reason: Take loan.
-Engel Kuhn [C002806] chose Cash Stand [S000002] and now queue length is 3.
+08:39
+A wild client appeared: Gudryn Guth (PIH638) with reason: Get info about loan.
+Gudryn Guth [C007545] chose Information Stand [S000003] and now queue length is 1.
 
 08:40
-A wild client appeared: Bartolf Wechsler (QPF103) with reason: Payment.
-Bartolf Wechsler [C005058] chose ATMin [S000000] and now queue length is 1.
+Employee [E000000] just helped customer [C001906] with Repay loan in Cash Stand.
 
 08:42
-Employee [E000000] just helped customer [C006486] with Take loan in Cash Stand.
-
-08:44
-Bartolf Wechsler (QPF103) with reason: Payment finished doing it with ATMin [S000000].
-
-08:46
-A wild client appeared: Karl Schleiermacher (IMZ281) with reason: Withdraw.
-Karl Schleiermacher [C001116] chose ATMout [S000001] and now queue length is 1.
+Employee [E000001] just helped customer [C007545] with Get info about loan in Information Stand.
 
 08:47
-Employee [E000000] just helped customer [C006020] with Repay loan in Cash Stand.
+A wild client appeared: Lavinia Naubhof (HSA283) with reason: Delete account.
+Lavinia Naubhof [C003672] chose Account Stand [S000004] and now queue length is 1.
 
 08:49
-A wild client appeared: Gawin Naubhof (RQJ911) with reason: Get info about account.
-Gawin Naubhof [C002760] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Lisbeth Altmann (DQB902) with reason: Payment.
+Lisbeth Altmann [C004754] chose ATMin [S000000] and now queue length is 1.
 
 08:50
-A wild client appeared: Constanza Gebauer (QPZ465) with reason: Payment.
-Constanza Gebauer [C006977] chose ATMin [S000000] and now queue length is 1.
+A wild client appeared: Johann Baer (OPD154) with reason: Take loan.
+Johann Baer [C008494] chose Cash Stand [S000002] and now queue length is 1.
 
 08:51
-Karl Schleiermacher (IMZ281) with reason: Withdraw finished doing it with ATMout [S000001].
-
-08:52
-Employee [E000001] just helped customer [C002760] with Get info about account in Information Stand.
-Employee [E000000] just helped customer [C007871] with Repay loan in Cash Stand.
+A wild client appeared: Connie Bischof (LMV149) with reason: Payment.
+Connie Bischof [C006942] chose ATMin [S000000] and now queue length is 1.
 
 08:53
-A wild client appeared: Leopold Falkenheim (JFU922) with reason: Payment.
-Leopold Falkenheim [C003340] chose ATMin [S000000] and now queue length is 1.
-Employee [E000002] just helped customer [C003449] with Delete account in Account Stand.
+Lisbeth Altmann (DQB902) with reason: Payment finished doing it with ATMin [S000000].
 
-08:54
-Constanza Gebauer (QPZ465) with reason: Payment finished doing it with ATMin [S000000].
+08:55
+A wild client appeared: Esmaralda Fiegler (TOZ578) with reason: Delete account.
+Esmaralda Fiegler [C007627] chose Account Stand [S000004] and now queue length is 1.
 
-08:58
-A wild client appeared: Liebert Fiegler (BGN276) with reason: Take loan.
-Liebert Fiegler [C001107] chose Cash Stand [S000002] and now queue length is 1.
-Leopold Falkenheim (JFU922) with reason: Payment finished doing it with ATMin [S000000].
+08:57
+Connie Bischof (LMV149) with reason: Payment finished doing it with ATMin [S000000].
 
-08:59
-A wild client appeared: Tilmann Hirtzel (NGB226) with reason: Get info about loan.
-Tilmann Hirtzel [C005215] chose Information Stand [S000003] and now queue length is 1.
-
-09:02
-A wild client appeared: Broncea Rohrig (OHH276) with reason: Create account.
-Broncea Rohrig [C006074] chose Account Stand [S000004] and now queue length is 3.
-Employee [E000001] just helped customer [C005215] with Get info about loan in Information Stand.
-Employee [E000000] just helped customer [C002806] with Take loan in Cash Stand.
+09:00
+Employee [E000000] just helped customer [C008494] with Take loan in Cash Stand.
 
 09:07
-A wild client appeared: Maglyn Allenstag (STG677) with reason: Take loan.
-Maglyn Allenstag [C009385] chose Cash Stand [S000002] and now queue length is 1.
-
-09:08
-A wild client appeared: Elsina Otzlowe (NDT438) with reason: Withdraw.
-Elsina Otzlowe [C003413] chose ATMout [S000001] and now queue length is 1.
+A wild client appeared: Heinman Durrbein (HFN689) with reason: Withdraw.
+Heinman Durrbein [C007055] chose ATMout [S000001] and now queue length is 1.
+Employee [E000002] just helped customer [C003672] with Delete account in Account Stand.
 
 09:12
-Employee [E000000] just helped customer [C001107] with Take loan in Cash Stand.
+Heinman Durrbein (HFN689) with reason: Withdraw finished doing it with ATMout [S000001].
 
-09:13
-Elsina Otzlowe (NDT438) with reason: Withdraw finished doing it with ATMout [S000001].
-Employee [E000002] just helped customer [C009076] with Delete account in Account Stand.
+09:18
+A wild client appeared: Viggo Nuhr (IFY616) with reason: Withdraw.
+Viggo Nuhr [C000123] chose ATMout [S000001] and now queue length is 1.
 
 09:19
-A wild client appeared: Elsa Baumann (DPL740) with reason: Payment.
-Elsa Baumann [C007562] chose ATMin [S000000] and now queue length is 1.
+A wild client appeared: Max Kummel (MZE936) with reason: Take loan.
+Max Kummel [C005254] chose Cash Stand [S000002] and now queue length is 1.
 
-09:22
-Employee [E000000] just helped customer [C009385] with Take loan in Cash Stand.
+09:21
+A wild client appeared: Roz Vogt (VDX774) with reason: Create account.
+Roz Vogt [C007935] chose Account Stand [S000004] and now queue length is 1.
 
 09:23
-Elsa Baumann (DPL740) with reason: Payment finished doing it with ATMin [S000000].
+Viggo Nuhr (IFY616) with reason: Withdraw finished doing it with ATMout [S000001].
 
-09:25
-A wild client appeared: Eckhart Reiss (GPA812) with reason: Create account.
-Eckhart Reiss [C006516] chose Account Stand [S000004] and now queue length is 3.
+09:26
+A wild client appeared: Fulko Liess (DMA945) with reason: Get info about loan.
+Fulko Liess [C006864] chose Information Stand [S000003] and now queue length is 1.
 
-09:28
-A wild client appeared: Felix Bacher (YGJ412) with reason: Payment.
-Felix Bacher [C004232] chose ATMin [S000000] and now queue length is 1.
+09:27
+Employee [E000002] just helped customer [C007627] with Delete account in Account Stand.
 
-09:32
-Felix Bacher (YGJ412) with reason: Payment finished doing it with ATMin [S000000].
+09:29
+Employee [E000001] just helped customer [C006864] with Get info about loan in Information Stand.
+Employee [E000000] just helped customer [C005254] with Take loan in Cash Stand.
 
-09:34
-A wild client appeared: Baldwin Allenstag (CZB514) with reason: Delete account.
-Baldwin Allenstag [C006839] chose Account Stand [S000004] and now queue length is 4.
+09:53
+A wild client appeared: Ranulf Vogt (VIQ041) with reason: Take loan.
+Ranulf Vogt [C007199] chose Cash Stand [S000002] and now queue length is 1.
 
-09:36
-A wild client appeared: Gosbert Albrecht (GRA721) with reason: Create account.
-Gosbert Albrecht [C002732] chose Account Stand [S000004] and now queue length is 5.
+09:56
+A wild client appeared: Caspar Riese (ABT736) with reason: Get info about loan.
+Caspar Riese [C002285] chose Information Stand [S000003] and now queue length is 1.
 
-09:37
-A wild client appeared: Oswin Albrecht (DKT789) with reason: Take loan.
-Oswin Albrecht [C007594] chose Cash Stand [S000002] and now queue length is 1.
-
-09:43
-Employee [E000002] just helped customer [C007622] with Create account in Account Stand.
-
-09:47
-Employee [E000000] just helped customer [C007594] with Take loan in Cash Stand.
-
-09:50
-A wild client appeared: Renata Oberholczer (MYF924) with reason: Create account.
-Renata Oberholczer [C006937] chose Account Stand [S000004] and now queue length is 5.
-
-09:51
-A wild client appeared: Klaus Breuer (RLK945) with reason: Delete account.
-Klaus Breuer [C006180] chose Account Stand [S000004] and now queue length is 6.
-
-09:55
-A wild client appeared: Gerberga Frueh (FZR329) with reason: Take loan.
-Gerberga Frueh [C007539] chose Cash Stand [S000002] and now queue length is 1.
+09:57
+Employee [E000002] just helped customer [C007935] with Create account in Account Stand.
 
 09:59
-A wild client appeared: Constance Drakenhof (QOD082) with reason: Repay loan.
-Constance Drakenhof [C003620] chose Cash Stand [S000002] and now queue length is 1.
-
-10:00
-A wild client appeared: Jurgen Herzog (CPL581) with reason: Create account.
-Jurgen Herzog [C002117] chose Account Stand [S000004] and now queue length is 7.
+Employee [E000001] just helped customer [C002285] with Get info about loan in Information Stand.
 
 10:02
-A wild client appeared: Marhilda Hoefer (PAM552) with reason: Repay loan.
-Marhilda Hoefer [C000311] chose Cash Stand [S000002] and now queue length is 2.
+A wild client appeared: Valdred Ohrsten (MIJ239) with reason: Withdraw.
+Valdred Ohrsten [C008307] chose ATMout [S000001] and now queue length is 1.
 
 10:03
-Employee [E000002] just helped customer [C007475] with Delete account in Account Stand.
+Employee [E000000] just helped customer [C007199] with Take loan in Cash Stand.
 
-10:05
-Employee [E000000] just helped customer [C007539] with Take loan in Cash Stand.
+10:06
+A wild client appeared: Odwin Wechsler (GAK500) with reason: Delete account.
+Odwin Wechsler [C003735] chose Account Stand [S000004] and now queue length is 1.
 
 10:07
-A wild client appeared: Ingwald Lutzen (UOS691) with reason: Delete account.
-Ingwald Lutzen [C000520] chose Account Stand [S000004] and now queue length is 7.
+Valdred Ohrsten (MIJ239) with reason: Withdraw finished doing it with ATMout [S000001].
 
 10:10
-A wild client appeared: Gabriele Machholt (HOJ584) with reason: Get info about loan.
-Gabriele Machholt [C000514] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000000] just helped customer [C003620] with Repay loan in Cash Stand.
+A wild client appeared: Waldred Hofstetter (NVO563) with reason: Get info about account.
+Waldred Hofstetter [C009919] chose Information Stand [S000003] and now queue length is 1.
 
 10:13
-A wild client appeared: Gundred Nachtmann (OCE979) with reason: Get info about account.
-Gundred Nachtmann [C006426] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000001] just helped customer [C000514] with Get info about loan in Information Stand.
-
-10:15
-A wild client appeared: Aldebrand Hoch (EVG159) with reason: Get info about account.
-Aldebrand Hoch [C008716] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000000] just helped customer [C000311] with Repay loan in Cash Stand.
-
-10:16
-A wild client appeared: Jom Riese (NIB130) with reason: Withdraw.
-Jom Riese [C009621] chose ATMout [S000001] and now queue length is 1.
-Employee [E000001] just helped customer [C006426] with Get info about account in Information Stand.
-
-10:18
-A wild client appeared: Lavinia Atzwig (QVR787) with reason: Repay loan.
-Lavinia Atzwig [C002850] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000001] just helped customer [C009919] with Get info about account in Information Stand.
 
 10:19
-A wild client appeared: Lisa Konigsamen (FXL078) with reason: Repay loan.
-Lisa Konigsamen [C001336] chose Cash Stand [S000002] and now queue length is 1.
-Employee [E000001] just helped customer [C008716] with Get info about account in Information Stand.
+A wild client appeared: Emelia Scherer (LUP371) with reason: Repay loan.
+Emelia Scherer [C000304] chose Cash Stand [S000002] and now queue length is 1.
 
-10:21
-Jom Riese (NIB130) with reason: Withdraw finished doing it with ATMout [S000001].
-
-10:22
-A wild client appeared: Madge Grunenwald (UKQ823) with reason: Get info about loan.
-Madge Grunenwald [C007004] chose Information Stand [S000003] and now queue length is 1.
-
-10:23
-A wild client appeared: Osric Gaertner (EVC032) with reason: Repay loan.
-Osric Gaertner [C000967] chose Cash Stand [S000002] and now queue length is 2.
-Employee [E000000] just helped customer [C002850] with Repay loan in Cash Stand.
+10:24
+A wild client appeared: Gunthcr Kalb (PJB275) with reason: Payment.
+Gunthcr Kalb [C004426] chose ATMin [S000000] and now queue length is 1.
+Employee [E000000] just helped customer [C000304] with Repay loan in Cash Stand.
 
 10:25
-Employee [E000001] just helped customer [C007004] with Get info about loan in Information Stand.
+A wild client appeared: Edythe Schultz (VNF453) with reason: Delete account.
+Edythe Schultz [C001435] chose Account Stand [S000004] and now queue length is 1.
 
-10:27
-A wild client appeared: Hagen Reiss (AMM958) with reason: Withdraw.
-Hagen Reiss [C002737] chose ATMout [S000001] and now queue length is 1.
+10:26
+Employee [E000002] just helped customer [C003735] with Delete account in Account Stand.
 
 10:28
-A wild client appeared: Petronella Albrecht (TQM582) with reason: Get info about loan.
-Petronella Albrecht [C004815] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000000] just helped customer [C001336] with Repay loan in Cash Stand.
+Gunthcr Kalb (PJB275) with reason: Payment finished doing it with ATMin [S000000].
 
-10:31
-Employee [E000001] just helped customer [C004815] with Get info about loan in Information Stand.
+10:36
+A wild client appeared: Kirsren Schaffer (YON416) with reason: Create account.
+Kirsren Schaffer [C007058] chose Account Stand [S000004] and now queue length is 1.
 
-10:32
-Hagen Reiss (AMM958) with reason: Withdraw finished doing it with ATMout [S000001].
-
-10:33
-A wild client appeared: Volker Reichert (XOZ874) with reason: Payment.
-Volker Reichert [C000934] chose ATMin [S000000] and now queue length is 1.
-Employee [E000000] just helped customer [C000967] with Repay loan in Cash Stand.
-Employee [E000002] just helped customer [C006074] with Create account in Account Stand.
-
-10:37
-A wild client appeared: Perdita Sleiner (MRW761) with reason: Create account.
-Perdita Sleiner [C009853] chose Account Stand [S000004] and now queue length is 7.
-Volker Reichert (XOZ874) with reason: Payment finished doing it with ATMin [S000000].
-
-10:38
-A wild client appeared: Bertolf Dahmbach (XLS588) with reason: Delete account.
-Bertolf Dahmbach [C005991] chose Account Stand [S000004] and now queue length is 8.
-
-10:39
-A wild client appeared: Durnhelm Reiss (GRD390) with reason: Withdraw.
-Durnhelm Reiss [C001671] chose ATMout [S000001] and now queue length is 1.
+10:41
+A wild client appeared: Wolfgang Frueh (HRP044) with reason: Get info about account.
+Wolfgang Frueh [C009458] chose Information Stand [S000003] and now queue length is 1.
 
 10:44
-Durnhelm Reiss (GRD390) with reason: Withdraw finished doing it with ATMout [S000001].
+A wild client appeared: Gudrun Weber (XWH975) with reason: Withdraw.
+Gudrun Weber [C002443] chose ATMout [S000001] and now queue length is 1.
+Employee [E000001] just helped customer [C009458] with Get info about account in Information Stand.
 
 10:45
-A wild client appeared: Eodred Fuchs (KDX733) with reason: Take loan.
-Eodred Fuchs [C005258] chose Cash Stand [S000002] and now queue length is 1.
+A wild client appeared: Odwin Tolzen (EXA636) with reason: Create account.
+Odwin Tolzen [C001581] chose Account Stand [S000004] and now queue length is 2.
 
-10:47
-A wild client appeared: Wilbert Frohlich (DLZ830) with reason: Repay loan.
-Wilbert Frohlich [C008435] chose Cash Stand [S000002] and now queue length is 1.
+10:46
+Employee [E000002] just helped customer [C001435] with Delete account in Account Stand.
+
+10:49
+Gudrun Weber (XWH975) with reason: Withdraw finished doing it with ATMout [S000001].
+
+10:50
+A wild client appeared: Andre Drakenhof (AYO941) with reason: Get info about account.
+Andre Drakenhof [C001102] chose Information Stand [S000003] and now queue length is 1.
 
 10:53
-A wild client appeared: Adelle Wechsler (MFS839) with reason: Get info about loan.
-Adelle Wechsler [C009099] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000001] just helped customer [C001102] with Get info about account in Information Stand.
 
-10:55
-A wild client appeared: Kleber Altmann (UXQ998) with reason: Withdraw.
-Kleber Altmann [C003525] chose ATMout [S000001] and now queue length is 1.
-Employee [E000000] just helped customer [C005258] with Take loan in Cash Stand.
+11:04
+A wild client appeared: Narhandar Scherer (UFD659) with reason: Create account.
+Narhandar Scherer [C005652] chose Account Stand [S000004] and now queue length is 2.
 
-10:56
-A wild client appeared: Drachena Herzog (VGQ681) with reason: Payment.
-Drachena Herzog [C000251] chose ATMin [S000000] and now queue length is 1.
-Employee [E000001] just helped customer [C009099] with Get info about loan in Information Stand.
-
-11:00
-A wild client appeared: Gregor Wirtz (JQP392) with reason: Take loan.
-Gregor Wirtz [C009141] chose Cash Stand [S000002] and now queue length is 1.
-Drachena Herzog (VGQ681) with reason: Payment finished doing it with ATMin [S000000].
-Kleber Altmann (UXQ998) with reason: Withdraw finished doing it with ATMout [S000001].
-Employee [E000000] just helped customer [C008435] with Repay loan in Cash Stand.
-
-11:01
-A wild client appeared: Fulko Kuhn (HSS544) with reason: Payment.
-Fulko Kuhn [C000075] chose ATMin [S000000] and now queue length is 1.
-
-11:03
-Employee [E000002] just helped customer [C006516] with Create account in Account Stand.
-
-11:05
-Fulko Kuhn (HSS544) with reason: Payment finished doing it with ATMin [S000000].
+11:07
+A wild client appeared: Abbie Reifsneider (SXD159) with reason: Take loan.
+Abbie Reifsneider [C008743] chose Cash Stand [S000002] and now queue length is 1.
 
 11:10
-Employee [E000000] just helped customer [C009141] with Take loan in Cash Stand.
+A wild client appeared: Fredric Lankdorf (THU048) with reason: Payment.
+Fredric Lankdorf [C001301] chose ATMin [S000000] and now queue length is 1.
+
+11:12
+A wild client appeared: Baldric Schwalb (LIF367) with reason: Create account.
+Baldric Schwalb [C007493] chose Account Stand [S000004] and now queue length is 3.
 
 11:14
-A wild client appeared: Hildebrand Schaumer (YOL592) with reason: Repay loan.
-Hildebrand Schaumer [C009012] chose Cash Stand [S000002] and now queue length is 1.
+Fredric Lankdorf (THU048) with reason: Payment finished doing it with ATMin [S000000].
 
 11:16
-A wild client appeared: Edmund Otzlowe (LEO702) with reason: Get info about loan.
-Edmund Otzlowe [C005358] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000002] just helped customer [C007058] with Create account in Account Stand.
 
-11:19
-A wild client appeared: Rosabel Mohr (PXE510) with reason: Get info about account.
-Rosabel Mohr [C008696] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000001] just helped customer [C005358] with Get info about loan in Information Stand.
-Employee [E000000] just helped customer [C009012] with Repay loan in Cash Stand.
-
-11:21
-A wild client appeared: Gerberga Baer (XHW846) with reason: Get info about loan.
-Gerberga Baer [C006140] chose Information Stand [S000003] and now queue length is 1.
-
-11:22
-Employee [E000001] just helped customer [C008696] with Get info about account in Information Stand.
+11:17
+Employee [E000000] just helped customer [C008743] with Take loan in Cash Stand.
 
 11:23
-Employee [E000002] just helped customer [C006839] with Delete account in Account Stand.
+A wild client appeared: Dietrich Meyer (RHY771) with reason: Repay loan.
+Dietrich Meyer [C007838] chose Cash Stand [S000002] and now queue length is 1.
 
-11:25
-Employee [E000001] just helped customer [C006140] with Get info about loan in Information Stand.
+11:26
+A wild client appeared: Reinolt Teubcr (FPF459) with reason: Payment.
+Reinolt Teubcr [C001474] chose ATMin [S000000] and now queue length is 1.
+
+11:28
+A wild client appeared: Kitty Hoefer (IHR945) with reason: Repay loan.
+Kitty Hoefer [C004884] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C007838] with Repay loan in Cash Stand.
+
+11:29
+A wild client appeared: Rosamunde Vogt (EVW631) with reason: Take loan.
+Rosamunde Vogt [C000936] chose Cash Stand [S000002] and now queue length is 1.
+
+11:30
+Reinolt Teubcr (FPF459) with reason: Payment finished doing it with ATMin [S000000].
 
 11:33
-A wild client appeared: Brunhi Ehrhard (BOI507) with reason: Withdraw.
-Brunhi Ehrhard [C001315] chose ATMout [S000001] and now queue length is 1.
+Employee [E000000] just helped customer [C004884] with Repay loan in Cash Stand.
 
-11:38
-A wild client appeared: Linus Reiss (TXW913) with reason: Take loan.
-Linus Reiss [C006373] chose Cash Stand [S000002] and now queue length is 1.
-Brunhi Ehrhard (BOI507) with reason: Withdraw finished doing it with ATMout [S000001].
+11:43
+Employee [E000000] just helped customer [C000936] with Take loan in Cash Stand.
 
-11:48
-Employee [E000000] just helped customer [C006373] with Take loan in Cash Stand.
+11:46
+A wild client appeared: Esmaralda Neumann (BUY837) with reason: Take loan.
+Esmaralda Neumann [C009271] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000002] just helped customer [C001581] with Create account in Account Stand.
 
-11:52
-A wild client appeared: Desdcmona Eschlimann (DRN078) with reason: Delete account.
-Desdcmona Eschlimann [C006540] chose Account Stand [S000004] and now queue length is 7.
+11:47
+A wild client appeared: Wolfgang Lutzen (VPY984) with reason: Create account.
+Wolfgang Lutzen [C001876] chose Account Stand [S000004] and now queue length is 2.
 
-11:53
-Employee [E000002] just helped customer [C002732] with Create account in Account Stand.
+11:55
+A wild client appeared: Rosalin Meyer (BTD156) with reason: Get info about account.
+Rosalin Meyer [C006122] chose Information Stand [S000003] and now queue length is 1.
 
-11:54
-A wild client appeared: Alfreid Grunenwald (WLA511) with reason: Create account.
-Alfreid Grunenwald [C005320] chose Account Stand [S000004] and now queue length is 7.
+11:56
+Employee [E000000] just helped customer [C009271] with Take loan in Cash Stand.
 
-11:57
-A wild client appeared: Jom Allenstag (ERB366) with reason: Get info about loan.
-Jom Allenstag [C006037] chose Information Stand [S000003] and now queue length is 1.
+11:58
+Employee [E000001] just helped customer [C006122] with Get info about account in Information Stand.
 
-12:00
-Employee [E000001] just helped customer [C006037] with Get info about loan in Information Stand.
+12:02
+A wild client appeared: Salina Gebauer (STB479) with reason: Repay loan.
+Salina Gebauer [C003676] chose Cash Stand [S000002] and now queue length is 1.
+
+12:07
+Employee [E000000] just helped customer [C003676] with Repay loan in Cash Stand.
+
+12:08
+A wild client appeared: Odric Godtgraf (XNL161) with reason: Create account.
+Odric Godtgraf [C007523] chose Account Stand [S000004] and now queue length is 3.
 
 12:14
-A wild client appeared: Karin Mohr (IHG180) with reason: Withdraw.
-Karin Mohr [C000743] chose ATMout [S000001] and now queue length is 1.
+A wild client appeared: Hildebrand Hoefer (FEU544) with reason: Take loan.
+Hildebrand Hoefer [C006972] chose Cash Stand [S000002] and now queue length is 1.
 
-12:15
-A wild client appeared: Bruno Behn (HQL125) with reason: Create account.
-Bruno Behn [C008266] chose Account Stand [S000004] and now queue length is 8.
+12:16
+Employee [E000002] just helped customer [C005652] with Create account in Account Stand.
 
-12:19
-Karin Mohr (IHG180) with reason: Withdraw finished doing it with ATMout [S000001].
+12:18
+A wild client appeared: Mathias Fehr (GPL913) with reason: Delete account.
+Mathias Fehr [C009772] chose Account Stand [S000004] and now queue length is 3.
 
-12:23
-Employee [E000002] just helped customer [C006937] with Create account in Account Stand.
+12:24
+A wild client appeared: Haldred Naubhof (OQF010) with reason: Withdraw.
+Haldred Naubhof [C006413] chose ATMout [S000001] and now queue length is 1.
+Employee [E000000] just helped customer [C006972] with Take loan in Cash Stand.
 
-12:33
-A wild client appeared: Mabel Herz (LPI371) with reason: Create account.
-Mabel Herz [C006515] chose Account Stand [S000004] and now queue length is 8.
+12:26
+A wild client appeared: Volkrad Nuhr (ICE641) with reason: Get info about account.
+Volkrad Nuhr [C008839] chose Information Stand [S000003] and now queue length is 1.
 
-12:40
-A wild client appeared: Abbie Lebengut (WZN186) with reason: Create account.
-Abbie Lebengut [C002555] chose Account Stand [S000004] and now queue length is 9.
+12:29
+A wild client appeared: Perdita Ehrhard (YAW904) with reason: Create account.
+Perdita Ehrhard [C009500] chose Account Stand [S000004] and now queue length is 4.
+Employee [E000001] just helped customer [C008839] with Get info about account in Information Stand.
+Haldred Naubhof (OQF010) with reason: Withdraw finished doing it with ATMout [S000001].
 
-12:43
-Employee [E000002] just helped customer [C006180] with Delete account in Account Stand.
+12:31
+A wild client appeared: Constanza Hoch (UBH273) with reason: Withdraw.
+Constanza Hoch [C006715] chose ATMout [S000001] and now queue length is 1.
 
-12:49
-A wild client appeared: Sepp Meyer (PKE273) with reason: Get info about account.
-Sepp Meyer [C000119] chose Information Stand [S000003] and now queue length is 1.
+12:36
+Constanza Hoch (UBH273) with reason: Withdraw finished doing it with ATMout [S000001].
 
-12:52
-Employee [E000001] just helped customer [C000119] with Get info about account in Information Stand.
+12:44
+A wild client appeared: Heinz Albrecht (NVH249) with reason: Delete account.
+Heinz Albrecht [C008047] chose Account Stand [S000004] and now queue length is 5.
 
-12:57
-A wild client appeared: Ophelia Lebengut (DKX822) with reason: Take loan.
-Ophelia Lebengut [C001684] chose Cash Stand [S000002] and now queue length is 1.
+12:46
+Employee [E000002] just helped customer [C007493] with Create account in Account Stand.
+
+12:47
+A wild client appeared: Rosamunde Mohr (TDP737) with reason: Create account.
+Rosamunde Mohr [C002616] chose Account Stand [S000004] and now queue length is 5.
+
+12:53
+A wild client appeared: Bernolt Durrbein (ZSV944) with reason: Delete account.
+Bernolt Durrbein [C007033] chose Account Stand [S000004] and now queue length is 6.
+
+12:56
+A wild client appeared: Maghilda Lang (DFW255) with reason: Create account.
+Maghilda Lang [C002733] chose Account Stand [S000004] and now queue length is 7.
+
+12:58
+A wild client appeared: Reikhard Rohrig (ILV511) with reason: Repay loan.
+Reikhard Rohrig [C003110] chose Cash Stand [S000002] and now queue length is 1.
+
+12:59
+A wild client appeared: Mekel Liess (ABQ232) with reason: Get info about account.
+Mekel Liess [C008953] chose Information Stand [S000003] and now queue length is 1.
 
 13:00
-A wild client appeared: Mathias Durrbein (PMB310) with reason: Get info about loan.
-Mathias Durrbein [C005830] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Herwin Atzwig (UTG755) with reason: Get info about account.
+Herwin Atzwig [C009353] chose Information Stand [S000003] and now queue length is 1.
+
+13:02
+Employee [E000001] just helped customer [C008953] with Get info about account in Information Stand.
 
 13:03
-Employee [E000001] just helped customer [C005830] with Get info about loan in Information Stand.
+Employee [E000000] just helped customer [C003110] with Repay loan in Cash Stand.
 
-13:07
-Employee [E000000] just helped customer [C001684] with Take loan in Cash Stand.
+13:04
+A wild client appeared: Siegfried Schultz (WVK317) with reason: Take loan.
+Siegfried Schultz [C007320] chose Cash Stand [S000002] and now queue length is 1.
 
-13:12
-A wild client appeared: Magunda Scherer (SDY261) with reason: Delete account.
-Magunda Scherer [C007354] chose Account Stand [S000004] and now queue length is 9.
+13:05
+A wild client appeared: Eber Wechsler (NKJ660) with reason: Take loan.
+Eber Wechsler [C006282] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000001] just helped customer [C009353] with Get info about account in Information Stand.
 
-13:13
-Employee [E000002] just helped customer [C002117] with Create account in Account Stand.
+13:14
+Employee [E000000] just helped customer [C007320] with Take loan in Cash Stand.
 
-13:15
-A wild client appeared: Sebastian Krebs (NUE721) with reason: Repay loan.
-Sebastian Krebs [C000889] chose Cash Stand [S000002] and now queue length is 1.
+13:16
+A wild client appeared: Friedhilda Niederlitz (CHT395) with reason: Get info about loan.
+Friedhilda Niederlitz [C007037] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000002] just helped customer [C001876] with Create account in Account Stand.
 
-13:20
-Employee [E000000] just helped customer [C000889] with Repay loan in Cash Stand.
+13:19
+Employee [E000001] just helped customer [C007037] with Get info about loan in Information Stand.
 
 13:23
-A wild client appeared: Esmaralda Adelhof (YTG432) with reason: Withdraw.
-Esmaralda Adelhof [C008623] chose ATMout [S000001] and now queue length is 1.
+A wild client appeared: Johanna Riese (EIL902) with reason: Create account.
+Johanna Riese [C001971] chose Account Stand [S000004] and now queue length is 7.
 
-13:28
-A wild client appeared: Altmar Eisenhauer (EQR208) with reason: Get info about account.
-Altmar Eisenhauer [C000081] chose Information Stand [S000003] and now queue length is 1.
-Esmaralda Adelhof (YTG432) with reason: Withdraw finished doing it with ATMout [S000001].
+13:24
+Employee [E000000] just helped customer [C006282] with Take loan in Cash Stand.
+
+13:25
+A wild client appeared: Siegfried Drauwulf (YHT335) with reason: Payment.
+Siegfried Drauwulf [C005156] chose ATMin [S000000] and now queue length is 1.
+
+13:26
+A wild client appeared: Carloua Drauwulf (WYQ067) with reason: Create account.
+Carloua Drauwulf [C009815] chose Account Stand [S000004] and now queue length is 8.
+
+13:27
+A wild client appeared: Erkenbrand Jutzenbach (IZX256) with reason: Get info about account.
+Erkenbrand Jutzenbach [C008090] chose Information Stand [S000003] and now queue length is 1.
+
+13:29
+A wild client appeared: Johann Fiegler (ZIF312) with reason: Withdraw.
+Johann Fiegler [C002335] chose ATMout [S000001] and now queue length is 1.
+Siegfried Drauwulf (YHT335) with reason: Payment finished doing it with ATMin [S000000].
 
 13:30
-A wild client appeared: Gortolf Kaltenbach (GSM079) with reason: Get info about account.
-Gortolf Kaltenbach [C008871] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000001] just helped customer [C008090] with Get info about account in Information Stand.
 
-13:31
-A wild client appeared: Ingrid Vogt (QVR287) with reason: Get info about loan.
-Ingrid Vogt [C000938] chose Information Stand [S000003] and now queue length is 2.
-Employee [E000001] just helped customer [C000081] with Get info about account in Information Stand.
-
-13:33
-Employee [E000002] just helped customer [C000520] with Delete account in Account Stand.
+13:32
+A wild client appeared: Abigund Eschlimann (EVM553) with reason: Payment.
+Abigund Eschlimann [C002856] chose ATMin [S000000] and now queue length is 1.
 
 13:34
-Employee [E000001] just helped customer [C008871] with Get info about account in Information Stand.
+A wild client appeared: Ostia Albrecht (IXR787) with reason: Get info about account.
+Ostia Albrecht [C000603] chose Information Stand [S000003] and now queue length is 1.
+Johann Fiegler (ZIF312) with reason: Withdraw finished doing it with ATMout [S000001].
+
+13:36
+A wild client appeared: Gawin Betz (DVL739) with reason: Withdraw.
+Gawin Betz [C003323] chose ATMout [S000001] and now queue length is 1.
+Abigund Eschlimann (EVM553) with reason: Payment finished doing it with ATMin [S000000].
 
 13:37
-Employee [E000001] just helped customer [C000938] with Get info about loan in Information Stand.
+A wild client appeared: Nellie Meyer (CWB712) with reason: Repay loan.
+Nellie Meyer [C005993] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000001] just helped customer [C000603] with Get info about account in Information Stand.
 
 13:41
-A wild client appeared: Ophelia Lebengut (DKX822) with reason: Take loan.
-Ophelia Lebengut [C001684] chose Cash Stand [S000002] and now queue length is 1.
+Gawin Betz (DVL739) with reason: Withdraw finished doing it with ATMout [S000001].
+
+13:42
+A wild client appeared: Heidric Herzog (XUB566) with reason: Repay loan.
+Heidric Herzog [C001639] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C005993] with Repay loan in Cash Stand.
+
+13:44
+A wild client appeared: Gerber Tolzen (WNU871) with reason: Withdraw.
+Gerber Tolzen [C006098] chose ATMout [S000001] and now queue length is 1.
+
+13:45
+A wild client appeared: Valdric Breitenbach (QQK002) with reason: Repay loan.
+Valdric Breitenbach [C000772] chose Cash Stand [S000002] and now queue length is 1.
 
 13:46
-A wild client appeared: Baldric Eschlimann (RQH391) with reason: Payment.
-Baldric Eschlimann [C006551] chose ATMin [S000000] and now queue length is 1.
+Employee [E000002] just helped customer [C007523] with Create account in Account Stand.
 
-13:50
-Baldric Eschlimann (RQH391) with reason: Payment finished doing it with ATMin [S000000].
+13:47
+Employee [E000000] just helped customer [C001639] with Repay loan in Cash Stand.
 
-13:51
-Employee [E000000] just helped customer [C001684] with Take loan in Cash Stand.
+13:49
+Gerber Tolzen (WNU871) with reason: Withdraw finished doing it with ATMout [S000001].
 
-13:54
-A wild client appeared: Alicia Godtgraf (JQA227) with reason: Get info about loan.
-Alicia Godtgraf [C008819] chose Information Stand [S000003] and now queue length is 1.
+13:52
+Employee [E000000] just helped customer [C000772] with Repay loan in Cash Stand.
 
-13:55
-A wild client appeared: Ottilyn Liess (XUN443) with reason: Get info about loan.
-Ottilyn Liess [C008649] chose Information Stand [S000003] and now queue length is 1.
-
-13:57
-Employee [E000001] just helped customer [C008819] with Get info about loan in Information Stand.
+13:53
+A wild client appeared: Adel Schreiber (YKD756) with reason: Take loan.
+Adel Schreiber [C001152] chose Cash Stand [S000002] and now queue length is 1.
 
 14:00
-Employee [E000001] just helped customer [C008649] with Get info about loan in Information Stand.
+A wild client appeared: Magdalyn Dahmbach (KPP225) with reason: Withdraw.
+Magdalyn Dahmbach [C009867] chose ATMout [S000001] and now queue length is 1.
 
 14:02
-A wild client appeared: Valeria Dahmbach (VEW846) with reason: Payment.
-Valeria Dahmbach [C003332] chose ATMin [S000000] and now queue length is 1.
+A wild client appeared: Tilea Albrecht (YJQ049) with reason: Delete account.
+Tilea Albrecht [C006522] chose Account Stand [S000004] and now queue length is 8.
 
 14:03
-A wild client appeared: Carla Becker (SKM473) with reason: Get info about loan.
-Carla Becker [C004602] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000002] just helped customer [C009853] with Create account in Account Stand.
+A wild client appeared: Tankred Konig (LYP108) with reason: Repay loan.
+Tankred Konig [C009669] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C001152] with Take loan in Cash Stand.
+
+14:04
+A wild client appeared: Abelhelm Becker (KHF205) with reason: Create account.
+Abelhelm Becker [C001936] chose Account Stand [S000004] and now queue length is 9.
+
+14:05
+Magdalyn Dahmbach (KPP225) with reason: Withdraw finished doing it with ATMout [S000001].
 
 14:06
-Employee [E000001] just helped customer [C004602] with Get info about loan in Information Stand.
-Valeria Dahmbach (VEW846) with reason: Payment finished doing it with ATMin [S000000].
+A wild client appeared: Reikhilda Tolzen (PIG553) with reason: Delete account.
+Reikhilda Tolzen [C006552] chose Account Stand [S000004] and now queue length is 10.
+Employee [E000002] just helped customer [C009772] with Delete account in Account Stand.
 
-14:10
-A wild client appeared: Baldric Teubcr (FVV745) with reason: Repay loan.
-Baldric Teubcr [C004882] chose Cash Stand [S000002] and now queue length is 1.
-
-14:11
-A wild client appeared: Magdalyn Veit (WFU592) with reason: Get info about loan.
-Magdalyn Veit [C006118] chose Information Stand [S000003] and now queue length is 1.
-
-14:12
-A wild client appeared: Herlinde Gebauer (XHE803) with reason: Get info about loan.
-Herlinde Gebauer [C005192] chose Information Stand [S000003] and now queue length is 1.
+14:08
+A wild client appeared: Johann Fiegler (ZIF312) with reason: Withdraw.
+Johann Fiegler [C002335] chose ATMout [S000001] and now queue length is 1.
+Employee [E000000] just helped customer [C009669] with Repay loan in Cash Stand.
 
 14:13
-A wild client appeared: Elsa Jochutz (VUR714) with reason: Create account.
-Elsa Jochutz [C009053] chose Account Stand [S000004] and now queue length is 7.
+Johann Fiegler (ZIF312) with reason: Withdraw finished doing it with ATMout [S000001].
 
-14:14
-Employee [E000001] just helped customer [C006118] with Get info about loan in Information Stand.
-
-14:15
-Employee [E000000] just helped customer [C004882] with Repay loan in Cash Stand.
-
-14:17
-Employee [E000001] just helped customer [C005192] with Get info about loan in Information Stand.
+14:20
+A wild client appeared: Rosalia Falkenheim (HXK491) with reason: Get info about loan.
+Rosalia Falkenheim [C004023] chose Information Stand [S000003] and now queue length is 1.
 
 14:23
-Employee [E000002] just helped customer [C005991] with Delete account in Account Stand.
+Employee [E000001] just helped customer [C004023] with Get info about loan in Information Stand.
 
-14:25
-A wild client appeared: Hanna Hirtzel (QWX846) with reason: Withdraw.
-Hanna Hirtzel [C003567] chose ATMout [S000001] and now queue length is 1.
+14:24
+A wild client appeared: Truben Eschlimann (GXV765) with reason: Get info about account.
+Truben Eschlimann [C007553] chose Information Stand [S000003] and now queue length is 1.
 
-14:30
-Hanna Hirtzel (QWX846) with reason: Withdraw finished doing it with ATMout [S000001].
+14:27
+Employee [E000001] just helped customer [C007553] with Get info about account in Information Stand.
 
-14:43
-Employee [E000002] just helped customer [C006540] with Delete account in Account Stand.
+14:29
+A wild client appeared: Trubald Lankdorf (RXP508) with reason: Get info about account.
+Trubald Lankdorf [C003762] chose Information Stand [S000003] and now queue length is 1.
+
+14:31
+A wild client appeared: Isolde Adelhof (IRP207) with reason: Withdraw.
+Isolde Adelhof [C004432] chose ATMout [S000001] and now queue length is 1.
+
+14:32
+Employee [E000001] just helped customer [C003762] with Get info about account in Information Stand.
+
+14:36
+Isolde Adelhof (IRP207) with reason: Withdraw finished doing it with ATMout [S000001].
+Employee [E000002] just helped customer [C009500] with Create account in Account Stand.
+
+14:39
+A wild client appeared: Sebastian Beyer (JDS637) with reason: Take loan.
+Sebastian Beyer [C001163] chose Cash Stand [S000002] and now queue length is 1.
+
+14:40
+A wild client appeared: Elmeric Weber (PAO768) with reason: Create account.
+Elmeric Weber [C003286] chose Account Stand [S000004] and now queue length is 9.
+
+14:41
+A wild client appeared: Sigric Lebengut (ZNH976) with reason: Withdraw.
+Sigric Lebengut [C009607] chose ATMout [S000001] and now queue length is 1.
+
+14:46
+Sigric Lebengut (ZNH976) with reason: Withdraw finished doing it with ATMout [S000001].
+
+14:47
+A wild client appeared: Gercie Baer (KVM503) with reason: Create account.
+Gercie Baer [C004960] chose Account Stand [S000004] and now queue length is 10.
+
+14:49
+Employee [E000000] just helped customer [C001163] with Take loan in Cash Stand.
+
+14:50
+A wild client appeared: Mandred Wirtz (HON092) with reason: Get info about account.
+Mandred Wirtz [C004363] chose Information Stand [S000003] and now queue length is 1.
 
 14:52
-A wild client appeared: Hagen Betz (XAC493) with reason: Payment.
-Hagen Betz [C007476] chose ATMin [S000000] and now queue length is 1.
+A wild client appeared: Abbie Durrbein (BUD962) with reason: Delete account.
+Abbie Durrbein [C005244] chose Account Stand [S000004] and now queue length is 11.
+
+14:53
+Employee [E000001] just helped customer [C004363] with Get info about account in Information Stand.
 
 14:56
-Hagen Betz (XAC493) with reason: Payment finished doing it with ATMin [S000000].
+Employee [E000002] just helped customer [C008047] with Delete account in Account Stand.
 
-14:57
-A wild client appeared: Ferdinand Meyer (KCP651) with reason: Withdraw.
-Ferdinand Meyer [C004301] chose ATMout [S000001] and now queue length is 1.
+15:01
+A wild client appeared: Gocfried Breuer (LBA332) with reason: Repay loan.
+Gocfried Breuer [C006188] chose Cash Stand [S000002] and now queue length is 1.
 
-15:02
-Ferdinand Meyer (KCP651) with reason: Withdraw finished doing it with ATMout [S000001].
+15:03
+A wild client appeared: Linus Drakenhof (FOZ541) with reason: Create account.
+Linus Drakenhof [C002043] chose Account Stand [S000004] and now queue length is 11.
+
+15:04
+A wild client appeared: Ortolf Falkenheim (FKA679) with reason: Repay loan.
+Ortolf Falkenheim [C009519] chose Cash Stand [S000002] and now queue length is 1.
 
 15:06
-A wild client appeared: Tomas Beyer (BKW810) with reason: Take loan.
-Tomas Beyer [C007362] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C006188] with Repay loan in Cash Stand.
 
 15:07
-A wild client appeared: Josie Fleischer (NGB718) with reason: Payment.
-Josie Fleischer [C001846] chose ATMin [S000000] and now queue length is 1.
+A wild client appeared: Oswin Bischof (ZCO248) with reason: Get info about account.
+Oswin Bischof [C007998] chose Information Stand [S000003] and now queue length is 1.
 
-15:08
-A wild client appeared: Ottilyn Vogel (WMZ557) with reason: Repay loan.
-Ottilyn Vogel [C004055] chose Cash Stand [S000002] and now queue length is 1.
+15:10
+A wild client appeared: Gernar Grunenwald (YAQ095) with reason: Payment.
+Gernar Grunenwald [C003961] chose ATMin [S000000] and now queue length is 1.
+Employee [E000001] just helped customer [C007998] with Get info about account in Information Stand.
 
 15:11
-Josie Fleischer (NGB718) with reason: Payment finished doing it with ATMin [S000000].
-
-15:13
-Employee [E000002] just helped customer [C005320] with Create account in Account Stand.
+Employee [E000000] just helped customer [C009519] with Repay loan in Cash Stand.
 
 15:14
-A wild client appeared: Gundolf Betz (NSS654) with reason: Repay loan.
-Gundolf Betz [C003134] chose Cash Stand [S000002] and now queue length is 2.
+A wild client appeared: Tankred Wechsler (GIE275) with reason: Get info about loan.
+Tankred Wechsler [C007111] chose Information Stand [S000003] and now queue length is 1.
+Gernar Grunenwald (YAQ095) with reason: Payment finished doing it with ATMin [S000000].
 
-15:15
-A wild client appeared: Honoria Lang (SDZ059) with reason: Delete account.
-Honoria Lang [C005937] chose Account Stand [S000004] and now queue length is 5.
-
-15:16
-Employee [E000000] just helped customer [C007362] with Take loan in Cash Stand.
-
-15:20
-A wild client appeared: Otrilda Frueh (TQN404) with reason: Payment.
-Otrilda Frueh [C002055] chose ATMin [S000000] and now queue length is 1.
-
-15:21
-Employee [E000000] just helped customer [C004055] with Repay loan in Cash Stand.
+15:17
+Employee [E000001] just helped customer [C007111] with Get info about loan in Information Stand.
 
 15:24
-Otrilda Frueh (TQN404) with reason: Payment finished doing it with ATMin [S000000].
+A wild client appeared: Prospero Godtgraf (OJI983) with reason: Delete account.
+Prospero Godtgraf [C007289] chose Account Stand [S000004] and now queue length is 12.
 
 15:26
-Employee [E000000] just helped customer [C003134] with Repay loan in Cash Stand.
+Employee [E000002] just helped customer [C002616] with Create account in Account Stand.
 
-15:40
-A wild client appeared: Clora Meyer (SEG702) with reason: Delete account.
-Clora Meyer [C001514] chose Account Stand [S000004] and now queue length is 6.
+15:29
+A wild client appeared: Hildegund Otzlowe (MGD952) with reason: Withdraw.
+Hildegund Otzlowe [C007835] chose ATMout [S000001] and now queue length is 1.
 
-15:42
-A wild client appeared: Lukas Eschlimann (HCE137) with reason: Payment.
-Lukas Eschlimann [C003448] chose ATMin [S000000] and now queue length is 1.
+15:33
+A wild client appeared: Ulfman Hoch (LVN467) with reason: Withdraw.
+Ulfman Hoch [C000091] chose ATMout [S000001] and now queue length is 1.
 
-15:43
-Employee [E000002] just helped customer [C008266] with Create account in Account Stand.
+15:34
+Hildegund Otzlowe (MGD952) with reason: Withdraw finished doing it with ATMout [S000001].
+
+15:39
+Ulfman Hoch (LVN467) with reason: Withdraw finished doing it with ATMout [S000001].
 
 15:46
-Lukas Eschlimann (HCE137) with reason: Payment finished doing it with ATMin [S000000].
+Employee [E000002] just helped customer [C007033] with Delete account in Account Stand.
 
-15:47
-A wild client appeared: Hildred Meusmann (BPB996) with reason: Payment.
-Hildred Meusmann [C000693] chose ATMin [S000000] and now queue length is 1.
-
-15:48
-A wild client appeared: Sigismund Ohrsten (PLM880) with reason: Delete account.
-Sigismund Ohrsten [C006685] chose Account Stand [S000004] and now queue length is 6.
-
-15:51
-Hildred Meusmann (BPB996) with reason: Payment finished doing it with ATMin [S000000].
-
-15:52
-A wild client appeared: Siegmund Drauwulf (MYG307) with reason: Withdraw.
-Siegmund Drauwulf [C001773] chose ATMout [S000001] and now queue length is 1.
-
-15:56
-A wild client appeared: Max Fiegler (NBM970) with reason: Payment.
-Max Fiegler [C003762] chose ATMin [S000000] and now queue length is 1.
+15:54
+A wild client appeared: Erkenbrand Schreiber (EWE108) with reason: Get info about account.
+Erkenbrand Schreiber [C003287] chose Information Stand [S000003] and now queue length is 1.
 
 15:57
-Siegmund Drauwulf (MYG307) with reason: Withdraw finished doing it with ATMout [S000001].
+Employee [E000001] just helped customer [C003287] with Get info about account in Information Stand.
 
-16:00
-Max Fiegler (NBM970) with reason: Payment finished doing it with ATMin [S000000].
+16:01
+A wild client appeared: Hadwin Kaltenbach (TBM244) with reason: Withdraw.
+Hadwin Kaltenbach [C000354] chose ATMout [S000001] and now queue length is 1.
 
-16:07
-A wild client appeared: Engelhart Schwalb (SKV184) with reason: Repay loan.
-Engelhart Schwalb [C006239] chose Cash Stand [S000002] and now queue length is 1.
+16:05
+A wild client appeared: Berlyn Netzhoch (BHK898) with reason: Repay loan.
+Berlyn Netzhoch [C000117] chose Cash Stand [S000002] and now queue length is 1.
 
-16:12
-A wild client appeared: Griswold Breitenbach (ZFO490) with reason: Get info about account.
-Griswold Breitenbach [C006421] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000000] just helped customer [C006239] with Repay loan in Cash Stand.
+16:06
+Hadwin Kaltenbach (TBM244) with reason: Withdraw finished doing it with ATMout [S000001].
+
+16:08
+A wild client appeared: Reinolt Altmann (ZRT178) with reason: Get info about loan.
+Reinolt Altmann [C003161] chose Information Stand [S000003] and now queue length is 1.
+
+16:10
+Employee [E000000] just helped customer [C000117] with Repay loan in Cash Stand.
+
+16:11
+Employee [E000001] just helped customer [C003161] with Get info about loan in Information Stand.
 
 16:13
-A wild client appeared: Valeria Beyer (ZHK619) with reason: Get info about account.
-Valeria Beyer [C000294] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000002] just helped customer [C006515] with Create account in Account Stand.
+A wild client appeared: Lanwin Lebengut (JAS321) with reason: Create account.
+Lanwin Lebengut [C007887] chose Account Stand [S000004] and now queue length is 11.
 
-16:14
-A wild client appeared: Hanna Allenstag (YYW997) with reason: Take loan.
-Hanna Allenstag [C001718] chose Cash Stand [S000002] and now queue length is 1.
+16:16
+Employee [E000002] just helped customer [C002733] with Create account in Account Stand.
 
-16:15
-A wild client appeared: Ulrica Hoefer (FGL655) with reason: Withdraw.
-Ulrica Hoefer [C002085] chose ATMout [S000001] and now queue length is 1.
-Employee [E000001] just helped customer [C006421] with Get info about account in Information Stand.
+16:17
+A wild client appeared: Steffan Jochutz (KYR925) with reason: Get info about account.
+Steffan Jochutz [C003930] chose Information Stand [S000003] and now queue length is 1.
 
 16:18
-Employee [E000001] just helped customer [C000294] with Get info about account in Information Stand.
+A wild client appeared: Sigric Schaffer (VZR120) with reason: Repay loan.
+Sigric Schaffer [C006824] chose Cash Stand [S000002] and now queue length is 1.
 
 16:20
-Ulrica Hoefer (FGL655) with reason: Withdraw finished doing it with ATMout [S000001].
+Employee [E000001] just helped customer [C003930] with Get info about account in Information Stand.
 
-16:22
-A wild client appeared: Edmund Netzhoch (EXL072) with reason: Delete account.
-Edmund Netzhoch [C005483] chose Account Stand [S000004] and now queue length is 6.
+16:23
+A wild client appeared: Edwin Krebs (OSH142) with reason: Withdraw.
+Edwin Krebs [C004301] chose ATMout [S000001] and now queue length is 1.
+Employee [E000000] just helped customer [C006824] with Repay loan in Cash Stand.
 
-16:24
-Employee [E000000] just helped customer [C001718] with Take loan in Cash Stand.
+16:25
+A wild client appeared: Andred Otzlowe (QGA333) with reason: Repay loan.
+Andred Otzlowe [C000521] chose Cash Stand [S000002] and now queue length is 1.
+
+16:28
+A wild client appeared: Sieger Ehrhard (RVP603) with reason: Payment.
+Sieger Ehrhard [C001240] chose ATMin [S000000] and now queue length is 1.
+Edwin Krebs (OSH142) with reason: Withdraw finished doing it with ATMout [S000001].
 
 16:30
-A wild client appeared: Kirsren Mohr (SLB715) with reason: Repay loan.
-Kirsren Mohr [C002430] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C000521] with Repay loan in Cash Stand.
 
-16:35
-Employee [E000000] just helped customer [C002430] with Repay loan in Cash Stand.
+16:32
+Sieger Ehrhard (RVP603) with reason: Payment finished doing it with ATMin [S000000].
 
-16:43
-Employee [E000002] just helped customer [C002555] with Create account in Account Stand.
+16:40
+A wild client appeared: Klaus Lebengut (NWO257) with reason: Create account.
+Klaus Lebengut [C003931] chose Account Stand [S000004] and now queue length is 11.
 
-16:49
-A wild client appeared: Dekmar Albrecht (MNS399) with reason: Payment.
-Dekmar Albrecht [C006548] chose ATMin [S000000] and now queue length is 1.
-
-16:50
-A wild client appeared: Bart Durrbein (YTV040) with reason: Withdraw.
-Bart Durrbein [C007480] chose ATMout [S000001] and now queue length is 1.
+16:46
+Employee [E000002] just helped customer [C001971] with Create account in Account Stand.
 
 16:53
-Dekmar Albrecht (MNS399) with reason: Payment finished doing it with ATMin [S000000].
+A wild client appeared: Connie Herzog (KEN898) with reason: Payment.
+Connie Herzog [C001832] chose ATMin [S000000] and now queue length is 1.
 
-16:55
-A wild client appeared: Meinhart Gebauer (BRF451) with reason: Repay loan.
-Meinhart Gebauer [C009071] chose Cash Stand [S000002] and now queue length is 1.
-Bart Durrbein (YTV040) with reason: Withdraw finished doing it with ATMout [S000001].
+16:54
+A wild client appeared: Hadwin Haimz (SPR619) with reason: Get info about loan.
+Hadwin Haimz [C002005] chose Information Stand [S000003] and now queue length is 1.
 
-16:58
-A wild client appeared: Orwin Fehr (EFF044) with reason: Payment.
-Orwin Fehr [C003144] chose ATMin [S000000] and now queue length is 1.
-
-17:00
-Employee [E000000] just helped customer [C009071] with Repay loan in Cash Stand.
+16:57
+A wild client appeared: Ludmilla Wirtz (AEP802) with reason: Withdraw.
+Ludmilla Wirtz [C005304] chose ATMout [S000001] and now queue length is 1.
+Employee [E000001] just helped customer [C002005] with Get info about loan in Information Stand.
+Connie Herzog (KEN898) with reason: Payment finished doing it with ATMin [S000000].
 
 17:02
-A wild client appeared: Salina Rohrig (NCJ378) with reason: Take loan.
-Salina Rohrig [C003285] chose Cash Stand [S000002] and now queue length is 1.
-Orwin Fehr (EFF044) with reason: Payment finished doing it with ATMin [S000000].
-
-17:03
-Employee [E000002] just helped customer [C007354] with Delete account in Account Stand.
+Ludmilla Wirtz (AEP802) with reason: Withdraw finished doing it with ATMout [S000001].
 
 17:04
-A wild client appeared: Hamlyn Vogel (XKV275) with reason: Get info about account.
-Hamlyn Vogel [C002027] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Ehrl Schwalb (BHH219) with reason: Get info about account.
+Ehrl Schwalb [C000566] chose Information Stand [S000003] and now queue length is 1.
 
 17:07
-Employee [E000001] just helped customer [C002027] with Get info about account in Information Stand.
+Employee [E000001] just helped customer [C000566] with Get info about account in Information Stand.
 
-17:12
-Employee [E000000] just helped customer [C003285] with Take loan in Cash Stand.
+17:09
+A wild client appeared: Maglind Reifsneider (YRS372) with reason: Repay loan.
+Maglind Reifsneider [C008145] chose Cash Stand [S000002] and now queue length is 1.
 
-17:15
-A wild client appeared: Lukas Oberholczer (IGU035) with reason: Get info about loan.
-Lukas Oberholczer [C009937] chose Information Stand [S000003] and now queue length is 1.
+17:14
+Employee [E000000] just helped customer [C008145] with Repay loan in Cash Stand.
 
-17:18
-Employee [E000001] just helped customer [C009937] with Get info about loan in Information Stand.
+17:16
+Employee [E000002] just helped customer [C009815] with Create account in Account Stand.
 
-17:22
-A wild client appeared: Gerlach Wechsler (MOQ572) with reason: Withdraw.
-Gerlach Wechsler [C006261] chose ATMout [S000001] and now queue length is 1.
+17:17
+A wild client appeared: Hamlyn Reifsneider (KHX193) with reason: Get info about account.
+Hamlyn Reifsneider [C002386] chose Information Stand [S000003] and now queue length is 1.
 
-17:24
-A wild client appeared: Meg Jutzenbach (EDW125) with reason: Get info about loan.
-Meg Jutzenbach [C001179] chose Information Stand [S000003] and now queue length is 1.
+17:20
+Employee [E000001] just helped customer [C002386] with Get info about account in Information Stand.
 
-17:26
-A wild client appeared: Viktor Breitenbach (OMK778) with reason: Delete account.
-Viktor Breitenbach [C001801] chose Account Stand [S000004] and now queue length is 5.
+17:31
+A wild client appeared: Gocfried Breuer (LBA332) with reason: Repay loan.
+Gocfried Breuer [C006188] chose Cash Stand [S000002] and now queue length is 1.
 
-17:27
-Employee [E000001] just helped customer [C001179] with Get info about loan in Information Stand.
-Gerlach Wechsler (MOQ572) with reason: Withdraw finished doing it with ATMout [S000001].
-
-17:30
-A wild client appeared: Cilicia Delfholt (HJC250) with reason: Get info about loan.
-Cilicia Delfholt [C008646] chose Information Stand [S000003] and now queue length is 1.
-
-17:33
-Employee [E000001] just helped customer [C008646] with Get info about loan in Information Stand.
-Employee [E000002] just helped customer [C009053] with Create account in Account Stand.
+17:35
+A wild client appeared: Lavinia Grunenwald (UNY934) with reason: Take loan.
+Lavinia Grunenwald [C005989] chose Cash Stand [S000002] and now queue length is 1.
 
 17:36
-A wild client appeared: Emme Hoefer (JTF747) with reason: Get info about account.
-Emme Hoefer [C009906] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Lisbeth Vogel (YQB681) with reason: Delete account.
+Lisbeth Vogel [C000339] chose Account Stand [S000004] and now queue length is 10.
+Employee [E000000] just helped customer [C006188] with Repay loan in Cash Stand.
+Employee [E000002] just helped customer [C006522] with Delete account in Account Stand.
 
-17:37
-A wild client appeared: Miranda Naubhof (QZN303) with reason: Create account.
-Miranda Naubhof [C008403] chose Account Stand [S000004] and now queue length is 5.
+17:45
+A wild client appeared: Ludmilla Widmann (ILV341) with reason: Get info about loan.
+Ludmilla Widmann [C009345] chose Information Stand [S000003] and now queue length is 1.
 
-17:39
-Employee [E000001] just helped customer [C009906] with Get info about account in Information Stand.
+17:46
+Employee [E000000] just helped customer [C005989] with Take loan in Cash Stand.
+
+17:48
+Employee [E000001] just helped customer [C009345] with Get info about loan in Information Stand.
+
+17:49
+A wild client appeared: Hadred Sleiner (ZTD208) with reason: Get info about loan.
+Hadred Sleiner [C004314] chose Information Stand [S000003] and now queue length is 1.
+
+17:51
+A wild client appeared: Harbrand Albrecht (XPU769) with reason: Withdraw.
+Harbrand Albrecht [C006539] chose ATMout [S000001] and now queue length is 1.
+
+17:52
+Employee [E000001] just helped customer [C004314] with Get info about loan in Information Stand.
 
 17:53
-Employee [E000002] just helped customer [C005937] with Delete account in Account Stand.
+A wild client appeared: Altmar Reichert (HYH160) with reason: Take loan.
+Altmar Reichert [C008295] chose Cash Stand [S000002] and now queue length is 1.
 
-18:00
-A wild client appeared: Josie Konigsamen (SXZ193) with reason: Repay loan.
-Josie Konigsamen [C009927] chose Cash Stand [S000002] and now queue length is 1.
+17:56
+A wild client appeared: Jodokus Hirtzel (LAI199) with reason: Get info about loan.
+Jodokus Hirtzel [C005987] chose Information Stand [S000003] and now queue length is 1.
+Harbrand Albrecht (XPU769) with reason: Withdraw finished doing it with ATMout [S000001].
+
+17:59
+A wild client appeared: Broncea Atzwig (RRG069) with reason: Payment.
+Broncea Atzwig [C005897] chose ATMin [S000000] and now queue length is 1.
+Employee [E000001] just helped customer [C005987] with Get info about loan in Information Stand.
 
 18:03
-A wild client appeared: Marietta Kummel (XES455) with reason: Delete account.
-Marietta Kummel [C004424] chose Account Stand [S000004] and now queue length is 5.
+Broncea Atzwig (RRG069) with reason: Payment finished doing it with ATMin [S000000].
+Employee [E000000] just helped customer [C008295] with Take loan in Cash Stand.
 
 18:05
-Employee [E000000] just helped customer [C009927] with Repay loan in Cash Stand.
+A wild client appeared: Allane Krebs (FEC310) with reason: Get info about account.
+Allane Krebs [C005656] chose Information Stand [S000003] and now queue length is 1.
 
-18:09
-A wild client appeared: Eldred Otzlowe (WDZ538) with reason: Get info about loan.
-Eldred Otzlowe [C006647] chose Information Stand [S000003] and now queue length is 1.
+18:06
+Employee [E000002] just helped customer [C001936] with Create account in Account Stand.
 
-18:12
-Employee [E000001] just helped customer [C006647] with Get info about loan in Information Stand.
+18:08
+Employee [E000001] just helped customer [C005656] with Get info about account in Information Stand.
 
 18:13
-Employee [E000002] just helped customer [C001514] with Delete account in Account Stand.
+A wild client appeared: Bechilda Eisenhauer (XWE868) with reason: Get info about loan.
+Bechilda Eisenhauer [C002307] chose Information Stand [S000003] and now queue length is 1.
 
-18:18
-A wild client appeared: Alberic Schreiber (DAB020) with reason: Create account.
-Alberic Schreiber [C005853] chose Account Stand [S000004] and now queue length is 5.
+18:16
+Employee [E000001] just helped customer [C002307] with Get info about loan in Information Stand.
 
-18:22
-A wild client appeared: Meinhart Scherer (KNN461) with reason: Delete account.
-Meinhart Scherer [C005194] chose Account Stand [S000004] and now queue length is 6.
+18:17
+A wild client appeared: Dankred Trachsel (PVQ781) with reason: Create account.
+Dankred Trachsel [C006962] chose Account Stand [S000004] and now queue length is 9.
 
-18:28
-A wild client appeared: Fosten Liess (XCF723) with reason: Create account.
-Fosten Liess [C001878] chose Account Stand [S000004] and now queue length is 7.
+18:25
+A wild client appeared: Felix Niederlitz (KBE538) with reason: Payment.
+Felix Niederlitz [C006651] chose ATMin [S000000] and now queue length is 1.
+
+18:26
+Employee [E000002] just helped customer [C006552] with Delete account in Account Stand.
 
 18:29
-A wild client appeared: Demona Delfholt (FQR224) with reason: Delete account.
-Demona Delfholt [C007495] chose Account Stand [S000004] and now queue length is 8.
+A wild client appeared: Waldor Gaffwig (RQH935) with reason: Get info about loan.
+Waldor Gaffwig [C009918] chose Information Stand [S000003] and now queue length is 1.
+Felix Niederlitz (KBE538) with reason: Payment finished doing it with ATMin [S000000].
+
+18:31
+A wild client appeared: Harbrand Schultz (UIV709) with reason: Repay loan.
+Harbrand Schultz [C007028] chose Cash Stand [S000002] and now queue length is 1.
 
 18:32
-A wild client appeared: Lutolf Herz (YDC890) with reason: Take loan.
-Lutolf Herz [C001868] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000001] just helped customer [C009918] with Get info about loan in Information Stand.
 
-18:33
-Employee [E000002] just helped customer [C006685] with Delete account in Account Stand.
+18:36
+A wild client appeared: Hildegund Herz (MHI970) with reason: Take loan.
+Hildegund Herz [C006040] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000000] just helped customer [C007028] with Repay loan in Cash Stand.
 
-18:38
-A wild client appeared: Fleugweiner Gebauer (NIQ545) with reason: Get info about loan.
-Fleugweiner Gebauer [C006992] chose Information Stand [S000003] and now queue length is 1.
-
-18:41
-Employee [E000001] just helped customer [C006992] with Get info about loan in Information Stand.
-
-18:42
-Employee [E000000] just helped customer [C001868] with Take loan in Cash Stand.
+18:40
+A wild client appeared: Boris Godtgraf (XCJ108) with reason: Get info about account.
+Boris Godtgraf [C006444] chose Information Stand [S000003] and now queue length is 1.
 
 18:43
-A wild client appeared: Cilie Becker (NDS790) with reason: Take loan.
-Cilie Becker [C001496] chose Cash Stand [S000002] and now queue length is 1.
+Employee [E000001] just helped customer [C006444] with Get info about account in Information Stand.
 
-18:48
-A wild client appeared: Meinolf Teubcr (LOY125) with reason: Withdraw.
-Meinolf Teubcr [C001690] chose ATMout [S000001] and now queue length is 1.
+18:44
+A wild client appeared: Lupus Meusmann (GEW792) with reason: Create account.
+Lupus Meusmann [C005873] chose Account Stand [S000004] and now queue length is 9.
 
-18:50
-A wild client appeared: Letty Adelhof (QJT641) with reason: Get info about account.
-Letty Adelhof [C001283] chose Information Stand [S000003] and now queue length is 1.
+18:46
+Employee [E000000] just helped customer [C006040] with Take loan in Cash Stand.
 
-18:53
-Employee [E000001] just helped customer [C001283] with Get info about account in Information Stand.
-Meinolf Teubcr (LOY125) with reason: Withdraw finished doing it with ATMout [S000001].
-Employee [E000000] just helped customer [C001496] with Take loan in Cash Stand.
-Employee [E000002] just helped customer [C005483] with Delete account in Account Stand.
+18:49
+A wild client appeared: Irmella Betz (LTB527) with reason: Repay loan.
+Irmella Betz [C002473] chose Cash Stand [S000002] and now queue length is 1.
+
+18:54
+A wild client appeared: Griswold Becker (TSH776) with reason: Delete account.
+Griswold Becker [C006632] chose Account Stand [S000004] and now queue length is 10.
+Employee [E000000] just helped customer [C002473] with Repay loan in Cash Stand.
 
 18:56
-A wild client appeared: Uto Naubhof (BJP848) with reason: Take loan.
-Uto Naubhof [C002674] chose Cash Stand [S000002] and now queue length is 1.
-
-18:57
-A wild client appeared: Axel Schleiermacher (JHU979) with reason: Delete account.
-Axel Schleiermacher [C000240] chose Account Stand [S000004] and now queue length is 7.
+Employee [E000002] just helped customer [C003286] with Create account in Account Stand.
 
 18:59
-A wild client appeared: Alicia Grunenwald (HWX300) with reason: Take loan.
-Alicia Grunenwald [C001638] chose Cash Stand [S000002] and now queue length is 1.
+A wild client appeared: Gretchen Beyer (VUW073) with reason: Get info about loan.
+Gretchen Beyer [C001718] chose Information Stand [S000003] and now queue length is 1.
 
-19:00
-A wild client appeared: Siegmund Drakenhof (SRJ603) with reason: Payment.
-Siegmund Drakenhof [C002200] chose ATMin [S000000] and now queue length is 1.
+19:01
+A wild client appeared: Heinz Krebs (KHO437) with reason: Withdraw.
+Heinz Krebs [C005517] chose ATMout [S000001] and now queue length is 1.
 
 19:02
-A wild client appeared: Miranda Behn (TQJ060) with reason: Get info about loan.
-Miranda Behn [C001408] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Odric Liess (KMH669) with reason: Get info about loan.
+Odric Liess [C004311] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000001] just helped customer [C001718] with Get info about loan in Information Stand.
 
 19:04
-A wild client appeared: Ludmilla Bacher (GOS830) with reason: Create account.
-Ludmilla Bacher [C001940] chose Account Stand [S000004] and now queue length is 8.
-Siegmund Drakenhof (SRJ603) with reason: Payment finished doing it with ATMin [S000000].
+A wild client appeared: Sigismunda Ehrhard (FMB401) with reason: Get info about account.
+Sigismunda Ehrhard [C009011] chose Information Stand [S000003] and now queue length is 1.
 
 19:05
-Employee [E000001] just helped customer [C001408] with Get info about loan in Information Stand.
+Employee [E000001] just helped customer [C004311] with Get info about loan in Information Stand.
 
 19:06
-Employee [E000000] just helped customer [C002674] with Take loan in Cash Stand.
+Heinz Krebs (KHO437) with reason: Withdraw finished doing it with ATMout [S000001].
+
+19:07
+A wild client appeared: Adelle Oberholczer (SLB193) with reason: Repay loan.
+Adelle Oberholczer [C007305] chose Cash Stand [S000002] and now queue length is 1.
 
 19:08
-A wild client appeared: Grunhilda Drauwulf (NXZ318) with reason: Create account.
-Grunhilda Drauwulf [C006782] chose Account Stand [S000004] and now queue length is 9.
+Employee [E000001] just helped customer [C009011] with Get info about account in Information Stand.
 
-19:13
-A wild client appeared: Perdita Kummel (RYM551) with reason: Withdraw.
-Perdita Kummel [C006147] chose ATMout [S000001] and now queue length is 1.
-Employee [E000002] just helped customer [C001801] with Delete account in Account Stand.
+19:11
+A wild client appeared: Keterlind Mohr (PXR402) with reason: Get info about account.
+Keterlind Mohr [C009060] chose Information Stand [S000003] and now queue length is 1.
 
-19:16
-Employee [E000000] just helped customer [C001638] with Take loan in Cash Stand.
+19:12
+Employee [E000000] just helped customer [C007305] with Repay loan in Cash Stand.
 
-19:17
-A wild client appeared: Siegmund Falkenheim (AEC942) with reason: Create account.
-Siegmund Falkenheim [C004111] chose Account Stand [S000004] and now queue length is 9.
+19:14
+Employee [E000001] just helped customer [C009060] with Get info about account in Information Stand.
 
-19:18
-Perdita Kummel (RYM551) with reason: Withdraw finished doing it with ATMout [S000001].
+19:21
+A wild client appeared: Constanza Hoch (UBH273) with reason: Withdraw.
+Constanza Hoch [C006715] chose ATMout [S000001] and now queue length is 1.
 
-19:23
-A wild client appeared: Gawin Schultz (KEF249) with reason: Repay loan.
-Gawin Schultz [C000013] chose Cash Stand [S000002] and now queue length is 1.
-
-19:28
-Employee [E000000] just helped customer [C000013] with Repay loan in Cash Stand.
-
-19:30
-A wild client appeared: Roz Ehrhard (SEN967) with reason: Take loan.
-Roz Ehrhard [C004009] chose Cash Stand [S000002] and now queue length is 1.
-
-19:31
-A wild client appeared: Lanfried Weber (TRO056) with reason: Get info about loan.
-Lanfried Weber [C005665] chose Information Stand [S000003] and now queue length is 1.
-
-19:34
-A wild client appeared: Emelia Riese (JIF715) with reason: Withdraw.
-Emelia Riese [C007841] chose ATMout [S000001] and now queue length is 1.
-Employee [E000001] just helped customer [C005665] with Get info about loan in Information Stand.
+19:26
+Constanza Hoch (UBH273) with reason: Withdraw finished doing it with ATMout [S000001].
+Employee [E000002] just helped customer [C004960] with Create account in Account Stand.
 
 19:37
-A wild client appeared: Sigismund Kuhn (OSZ857) with reason: Create account.
-Sigismund Kuhn [C005111] chose Account Stand [S000004] and now queue length is 10.
-
-19:39
-Emelia Riese (JIF715) with reason: Withdraw finished doing it with ATMout [S000001].
-
-19:40
-Employee [E000000] just helped customer [C004009] with Take loan in Cash Stand.
-
-19:41
-A wild client appeared: Kleber Fiegler (UMR671) with reason: Create account.
-Kleber Fiegler [C006196] chose Account Stand [S000004] and now queue length is 11.
-
-19:43
-Employee [E000002] just helped customer [C008403] with Create account in Account Stand.
+A wild client appeared: Tomas Lang (RVK610) with reason: Create account.
+Tomas Lang [C001679] chose Account Stand [S000004] and now queue length is 9.
 
 19:44
-A wild client appeared: Arabella Weber (KKG077) with reason: Delete account.
-Arabella Weber [C009818] chose Account Stand [S000004] and now queue length is 11.
+A wild client appeared: Gregor Teubcr (JKO980) with reason: Delete account.
+Gregor Teubcr [C004506] chose Account Stand [S000004] and now queue length is 10.
 
-19:57
-A wild client appeared: Zemelda Hoefer (WUQ418) with reason: Delete account.
-Zemelda Hoefer [C005160] chose Account Stand [S000004] and now queue length is 12.
-
-19:58
-A wild client appeared: Rolf Meyer (IET908) with reason: Repay loan.
-Rolf Meyer [C007948] chose Cash Stand [S000002] and now queue length is 1.
+19:46
+A wild client appeared: Ingwald Ohrsten (HDM575) with reason: Create account.
+Ingwald Ohrsten [C005389] chose Account Stand [S000004] and now queue length is 11.
+Employee [E000002] just helped customer [C005244] with Delete account in Account Stand.
 
 19:59
-A wild client appeared: Abbie Baer (WSO376) with reason: Withdraw.
-Abbie Baer [C008002] chose ATMout [S000001] and now queue length is 1.
+A wild client appeared: Bartomar Herz (HIF348) with reason: Payment.
+Bartomar Herz [C006589] chose ATMin [S000000] and now queue length is 1.
 
 20:03
-Employee [E000000] just helped customer [C007948] with Repay loan in Cash Stand.
-Employee [E000002] just helped customer [C004424] with Delete account in Account Stand.
+Bartomar Herz (HIF348) with reason: Payment finished doing it with ATMin [S000000].
 
-20:04
-Abbie Baer (WSO376) with reason: Withdraw finished doing it with ATMout [S000001].
-
-20:06
-A wild client appeared: Oldred Herz (PAP311) with reason: Withdraw.
-Oldred Herz [C000061] chose ATMout [S000001] and now queue length is 1.
+20:05
+A wild client appeared: Lavinia Kalb (APW590) with reason: Create account.
+Lavinia Kalb [C001794] chose Account Stand [S000004] and now queue length is 11.
 
 20:09
-A wild client appeared: Dankmar Fehr (AEG437) with reason: Create account.
-Dankmar Fehr [C002574] chose Account Stand [S000004] and now queue length is 12.
+A wild client appeared: Jurgen Otzlowe (SWQ730) with reason: Withdraw.
+Jurgen Otzlowe [C000195] chose ATMout [S000001] and now queue length is 1.
 
-20:11
-Oldred Herz (PAP311) with reason: Withdraw finished doing it with ATMout [S000001].
+20:10
+A wild client appeared: Althea Mohr (GVO230) with reason: Take loan.
+Althea Mohr [C001791] chose Cash Stand [S000002] and now queue length is 1.
 
-20:15
-A wild client appeared: Sebastian Baer (NDM226) with reason: Take loan.
-Sebastian Baer [C008191] chose Cash Stand [S000002] and now queue length is 1.
+20:13
+A wild client appeared: Calvin Gebauer (AAQ324) with reason: Repay loan.
+Calvin Gebauer [C003885] chose Cash Stand [S000002] and now queue length is 1.
 
-20:19
-A wild client appeared: Lukas Breitenbach (RVN484) with reason: Delete account.
-Lukas Breitenbach [C008504] chose Account Stand [S000004] and now queue length is 13.
+20:14
+Jurgen Otzlowe (SWQ730) with reason: Withdraw finished doing it with ATMout [S000001].
 
-20:24
-A wild client appeared: Onlieb Bischof (YHX577) with reason: Take loan.
-Onlieb Bischof [C000848] chose Cash Stand [S000002] and now queue length is 1.
+20:16
+Employee [E000002] just helped customer [C002043] with Create account in Account Stand.
+
+20:17
+A wild client appeared: Emelia Vogt (EYB434) with reason: Delete account.
+Emelia Vogt [C002081] chose Account Stand [S000004] and now queue length is 11.
+
+20:20
+Employee [E000000] just helped customer [C001791] with Take loan in Cash Stand.
 
 20:25
-Employee [E000000] just helped customer [C008191] with Take loan in Cash Stand.
+Employee [E000000] just helped customer [C003885] with Repay loan in Cash Stand.
+
+20:27
+A wild client appeared: Adel Falkenheim (NSC926) with reason: Get info about account.
+Adel Falkenheim [C006009] chose Information Stand [S000003] and now queue length is 1.
+
+20:28
+A wild client appeared: Hildric Weber (PJK440) with reason: Get info about account.
+Hildric Weber [C003430] chose Information Stand [S000003] and now queue length is 1.
+
+20:30
+A wild client appeared: Ursula Atzwig (LCD221) with reason: Delete account.
+Ursula Atzwig [C001086] chose Account Stand [S000004] and now queue length is 12.
+Employee [E000001] just helped customer [C006009] with Get info about account in Information Stand.
+
+20:32
+A wild client appeared: Otfried Frueh (VLI370) with reason: Create account.
+Otfried Frueh [C000995] chose Account Stand [S000004] and now queue length is 13.
 
 20:33
-Employee [E000002] just helped customer [C005853] with Create account in Account Stand.
+Employee [E000001] just helped customer [C003430] with Get info about account in Information Stand.
 
 20:35
-Employee [E000000] just helped customer [C000848] with Take loan in Cash Stand.
+A wild client appeared: Hildric Herzog (DIO966) with reason: Withdraw.
+Hildric Herzog [C007622] chose ATMout [S000001] and now queue length is 1.
+
+20:36
+A wild client appeared: Varl Netzhoch (BGS763) with reason: Get info about loan.
+Varl Netzhoch [C000265] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000002] just helped customer [C007289] with Delete account in Account Stand.
 
 20:39
-A wild client appeared: Maida Schaumer (LLS784) with reason: Get info about loan.
-Maida Schaumer [C006270] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000001] just helped customer [C000265] with Get info about loan in Information Stand.
 
-20:42
-A wild client appeared: Kristen Krebs (MEF247) with reason: Delete account.
-Kristen Krebs [C005687] chose Account Stand [S000004] and now queue length is 13.
-Employee [E000001] just helped customer [C006270] with Get info about loan in Information Stand.
+20:40
+Hildric Herzog (DIO966) with reason: Withdraw finished doing it with ATMout [S000001].
+
+20:50
+A wild client appeared: Alaric Kalb (MQT238) with reason: Get info about loan.
+Alaric Kalb [C005665] chose Information Stand [S000003] and now queue length is 1.
 
 20:53
-A wild client appeared: Baldred Frueh (ESM256) with reason: Withdraw.
-Baldred Frueh [C002584] chose ATMout [S000001] and now queue length is 1.
-Employee [E000002] just helped customer [C005194] with Delete account in Account Stand.
+Employee [E000001] just helped customer [C005665] with Get info about loan in Information Stand.
 
-20:57
-A wild client appeared: Gabriele Kraemer (PVR187) with reason: Get info about loan.
-Gabriele Kraemer [C001909] chose Information Stand [S000003] and now queue length is 1.
+20:54
+A wild client appeared: Gorwin Fiegler (TLU239) with reason: Payment.
+Gorwin Fiegler [C006436] chose ATMin [S000000] and now queue length is 1.
+
+20:56
+A wild client appeared: Lucius Herzog (AMH624) with reason: Take loan.
+Lucius Herzog [C004317] chose Cash Stand [S000002] and now queue length is 1.
 
 20:58
-Baldred Frueh (ESM256) with reason: Withdraw finished doing it with ATMout [S000001].
-
-21:00
-Employee [E000001] just helped customer [C001909] with Get info about loan in Information Stand.
+Gorwin Fiegler (TLU239) with reason: Payment finished doing it with ATMin [S000000].
 
 21:01
-A wild client appeared: Dieter Hirtzel (DAY730) with reason: Get info about account.
-Dieter Hirtzel [C005032] chose Information Stand [S000003] and now queue length is 1.
+A wild client appeared: Hamlyn Baer (MIU903) with reason: Get info about account.
+Hamlyn Baer [C007811] chose Information Stand [S000003] and now queue length is 1.
+
+21:03
+A wild client appeared: Rosabel Muller (SBY937) with reason: Repay loan.
+Rosabel Muller [C005102] chose Cash Stand [S000002] and now queue length is 1.
 
 21:04
-A wild client appeared: Valdred Kaltenbach (WKG710) with reason: Take loan.
-Valdred Kaltenbach [C005924] chose Cash Stand [S000002] and now queue length is 1.
-Employee [E000001] just helped customer [C005032] with Get info about account in Information Stand.
+Employee [E000001] just helped customer [C007811] with Get info about account in Information Stand.
 
-21:10
-A wild client appeared: Walther Lutzen (WIM435) with reason: Delete account.
-Walther Lutzen [C008588] chose Account Stand [S000004] and now queue length is 13.
+21:06
+Employee [E000000] just helped customer [C004317] with Take loan in Cash Stand.
+Employee [E000002] just helped customer [C007887] with Create account in Account Stand.
 
-21:14
-Employee [E000000] just helped customer [C005924] with Take loan in Cash Stand.
+21:09
+A wild client appeared: Ruprecht Herz (WHC218) with reason: Get info about account.
+Ruprecht Herz [C005594] chose Information Stand [S000003] and now queue length is 1.
+
+21:11
+Employee [E000000] just helped customer [C005102] with Repay loan in Cash Stand.
+
+21:12
+Employee [E000001] just helped customer [C005594] with Get info about account in Information Stand.
 
 21:15
-A wild client appeared: Hildegarc Ohrsten (CYC507) with reason: Repay loan.
-Hildegarc Ohrsten [C001944] chose Cash Stand [S000002] and now queue length is 1.
+A wild client appeared: Jodokus Hirtzel (LAI199) with reason: Get info about loan.
+Jodokus Hirtzel [C005987] chose Information Stand [S000003] and now queue length is 1.
 
-21:17
-A wild client appeared: Hermann Jaeger (CXW331) with reason: Get info about loan.
-Hermann Jaeger [C006913] chose Information Stand [S000003] and now queue length is 1.
+21:18
+Employee [E000001] just helped customer [C005987] with Get info about loan in Information Stand.
 
-21:20
-Employee [E000001] just helped customer [C006913] with Get info about loan in Information Stand.
-Employee [E000000] just helped customer [C001944] with Repay loan in Cash Stand.
+21:22
+A wild client appeared: Pergunda Nuhr (QZZ605) with reason: Delete account.
+Pergunda Nuhr [C000501] chose Account Stand [S000004] and now queue length is 12.
 
-21:23
-Employee [E000002] just helped customer [C001878] with Create account in Account Stand.
+21:24
+A wild client appeared: Herwig Baer (OBA734) with reason: Repay loan.
+Herwig Baer [C005004] chose Cash Stand [S000002] and now queue length is 1.
 
-21:30
-A wild client appeared: Woldred Neumann (KKF981) with reason: Get info about account.
-Woldred Neumann [C003152] chose Information Stand [S000003] and now queue length is 1.
+21:25
+A wild client appeared: Nora Dahmbach (SRC375) with reason: Create account.
+Nora Dahmbach [C007133] chose Account Stand [S000004] and now queue length is 13.
 
-21:33
-Employee [E000001] just helped customer [C003152] with Get info about account in Information Stand.
+21:29
+Employee [E000000] just helped customer [C005004] with Repay loan in Cash Stand.
 
-21:34
-A wild client appeared: Wilhelmina Konigsamen (FKQ982) with reason: Create account.
-Wilhelmina Konigsamen [C007696] chose Account Stand [S000004] and now queue length is 13.
+21:35
+A wild client appeared: Rosale Trachsel (IFV259) with reason: Delete account.
+Rosale Trachsel [C006307] chose Account Stand [S000004] and now queue length is 14.
 
-21:41
-A wild client appeared: Meg Dahmbach (PDQ757) with reason: Take loan.
-Meg Dahmbach [C003604] chose Cash Stand [S000002] and now queue length is 1.
+21:36
+Employee [E000002] just helped customer [C003931] with Create account in Account Stand.
 
 21:42
-A wild client appeared: Eustasius Reifsneider (BYY689) with reason: Delete account.
-Eustasius Reifsneider [C005013] chose Account Stand [S000004] and now queue length is 14.
+A wild client appeared: Elspeth Lutzen (HHP935) with reason: Get info about account.
+Elspeth Lutzen [C002542] chose Information Stand [S000003] and now queue length is 1.
 
 21:43
-A wild client appeared: Aldreda Betz (RNU641) with reason: Get info about account.
-Aldreda Betz [C009463] chose Information Stand [S000003] and now queue length is 1.
-Employee [E000002] just helped customer [C007495] with Delete account in Account Stand.
+A wild client appeared: Jocelin Fleischer (AUN554) with reason: Create account.
+Jocelin Fleischer [C003184] chose Account Stand [S000004] and now queue length is 14.
 
 21:45
-A wild client appeared: Cordelia Baer (FLW737) with reason: Take loan.
-Cordelia Baer [C005589] chose Cash Stand [S000002] and now queue length is 1.
+A wild client appeared: Aver Veit (ULL129) with reason: Payment.
+Aver Veit [C007977] chose ATMin [S000000] and now queue length is 1.
+Employee [E000001] just helped customer [C002542] with Get info about account in Information Stand.
 
-21:46
-Employee [E000001] just helped customer [C009463] with Get info about account in Information Stand.
+21:49
+A wild client appeared: Harbrand Jaeger (UFX113) with reason: Delete account.
+Harbrand Jaeger [C000239] chose Account Stand [S000004] and now queue length is 15.
+Aver Veit (ULL129) with reason: Payment finished doing it with ATMin [S000000].
 
-21:51
-Employee [E000000] just helped customer [C003604] with Take loan in Cash Stand.
-
-21:52
-A wild client appeared: Hildebart Zumwald (OYM972) with reason: Delete account.
-Hildebart Zumwald [C001939] chose Account Stand [S000004] and now queue length is 14.
-
-21:55
-A wild client appeared: Haug Nachtmann (ADW573) with reason: Delete account.
-Haug Nachtmann [C000291] chose Account Stand [S000004] and now queue length is 15.
+21:53
+A wild client appeared: Lavinia Fuchs (GVW749) with reason: Repay loan.
+Lavinia Fuchs [C006727] chose Cash Stand [S000002] and now queue length is 1.
 
 21:56
-A wild client appeared: Hildegarc Machholt (YKF406) with reason: Take loan.
-Hildegarc Machholt [C007158] chose Cash Stand [S000002] and now queue length is 1.
-
-21:57
-A wild client appeared: Bruno Weber (COM441) with reason: Delete account.
-Bruno Weber [C000167] chose Account Stand [S000004] and now queue length is 16.
+Employee [E000002] just helped customer [C000339] with Delete account in Account Stand.
 
 21:58
-A wild client appeared: Lanfried Tabbcck (SLQ089) with reason: Get info about loan.
-Lanfried Tabbcck [C006385] chose Information Stand [S000003] and now queue length is 1.
+Employee [E000000] just helped customer [C006727] with Repay loan in Cash Stand.
 
 22:00
-A wild client appeared: Klaus Riese (XUO315) with reason: Get info about account.
-Klaus Riese [C002243] chose Information Stand [S000003] and now queue length is 1.
-
-22:00
-Klaus Riese (XUO315) with reason: Get info about account failed doing do it because simulation ended.
-Lanfried Tabbcck (SLQ089) with reason: Get info about loan failed doing do it because simulation ended.
-Bruno Weber (COM441) with reason: Delete account failed doing do it because simulation ended.
-Hildegarc Machholt (YKF406) with reason: Take loan failed doing do it because simulation ended.
-Haug Nachtmann (ADW573) with reason: Delete account failed doing do it because simulation ended.
-Hildebart Zumwald (OYM972) with reason: Delete account failed doing do it because simulation ended.
-Cordelia Baer (FLW737) with reason: Take loan failed doing do it because simulation ended.
-Eustasius Reifsneider (BYY689) with reason: Delete account failed doing do it because simulation ended.
-Wilhelmina Konigsamen (FKQ982) with reason: Create account failed doing do it because simulation ended.
-Walther Lutzen (WIM435) with reason: Delete account failed doing do it because simulation ended.
-Kristen Krebs (MEF247) with reason: Delete account failed doing do it because simulation ended.
-Lukas Breitenbach (RVN484) with reason: Delete account failed doing do it because simulation ended.
-Dankmar Fehr (AEG437) with reason: Create account failed doing do it because simulation ended.
-Zemelda Hoefer (WUQ418) with reason: Delete account failed doing do it because simulation ended.
-Arabella Weber (KKG077) with reason: Delete account failed doing do it because simulation ended.
-Kleber Fiegler (UMR671) with reason: Create account failed doing do it because simulation ended.
-Sigismund Kuhn (OSZ857) with reason: Create account failed doing do it because simulation ended.
-Siegmund Falkenheim (AEC942) with reason: Create account failed doing do it because simulation ended.
-Grunhilda Drauwulf (NXZ318) with reason: Create account failed doing do it because simulation ended.
-Ludmilla Bacher (GOS830) with reason: Create account failed doing do it because simulation ended.
-Axel Schleiermacher (JHU979) with reason: Delete account failed doing do it because simulation ended.
+Harbrand Jaeger (UFX113) with reason: Delete account failed doing do it because simulation ended.
+Jocelin Fleischer (AUN554) with reason: Create account failed doing do it because simulation ended.
+Rosale Trachsel (IFV259) with reason: Delete account failed doing do it because simulation ended.
+Nora Dahmbach (SRC375) with reason: Create account failed doing do it because simulation ended.
+Pergunda Nuhr (QZZ605) with reason: Delete account failed doing do it because simulation ended.
+Otfried Frueh (VLI370) with reason: Create account failed doing do it because simulation ended.
+Ursula Atzwig (LCD221) with reason: Delete account failed doing do it because simulation ended.
+Emelia Vogt (EYB434) with reason: Delete account failed doing do it because simulation ended.
+Lavinia Kalb (APW590) with reason: Create account failed doing do it because simulation ended.
+Ingwald Ohrsten (HDM575) with reason: Create account failed doing do it because simulation ended.
+Gregor Teubcr (JKO980) with reason: Delete account failed doing do it because simulation ended.
+Tomas Lang (RVK610) with reason: Create account failed doing do it because simulation ended.
+Griswold Becker (TSH776) with reason: Delete account failed doing do it because simulation ended.
+Lupus Meusmann (GEW792) with reason: Create account failed doing do it because simulation ended.
+Dankred Trachsel (PVQ781) with reason: Create account failed doing do it because simulation ended.
 Simulation ended
