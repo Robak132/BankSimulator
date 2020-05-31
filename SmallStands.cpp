@@ -4,7 +4,7 @@ using namespace std;
 
 ATMout::ATMout() : Stand()
 {
-	operations = { numt::accountToClient };
+	operations = { numt::PossibleOperations::accountToClient };
 	s_type = "ATMout";
 }
 
@@ -15,7 +15,7 @@ void ATMout::performOperation()
 		TransferO trans(client);
 		switch (client->getReason())
 		{
-		case numt::accountToClient:
+		case numt::PossibleOperations::accountToClient:
 		{
 			int tim = trans.accountToClient();
 			setWorkTime(tim);
@@ -31,7 +31,7 @@ void ATMout::performOperation()
 
 ATMin::ATMin() : Stand()
 {
-	operations = { numt::clientToAccount };
+	operations = { numt::PossibleOperations::clientToAccount };
 	s_type = "ATMin";
 }
 
@@ -43,7 +43,7 @@ void ATMin::performOperation()
 		TransferO trans(client);
 		switch (client->getReason())
 		{
-		case numt::clientToAccount:
+		case numt::PossibleOperations::clientToAccount:
 		{
 			int tim = trans.clientToAccount();
 			setWorkTime(tim);
@@ -58,7 +58,7 @@ void ATMin::performOperation()
 
 InfoStand::InfoStand(Employeet* e) : EStand(e)
 {
-	operations = { numt::infoAccount, numt::infoLoan };
+	operations = { numt::PossibleOperations::infoAccount, numt::PossibleOperations::infoLoan };
 	s_type = "Information Stand";
 }
 
@@ -70,13 +70,13 @@ void InfoStand::performOperation()
 		LoanO loa(client);
 		switch (client->getReason())
 		{
-		case numt::infoAccount:
+		case numt::PossibleOperations::infoAccount:
 		{
 			int tim = acc.infoAccount();
 			setWorkTime(tim);
 			break;
 		}
-		case numt::infoLoan:
+		case numt::PossibleOperations::infoLoan:
 		{
 			int tim = loa.infoLoan();
 			setWorkTime(tim);
@@ -93,7 +93,7 @@ void InfoStand::performOperation()
 
 CashStand::CashStand(Employeet* e) : EStand(e)
 {
-	operations = { numt::takeLoan, numt::repayLoan, numt::clientToAccount, numt::accountToClient };
+	operations = { numt::PossibleOperations::takeLoan, numt::PossibleOperations::repayLoan, numt::PossibleOperations::clientToAccount, numt::PossibleOperations::accountToClient };
 	s_type = "Cash Stand";
 }
 
@@ -105,25 +105,25 @@ void CashStand::performOperation()
 		LoanO loa(client);
 		switch (client->getReason())
 		{
-		case numt::takeLoan:
+		case numt::PossibleOperations::takeLoan:
 		{
 			int tim = loa.takeLoan();
 			setWorkTime(tim);
 			break;
 		}
-		case numt::repayLoan:
+		case numt::PossibleOperations::repayLoan:
 		{
 			int tim = loa.repayLoan();
 			setWorkTime(tim);
 			break;
 		}
-		case numt::clientToAccount:
+		case numt::PossibleOperations::clientToAccount:
 		{
 			int tim = trans.clientToAccount();
 			setWorkTime(tim);
 			break;
 		}
-		case numt::accountToClient:
+		case numt::PossibleOperations::accountToClient:
 		{
 			int tim = trans.accountToClient();
 			setWorkTime(tim);
@@ -140,7 +140,7 @@ void CashStand::performOperation()
 
 AccountStand::AccountStand(Employeet* e) : EStand(e)
 {
-	operations = { numt::createAccount, numt::deleteAccount, numt::infoAccount };
+	operations = { numt::PossibleOperations::createAccount, numt::PossibleOperations::deleteAccount, numt::PossibleOperations::infoAccount };
 	s_type = "Account Stand";
 }
 
@@ -151,19 +151,19 @@ void AccountStand::performOperation()
 		AccountO acc(client);
 		switch (client->getReason())
 		{
-		case  numt::createAccount:
+		case  numt::PossibleOperations::createAccount:
 		{
 			int tim = acc.createAccount();
 			setWorkTime(tim);
 			break;
 		}
-		case  numt::deleteAccount:
+		case  numt::PossibleOperations::deleteAccount:
 		{
 			int tim = acc.deleteAccount();
 			setWorkTime(tim);
 			break;
 		}
-		case  numt::infoAccount:
+		case  numt::PossibleOperations::infoAccount:
 		{
 			int tim = acc.infoAccount();
 			setWorkTime(tim);

@@ -4,7 +4,7 @@
 
 namespace numt
 {
-	enum PossibleOperations
+	enum class PossibleOperations
 	{
 		accountToClient,
 		clientToAccount,

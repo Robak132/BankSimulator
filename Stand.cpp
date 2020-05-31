@@ -56,7 +56,7 @@ void Stand::addClient(IClient* c)
 
 void Stand::performOperation()
 {
-    cout << client->getReason() << endl;
+    cout << "operation " << endl;
 }
 
 void Stand::decreaseWorkTime()

@@ -11,6 +11,7 @@ BankStats::BankStats()
 	catch (exception ex) {
 		throw "Log file not found";
 	}
+	stats_data = { 0,0,0 };
 }
 
 BankStats::~BankStats()
@@ -23,11 +24,11 @@ void BankStats::lookOnClient(IClient* cl)
 	stats_data.clients_passed++;
 	switch (cl->getReason())
 	{
-	case numt::createAccount:
+	case numt::PossibleOperations::createAccount:
 		if (!cl->getAccount()->getCreated())
 			stats_data.accounts_created++;
 		break;
-	case numt::deleteAccount:
+	case numt::PossibleOperations::deleteAccount:
 		if(cl->getAccount()->getCreated())
 			stats_data.accounts_deleted++;
 		break;
