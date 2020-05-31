@@ -4,7 +4,8 @@
 
 using namespace std;
 
-Timer::Timer(int _time_per_tick, string _log, BankSetup _bs) {
+Timer::Timer(int _time_per_tick, string _log, BankSetup _bs, int st) {
+	sleep_time = st;
 	time_per_tick = _time_per_tick;
 	bank = new Bank(_bs);
 	actual_time = bank->getOpenTime();
@@ -33,11 +34,14 @@ void Timer::runSimulation() {
 				{
 					log << endl;
 					log << getFormatedTime() << endl;
+					cout << endl << getFormatedTime() << endl;
 					not_timed = false;
 				}
 				log << "A wild client appeared: " << temp_client << "." << endl;
+				cout << "A wild client appeared: " << temp_client << "." << endl;
 				bank->addClientToList(temp_client);
 				log << temp_client->getNameSurname() << " [" << temp_client->getIDNumber() << "] chose " << temp_client->getCurrentStand() << "." << endl;
+				cout << temp_client->getNameSurname() << " [" << temp_client->getIDNumber() << "] chose " << temp_client->getCurrentStand() << "." << endl;
 			}
 		}
 		bank->iterateThrough();
@@ -49,27 +53,41 @@ void Timer::runSimulation() {
 				{
 					log << endl;
 					log << getFormatedTime() << endl;
+					cout << endl << getFormatedTime() << endl;
 					not_timed = false;
 				}
 				if (clients_in[i]->getCurrentStand()->isEmployeet())
+				{
 					log << "Employee [" << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << "] just helped customer [" << clients_in[i]->getIDNumber() << "] with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "." << endl;
+					cout << "Employee [" << clients_in[i]->getCurrentStand()->getEmployeet()->getSelfID().getID() << "] just helped customer [" << clients_in[i]->getIDNumber() << "] with " << clients_in[i]->getFormatedReason() << " in " << clients_in[i]->getCurrentStand()->getSType() << "." << endl;
+				}
 				else
+				{
 					log << clients_in[i] << " finished doing it with " << clients_in[i]->getCurrentStand()->getSType() << " [" << clients_in[i]->getCurrentStand()->getStandID().getID() << "]." << endl;
-				clients_in.erase(clients_in.begin()+i);
+					cout << clients_in[i] << " finished doing it with " << clients_in[i]->getCurrentStand()->getSType() << " [" << clients_in[i]->getCurrentStand()->getStandID().getID() << "]." << endl;
+				}
+					clients_in.erase(clients_in.begin()+i);
 			}
 
 		}
 		actual_time += time_per_tick;
-		not_timed = true;
+		if (!not_timed)
+		{
+			this_thread::sleep_for(chrono::seconds(getSleepTime()));
+			not_timed = true;
+		}
 	}
 	actual_time -= time_per_tick;
 
 	log << endl << getFormatedTime() << endl;
+	cout << endl << getFormatedTime() << endl;
 	for (int i = clients_in.size() - 1; i >= 0; i--) {
 		log << clients_in[i] << " failed doing do it because simulation ended." << endl;
+		cout << clients_in[i] << " failed doing do it because simulation ended." << endl;
 		clients_in.erase(clients_in.begin() + i);
 	}
 	log << "Simulation ended" << endl;
+	cout << "Simulation ended" << endl;
 	bank->getStats().saveIt();
 }
 
@@ -80,6 +98,10 @@ int Timer::getTimePerTick() {
 int Timer::getActualTime() {
 	return actual_time;
 }
+int Timer::getSleepTime() {
+	return sleep_time;
+}
+
 string Timer::getFormatedTime() {
 	string minutes = to_string(actual_time % 60);
 	if (minutes.size() == 1)
