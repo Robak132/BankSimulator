@@ -14,7 +14,7 @@ using namespace std;
 
 
 struct BankSetup
-{
+{   // Struktura trzymaj¹ca parametry banku.
     int n_workers;
     int n_clients;
     int n_ATMin;
@@ -28,26 +28,25 @@ struct BankSetup
 
 class Bank {
 private:
-    BankStats statistics;
-    BankSetup b_setup;
-    vector<vector<IStand*>>stands;
+    BankStats statistics;                   // Klasa statystyk banku. Przechowuje statystyki z konkretnego dnia.
+    BankSetup b_setup;                      // Parametry zgrupowane w strukturê.
+    vector<vector<IStand*>>stands;          // Wektor 2D Okienek w banku. Ka¿da kolumna reprezentuje inny typ okienka.
 
-    vector<IClient*>clients;
-    vector<Employeet*> employees;
+    vector<IClient*>clients;                // Wektor zarejestrowanych w banku klientów.
+    vector<Employeet*> employees;           // Wektor zarejestrowanych w banku pracowników.
 
-    IClient* createClient();
-    void initializeClients();
-    void initializeStands();
+    IClient* createClient();                // Tworzy jednego klienta dla banku. Ma 50% szans ¿e jest indywidualny i 50% ¿e jest biznesowy.
+    void initializeClients();               // Tworzy listê wszystkich klientów.
+    void initializeStands();                // Tworzy wszystkie okienka.
 public:
-    vector<vector<IStand*>> get_stands();
-    int getOpenTime();
+    vector<vector<IStand*>> get_stands();   // Zwraca wektr 2D Stanowisk
+    int getOpenTime();                      
     int getCloseTime();
     BankStats& getStats();
-    //Bank(int _n_clients=20, int _n_workers=5, int _n_ATMin = 1, int _nATMout = 2, int _n_CashStand = 2, int _n_InfoStand = 1, int _n_AccountStand = 2, int _open_time = 420, int _close_time = 1320);
-    Bank(BankSetup = { 20,20,1,2,2,1,2,420,1320 });
+    Bank(BankSetup = { 20,20,1,2,2,1,2,420,1320 }); // konstruktor domyœlny z domyœlnymi parametrami dla b_setup
     ~Bank();
-    IClient* randomClient();
-    void iterateThrough();
-    void addClientToList(IClient* client);
+    IClient* randomClient();                // Zwraca losowego klieta z listy wszystkich klientów
+    void iterateThrough();                  // PrzejdŸ przez wszystkie okienka wykonuj¹c metody nextClient i performOperation.
+    void addClientToList(IClient* client);  // Wybiera pracownikowi odpowiednie okienko gdzie za³atwi swoj¹ potrzebê.
 };
 #endif

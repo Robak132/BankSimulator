@@ -5,7 +5,7 @@
 using namespace std;
 
 class Operation
-{
+{   // klasa dokonujπca dla jakiegoú klienta operacji.
 protected:
 	IClient* client;
 public:
@@ -14,15 +14,15 @@ public:
 
 
 class TransferO : public Operation
-{
+{   // Przelewy
 public:
 	TransferO(IClient*);
 	int accountToClient();
 	int clientToAccount();
 };
 
-class AccountO : public Operation  // Øeby dzia≥a≥a jak potrzeba potrzebny wskaünik na Account
-{
+class AccountO : public Operation 
+{	// Konto
 public:
 	AccountO(IClient*);
 	int createAccount();
@@ -31,7 +31,7 @@ public:
 };
 
 class LoanO : public Operation
-{
+{	// Poøyczki
 public:
 	LoanO(IClient*);
 	int takeLoan();
