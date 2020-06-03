@@ -1,4 +1,0 @@
----BANK STATISTICS---
-Accounts_created: 1
-Accounts_deleted: 23
-All clients passed through bank: 194
