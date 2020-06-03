@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     case 1:     // Default file
         try {
             ifstream settings;
-            int arguments[11] = {};
+            int arguments[12] = {};
             
             settings.open("settings.txt");
             if (!settings.good())
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
                     throw BadOperation("Settings have wrong format.");
             }
             settings.close();
-            Timer timer(arguments[10], "log.txt", BankSetup { arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]});
+            Timer timer(arguments[10], "log.txt", BankSetup { arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]}, arguments[11]);
             timer.runSimulation();
         }
         catch (BadOperation ex) {
@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
     case 2:     // File
         try {
             ifstream settings;
-            int arguments[11] = {};
+            int arguments[12] = {};
 
             settings.open(argv[1]);
             if (!settings.good())
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
                     throw BadOperation("Settings have wrong format.");
             }
             settings.close();
-            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] });
+            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] }, arguments[11]);
             timer.runSimulation();
         }
         catch (BadOperation ex) {
@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
         break;
     case 11:    // Direct arguments
         try {
-            int arguments[11] = {};
+            int arguments[12] = {};
 
             for (int n = 1; n < argc; n++) {
                 arguments[n] = stoi(argv[n]);
@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
             }
            
 
-            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] });
+            Timer timer(arguments[10], "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] }, arguments[11]);
             timer.runSimulation();
         }
         catch (invalid_argument ex) {
