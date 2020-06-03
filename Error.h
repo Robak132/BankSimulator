@@ -1,3 +1,6 @@
+#ifndef ERROR_H
+#define ERROR_H
+
 #include <iostream>
 using namespace std;
 
@@ -22,3 +25,4 @@ struct NoClient : public StandError
 {
 	NoClient(string);
 };
+#endif

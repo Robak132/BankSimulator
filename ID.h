@@ -11,7 +11,7 @@ private:
 	string extendID(string _id);
 	string nextID(char _category);
 public:
-	ID(char _category=NULL);
+	ID(char _category='N');
 	string getID() const;
 };
 ostream& operator << (ostream& out, ID& id);

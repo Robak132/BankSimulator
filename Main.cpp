@@ -6,6 +6,7 @@
 #include "Timer.h"
 #include "ID.h"
 #include "Tools.h"
+#include "Error.h"
 //#define P(x) #x;
 
 int main(int argc, char* argv[]) {
