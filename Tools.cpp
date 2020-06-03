@@ -5,6 +5,7 @@
 using namespace std;
 
 int Tools::randomInt() {
+    // Generator losowej liczby ca³kowitej nieujemnej
     unsigned seed = chrono::system_clock::now().time_since_epoch().count();
     mt19937 generator(seed);
     int rand = generator();

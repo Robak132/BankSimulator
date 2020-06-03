@@ -11,12 +11,12 @@
 
 int main(int argc, char* argv[]) {
     switch (argc) {
-    case 1:     // Default file
+    case 1:     // Plik domyœlny settings.txt
         try {
             ifstream settings;
-            int arguments[11] = {};
+            int arguments[11] = {}; // Pusta tablica na argumenty, umieszczenie tak, ¿e arguments[1] - pierwszy argument, a arguments[11] - 10ty argument 
             
-            settings.open("settings.txt");
+            settings.open("settings.txt"); 
             if (!settings.good())
                 throw FileNotFound("Default settings file not found");
 
@@ -25,8 +25,10 @@ int main(int argc, char* argv[]) {
                 if (settings.fail() || arguments[n] < 0)
                     throw BadOperation("Settings have wrong format.");
             }
+            // Wczytywanie argumentów do tablicy, z wykrywaniem b³êdów
             settings.close();
             Timer timer(1, "log.txt", BankSetup { arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]}, arguments[10]);
+            // Argumenty podane do Timera
             timer.runSimulation();
         }
         catch (BadOperation ex) {
@@ -36,10 +38,10 @@ int main(int argc, char* argv[]) {
             cout << "Default settings file not found" << endl;
         }
         break;
-    case 2:     // File
+    case 2:     // Podany plik
         try {
             ifstream settings;
-            int arguments[11] = {};
+            int arguments[11] = {}; // Pusta tablica na argumenty, umieszczenie tak, ¿e arguments[1] - pierwszy argument, a arguments[11] - 10ty argument 
 
             settings.open(argv[1]);
             if (!settings.good())
@@ -51,7 +53,9 @@ int main(int argc, char* argv[]) {
                     throw BadOperation("Settings have wrong format.");
             }
             settings.close();
+            // Wczytywanie argumentów do tablicy, z wykrywaniem b³êdów
             Timer timer(1, "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] }, arguments[10]);
+            // Argumenty podane do Timera
             timer.runSimulation();
         }
         catch (BadOperation ex) {
@@ -61,9 +65,9 @@ int main(int argc, char* argv[]) {
             cout << "Default settings file not found" << endl;
         }
         break;
-    case 11:    // Direct arguments
+    case 11:    // Argumenty bezpoœrednie
         try {
-            int arguments[11] = {};
+            int arguments[11] = {}; // Pusta tablica na argumenty, umieszczenie tak, ¿e arguments[1] - pierwszy argument, a arguments[11] - 10ty argument 
 
             for (int n = 1; n < argc; n++) {
                 arguments[n] = stoi(argv[n]);
@@ -71,9 +75,9 @@ int main(int argc, char* argv[]) {
                     throw BadOperation("Settings have wrong format.");
                 }
             }
-           
-
+            // Wczytywanie argumentów do tablicy, z wykrywaniem b³êdów
             Timer timer(1, "log.txt", BankSetup{ arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9] }, arguments[10]);
+            // Argumenty podane do Timera
             timer.runSimulation();
         }
         catch (invalid_argument ex) {
@@ -83,7 +87,11 @@ int main(int argc, char* argv[]) {
             cout << "Wrong operation: " << ex << endl;
         }
         break;
+    default:
+        cout << "Wrong amount of arguments" << endl;
+        break;
     }
+    
     return 0;
 }
 

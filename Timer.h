@@ -22,13 +22,11 @@ private:
 public:
 	Timer(int _time_per_tick = 1, string _log = "log.txt", BankSetup = {1000,10000,1,1,1,1,1,420,1320}, int st = 1);
 	~Timer();
-	void runSimulation();
+	void runSimulation();		// Uruchamia symulacjê
 	int getTimePerTick();
 	int getActualTime();
 	int getSleepTime();
-	string getFormatedTime();
-
-	void setTimePerTick(int _time_per_tick);
+	string getFormatedTime();	// Formatuje actual_time do formy GG:MM
 };
 
 #endif

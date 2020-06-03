@@ -40,18 +40,17 @@ public:
 
 class Client : public IClient {
 private:
-    ID id_number;
-
     bool in_bank;
-    IStand* current_stand;
+    ID id_number;       // kategoria - du¿a litera, 6 cyfr indeksu
     string type;
     string name;
     string surname;
-    string document_id; // [3 - letters upersize, 3- digits]
+    string document_id; // 3 du¿e litery, 3 cyfry
     numt::PossibleOperations client_reason;
     int money;
-
     Account account;
+    IStand* current_stand;
+
     bool checkDocID(string _document_id);
 public:
     Client(string _name, string _surname, string _document_id, numt::PossibleOperations reason, int money, Account _account);
@@ -81,12 +80,12 @@ public:
     void setAccount(Account _account);
     void setCurrentStand(IStand*);
 protected:
-    static string randomName();
-    static string randomSurname();
-    static string randomDocumentID();
-    static numt::PossibleOperations randomOperation();
-    static int randomMoney();
-    static Account randomAccount();
+    static string randomName();                         // Losuje imie z pliku name.txt
+    static string randomSurname();                      // Losuje nazwisko z pliku name.txt
+    static string randomDocumentID();                   // Losuje identyfikator dokumentu z liter A-Z i liczb 0-9
+    static numt::PossibleOperations randomOperation();  // Losuje operacje 0-7
+    static int randomMoney();                           // Losuje liczbê pieniêdzy (1000-10000)
+    static Account randomAccount();                     // Losuje rodzaj konta (za³o¿one/nie) oraz liczbê pieniêdzy i/lub kredytu
 };
 
 ostream& operator << (ostream& out, const IClient* client);
@@ -98,7 +97,7 @@ public:
         setType("Business");
     }
 protected:
-    static int randomMoney();
+    static int randomMoney();                           // Klient biznesowy losuje w zakresie 1000-10000
 };
 
 class IndividualClient : public Client {
@@ -108,6 +107,6 @@ public:
         setType("Individual");
     }
 protected:
-    static int randomMoney();
+    static int randomMoney();                           // Klient indiwidualny losuje w zakresie 10000-100000
 };
 #endif
