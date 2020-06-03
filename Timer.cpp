@@ -24,7 +24,7 @@ Timer::~Timer() {
 
 void Timer::runSimulation() {
 	log << "Simulation started" << endl;
-	while (bank->getCloseTime() >= actual_time) {
+	while (bank->getCloseTime() > actual_time) {
 		bool not_timed = true;
 		if (Tools::randomInt() % 5 == 0) {
 			IClient* temp_client = bank->randomClient();
@@ -73,11 +73,11 @@ void Timer::runSimulation() {
 		actual_time += time_per_tick;
 		if (!not_timed)
 		{
-			this_thread::sleep_for(chrono::seconds(getSleepTime()));
+			if (sleep_time != 0)
+				this_thread::sleep_for(chrono::seconds(sleep_time));
 			not_timed = true;
 		}
 	}
-	actual_time -= time_per_tick;
 
 	log << endl << getFormatedTime() << endl;
 	cout << endl << getFormatedTime() << endl;
