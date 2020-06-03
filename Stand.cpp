@@ -79,16 +79,16 @@ bool Stand::isEmployeet() {
 }
 
 void Stand::nextClient()
-{
-    if (getQueueLength() && !work_time) 
-    { 
+{   // Następny klient podejdzie do okienka tylk wtedy gdy poprzedni zakończył swoją wizytę.
+    if (getQueueLength() && !work_time)     
+    { // Jeśli ktoś stał w kolejce, podejdzie do niej.
         if(client)
-            client->setInBank(false);
+            client->setInBank(false);   // Klient wychodzi z banku.
         client = client_queue.front();
         client_queue.pop();
     }
     else if (!getQueueLength() && !work_time)
-    {
+    { // Jeśli nikogo w kolejce nie ma, nikt nie podejdzie.
         if (client)
             client->setInBank(false);
         client = nullptr;

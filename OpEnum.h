@@ -5,7 +5,7 @@
 namespace numt
 {
 	enum class PossibleOperations
-	{
+	{   // Enum s³u¿¹cy wbieraniu operacji które mo¿na wykonaæ w banku.
 		accountToClient,
 		clientToAccount,
 		createAccount,
@@ -16,6 +16,6 @@ namespace numt
 		infoLoan,
 	};
 
-	std::string getFormatedReason(PossibleOperations po);
+	std::string getFormatedReason(PossibleOperations po); // Zwraca sformatowany string operacji. 
 }
 #endif

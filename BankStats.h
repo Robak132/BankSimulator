@@ -10,7 +10,7 @@
 class IClient;
 
 struct StatisticsData
-{
+{   // Dane które przechowuj¹ statystyki
 	int accounts_created;
 	int accounts_deleted;
 	int clients_passed;
@@ -25,8 +25,8 @@ class BankStats
 public:
 	BankStats();
 	~BankStats();
-	void lookOnClient(IClient*);
-	void saveIt();
+	void lookOnClient(IClient*);	// Patrzy na klienta który za³atwia swoj¹ potrzebê i odpowiednio zmienia statystyki.
+	void saveIt();					// Zapisuje do pliku.
 };
 
 

@@ -3,7 +3,7 @@
 #include "ID.h"
 
 class Employeet
-{
+{ // Prosta klasa symuluj¹ca pracownika.
 	ID self_ID;
 	int productivity;
 public:

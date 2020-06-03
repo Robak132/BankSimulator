@@ -3,15 +3,16 @@
 using namespace std;
 #define MONEY 100
 
+
+// S¹ tutaj opisane ró¿ne metody dzia³aj¹ce na kliencie, które zmieniaj¹ jego parametry takie jak pieni¹dze na koncie czy przy sobie.
+
 Operation::Operation(IClient* c)
 {
 	client = c;
 }
 
 TransferO::TransferO(IClient* c):Operation(c)
-{
-
-}
+{}
 
 int TransferO::accountToClient()
 {
@@ -34,9 +35,7 @@ int TransferO::clientToAccount()
 }
 
 AccountO::AccountO(IClient* c) :Operation(c)
-{
-
-}
+{}
 
 int AccountO::createAccount()
 {
@@ -54,9 +53,7 @@ int AccountO::infoAccount()
 }
 
 LoanO::LoanO(IClient* c) : Operation(c)
-{
-
-}
+{}
 
 int LoanO::takeLoan()
 {

@@ -9,16 +9,16 @@ ATMout::ATMout() : Stand()
 }
 
 void ATMout::performOperation()
-{
-	if (client != nullptr)
+{   // Przyk³adowa metoda performOperation dla Bankomatu. Analogicznie zachowuje siê dla innych typów okienek
+	if (client != nullptr)									// Jeœli ktoœ siedzi przy stanowisku...
 	{
-		TransferO trans(client);
-		switch (client->getReason())
+		TransferO trans(client);							
+		switch (client->getReason())						// ...Pyta siê go co chce zrobiæ...
 		{
-		case numt::PossibleOperations::accountToClient:
+		case numt::PossibleOperations::accountToClient:		// ...I wykonuje t¹ operacjê.
 		{
-			int tim = trans.accountToClient();
-			setWorkTime(tim);
+			int tim = trans.accountToClient();				// Pobiera z operacji czas potrzebny do jej wykonania
+			setWorkTime(tim);								// I informuje o nim okienko
 			break;
 		}
 		default:
