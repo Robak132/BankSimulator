@@ -1,0 +1,5 @@
+Odnośnie dokumentacji:
+- relację dziedziczenia w UML rysuje się inaczej, za pomocą strzałki z zamkniętym grotem, który jest pusty w środu (biały) - to oczywiście tylko informacyjnie, to nie wchodzi w zakres tego przedmiotu, ale warto wiedzieć
+- "liczba", nie "ilość" klientów/bankomatów/okienek itp.
+Odnośnie kodu:
+- eleganciej byłoby chyba użyć enumów do reprezentacji kategorii ID i typów okienek
